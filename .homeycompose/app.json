@@ -19,8 +19,7 @@
   "permissions": [],
   "images": {
     "small": "/assets/images/small.png",
-    "large": "/assets/images/large.png",
-    "xlarge": "/assets/images/xlarge.png"
+    "large": "/assets/images/large.png"
   },
   "contributing": {
     "donate": {
@@ -30,9 +29,10 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/Piotr-Grochowski/homey-blebox/issues"
+    "url": "https://github.com/Piotr-Grochowski/eu.blebox/issues"
   },
-  "source": "https://github.com/Piotr-Grochowski/homey-blebox",
+  "source": "https://github.com/Piotr-Grochowski/eu.blebox",
+  "homeyCommunityTopicId": 71173,
   "author": {
     "name": "Piotr Grochowski",
     "email": "piotr@grochowski.org"
