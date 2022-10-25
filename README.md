@@ -14,10 +14,14 @@ At the moment this app supports the following devices:
 - dimmerBox - dimmerBox is the first device in the world which allows you to switch and dim 230V lights in your home or office. Control your lights from a smartphone or tablet, no matter where you are.
 - wLightBox - the smallest wireless light controller in the world, wlightbox allows you to control colourful (RGBW) and plain LED lighting. It can be managed not only by smartphones and tablets, but also from your computer.
 - wLightBoxS - Using wLightBoxS you can switch on, off and also adjust brightness of single color LED lights using your smartphone or tablet, also from anywhere in the World. It's an alternative in compare with wLightBox (RGBW LED controller) for people who only want to control one color per device.
-- airSensor - airSensor is your personal air quality sensor - it keeps you informed about the presence of harmful dust suspended in your home and outside.
-- tempSensor - a device that indicates the temperature, equipped with a waterproof measuring probe, operating in the range of -55 to + 125 degrees Celsius.
 - gateBox - gateBox allows you to not only open and close gates, but also check on their status 
 - doorBox - an integrated, miniature controller: electric bolt lock, electric strikes and safety devices designed for access control
+- thermoBox - the device designed for the intelligent control of heating or cooling with the possibility of cooperation of 2 digital probes
+- saunaBox - it is is the world’s first sauna controller that allows you to turn on and off and control the sauna temperature from anywhere in the World without the use of additional peripherals
+- airSensor - airSensor is your personal air quality sensor - it keeps you informed about the presence of harmful dust suspended in your home and outside.
+- tempSensor - a device that indicates the temperature, equipped with a waterproof measuring probe, operating in the range of -55 to + 125 degrees Celsius.
+- tempSensor PRO - is an accurate temperature sensor with an extended range and increased resistance to weather conditions. It allows you to control the temperature with a smartphone from anywhere in the world.
+- rainSensor - detects the start and end of precipitation
 
 # Changelog
 v.3.2.0
