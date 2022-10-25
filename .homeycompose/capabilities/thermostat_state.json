@@ -1,0 +1,160 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Thermostat state"
+  },
+  "desc": {
+    "en": "State of the thermostat"
+  },
+  "values": [
+    {
+      "id": "0",
+      "title": {
+        "en": "Off"
+      }
+    },
+    {
+      "id": "1",
+      "title": {
+        "en": "On (temperature set)"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "On (no temperature set)"
+      }
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "Boost"
+      }
+    }
+  ],
+  "getable": true,
+  "setable": true,
+  "uiComponent": "picker",
+  "$flow": {
+    "triggers": [
+      {
+        "id": "thermostat_state_changed",
+        "title": {
+          "en": "Thermostat state has changed"
+        },
+        "args": [
+          {
+            "name": "thermostat_state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "title": {
+                  "en": "Off"
+                }
+              },
+              {
+                "id": "1",
+                "title": {
+                  "en": "On (temperature set)"
+                }
+              },
+              {
+                "id": "2",
+                "title": {
+                  "en": "On (no temperature set)"
+                }
+              },
+              {
+                "id": "3",
+                "title": {
+                  "en": "Boost"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "thermostat_state_is",
+        "title": {
+          "en": "Thermostat state !{{is|is not}}"
+        },
+        "args": [
+          {
+            "name": "thermostat_state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "title": {
+                  "en": "Off"
+                }
+              },
+              {
+                "id": "1",
+                "title": {
+                  "en": "On (temperature set)"
+                }
+              },
+              {
+                "id": "2",
+                "title": {
+                  "en": "On (no temperature set)"
+                }
+              },
+              {
+                "id": "3",
+                "title": {
+                  "en": "Boost"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "thermostat_state_set",
+        "title": {
+          "en": "Set the state"
+        },
+        "args": [
+          {
+            "name": "thermostat_state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "title": {
+                  "en": "Off"
+                }
+              },
+              {
+                "id": "1",
+                "title": {
+                  "en": "On (temperature set)"
+                }
+              },
+              {
+                "id": "2",
+                "title": {
+                  "en": "On (no temperature set)"
+                }
+              },
+              {
+                "id": "3",
+                "title": {
+                  "en": "Boost"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

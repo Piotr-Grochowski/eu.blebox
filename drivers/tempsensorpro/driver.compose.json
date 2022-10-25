@@ -1,0 +1,110 @@
+{
+  "name": {
+    "en": "tempSensorPro"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_temperature.sensor1",
+    "measure_temperature.sensor2",
+    "measure_temperature.sensor3",
+    "measure_temperature.sensor4"
+  ],
+  "capabilitiesOptions": {
+    "measure_temperature.sensor1": {"title": {"en": "Temperature 1"}},    
+    "measure_temperature.sensor2": {"title": {"en": "Temperature 2"}},    
+    "measure_temperature.sensor3": {"title": {"en": "Temperature 3"}},    
+    "measure_temperature.sensor4": {"title": {"en": "Temperature 4"}}    
+  },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png"
+  },
+  "energy": {
+    "approximation": {
+      "usageConstant": 1
+    }
+  },
+  "discovery": "bbxsrv",
+  "pair": [
+    {
+      "id": "list_tempsensorspro",
+      "template": "list_devices",
+      "navigation": { "next": "add_tempsensorspro"}
+    },
+    {
+      "id": "add_tempsensorspro",
+      "template": "add_devices"    
+    }
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+          "en": "General settings"
+      },
+      "children":
+      [
+        {
+          "id": "address",
+          "type": "text",
+          "label": {
+            "en": "IP Address"
+          }
+        },
+        {
+          "id": "poll_interval",
+          "type": "number",
+          "label": {
+            "en": "Poll interval [ms]"
+          },
+          "attr": {
+            "min": 500,
+            "max": 60000
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+          "en": "Device properties"
+      },
+      "children":
+      [
+        {
+          "id": "product",
+          "type": "label",
+          "label": {
+            "en": "Product name"
+          }
+        },
+        {
+          "id": "apiLevel",
+          "type": "label",
+          "label": {
+            "en": "API Level"
+          }
+        },
+        {
+          "id": "hv",
+          "type": "label",
+          "label": {
+            "en": "Hardware version"
+          }
+        },
+        {
+          "id": "fv",
+          "type": "label",
+          "label": {
+            "en": "Firmware version"
+          }
+        }
+      ]
+    }
+  ]}

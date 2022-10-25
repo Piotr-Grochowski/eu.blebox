@@ -1,0 +1,20 @@
+{
+    "title": {
+        "en": "Move to favorite position"
+    },
+    "type": "boolean",
+    "getable": false,
+    "setable": true,
+    "uiComponent": "button",
+    "uiQuickAction": true,
+    "$flow": {
+        "actions": [
+        {
+            "id": "press",
+            "title": {
+            "en": "Move to favorite position"
+            }
+        }
+        ]
+    }
+}

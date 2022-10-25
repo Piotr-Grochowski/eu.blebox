@@ -1,0 +1,104 @@
+{
+  "name": {
+    "en": "airSensor" 
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_pm25",
+    "measure_pm1",
+    "measure_pm10"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "discovery": "bbxsrv",
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png"
+  },
+  "pair": [
+    {
+      "id": "list_airsensors",
+      "template": "list_devices",
+      "navigation": { "next": "add_airsensors"}
+    },
+    {
+      "id": "add_airsensors",
+      "template": "add_devices"    
+    }
+  ],
+  "energy": {
+    "approximation": {
+      "usageConstant": 1
+    }
+  },
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+          "en": "General settings"
+      },
+      "children":
+      [
+        {
+          "id": "address",
+          "type": "text",
+          "label": {
+            "en": "IP Address"
+          }
+        },
+        {
+          "id": "poll_interval",
+          "type": "number",
+          "label": {
+            "en": "Poll interval [ms]"
+          },
+          "attr": {
+            "min": 60000,
+            "max": 360000
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+          "en": "Device properties"
+      },
+      "children":
+      [
+        {
+          "id": "product",
+          "type": "label",
+          "label": {
+            "en": "Product name"
+          }
+        },
+        {
+          "id": "apiLevel",
+          "type": "label",
+          "label": {
+            "en": "API Level"
+          }
+        },
+        {
+          "id": "hv",
+          "type": "label",
+          "label": {
+            "en": "Hardware version"
+          }
+        },
+        {
+          "id": "fv",
+          "type": "label",
+          "label": {
+            "en": "Firmware version"
+          }
+        }
+      ]
+    }
+  ]
+}

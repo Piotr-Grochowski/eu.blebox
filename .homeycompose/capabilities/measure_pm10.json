@@ -1,0 +1,47 @@
+{
+    "type": "number",
+    "title": {
+      "en": "PM10",
+      "nl": "PM10",
+      "de": "PM10"
+    },
+    "units": {
+      "en": "μg/m3"
+    },
+    "insights": true,
+    "icon": "/assets/measure_pm10.svg",
+    "desc": {
+      "en": "Atmospheric Particulate Matter PM10 (μg/m3)",
+      "nl": "Deeltjesvormige luchtverontreiniging PM10 (μg/m3)",
+      "de": "Atmosphärischer Feinstaub PM10 (μg/m3)"
+    },
+    "chartType": "spline",
+    "decimals": 2,
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor",
+    "$flow": {
+      "triggers": [
+        {
+          "id": "measure_pm10_changed",
+          "title": {
+            "en": "The PM10 value has changed",
+            "nl": "De PM10 waarde is veranderd",
+            "de": "Der PM10-Wert hat sich geändert"
+          },
+          "tokens": [
+            {
+              "name": "measure_pm10",
+              "title": {
+                "en": "PM10",
+                "nl": "PM10",
+                "de": "PM10"
+              },
+              "type": "number",
+              "example": 2
+            }
+          ]
+        }
+      ]
+    }
+  }

@@ -1,0 +1,97 @@
+{
+  "name": {
+    "en": "saunaBox"
+  },
+  "class": "thermostat",
+  "capabilities": [
+    "target_temperature",
+    "measure_temperature",
+    "onoff"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png"
+  },
+  "energy": {
+    "approximation": {
+      "usageConstant": 1
+    }
+  },
+  "pair": [
+    {
+      "id": "pair"            
+    }
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+          "en": "General settings"
+      },
+      "children":
+      [
+        {
+          "id": "address",
+          "type": "text",
+          "label": {
+            "en": "IP Address"
+          }
+        },
+        {
+          "id": "poll_interval",
+          "type": "number",
+          "label": {
+            "en": "Poll interval [ms]"
+          },
+          "attr": {
+            "min": 500,
+            "max": 60000
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+          "en": "Device properties"
+      },
+      "children":
+      [
+        {
+          "id": "product",
+          "type": "label",
+          "label": {
+            "en": "Product name"
+          }
+        },
+        {
+          "id": "apiLevel",
+          "type": "label",
+          "label": {
+            "en": "API Level"
+          }
+        },
+        {
+          "id": "hv",
+          "type": "label",
+          "label": {
+            "en": "Hardware version"
+          }
+        },
+        {
+          "id": "fv",
+          "type": "label",
+          "label": {
+            "en": "Firmware version"
+          }
+        }
+      ]
+    }
+  ]
+}
