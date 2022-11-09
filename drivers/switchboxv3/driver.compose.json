@@ -1,9 +1,11 @@
 {
   "name": {
-    "en": "switchBoxDC"
+    "en": "switchBox v3"
   },
   "class": "socket",
   "capabilities": [
+    "meter_power",
+    "measure_power",
     "onoff"
   ],
   "platforms": [
@@ -20,12 +22,12 @@
   },
   "pair": [
     {
-      "id": "list_switchboxdces",
+      "id": "list_switchboxesv3",
       "template": "list_devices",
-      "navigation": { "next": "add_switchboxdces"}
+      "navigation": { "next": "add_switchboxesv3"}
     },
     {
-      "id": "add_switchboxdces",
+      "id": "add_switchboxesv3",
       "template": "add_devices"    
     }
   ],

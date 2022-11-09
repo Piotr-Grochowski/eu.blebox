@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "switchBoxDC"
+    "en": "switchBox Light"
   },
   "class": "socket",
   "capabilities": [
@@ -20,12 +20,12 @@
   },
   "pair": [
     {
-      "id": "list_switchboxdces",
+      "id": "list_switchboxeslight",
       "template": "list_devices",
-      "navigation": { "next": "add_switchboxdces"}
+      "navigation": { "next": "add_switchboxeslight"}
     },
     {
-      "id": "add_switchboxdces",
+      "id": "add_switchboxeslight",
       "template": "add_devices"    
     }
   ],

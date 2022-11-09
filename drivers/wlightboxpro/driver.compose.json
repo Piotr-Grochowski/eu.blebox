@@ -1,31 +1,66 @@
 {
   "name": {
-    "en": "switchBoxDC"
+    "en": "wLightBoxPro"
   },
-  "class": "socket",
-  "capabilities": [
-    "onoff"
-  ],
+  "class": "light",
+  "capabilities": ["onoff","dim.brightness","dim.channelR","dim.channelG","dim.channelB","dim.channelW","light_hue","light_saturation"],
+  "capabilitiesOptions": {
+    "dim.brightness": {
+      "title": {
+        "en": "RGB Brightness",
+        "nl": "RGB Brightness"
+      }
+    },
+    "dim.channelW": {
+      "title": {
+        "en": "White brightness",
+        "nl": "White brightness"
+      }
+    },
+    "dim.channelR": {
+      "title": {
+        "en": "Channel R",
+        "nl": "Channel R"
+      }
+    },
+    "dim.channelG": {
+      "title": {
+        "en": "Channel G",
+        "nl": "Channel G"
+      }
+    },
+    "dim.channelB": {
+      "title": {
+        "en": "Channel B",
+        "nl": "Channel B"
+      }
+    }
+  },
   "platforms": [
     "local"
   ],
   "connectivity": [
     "lan"
   ],
-  "discovery": "bbxsrv",
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
-    "large": "{{driverAssetsPath}}/images/large.png",
-    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+    "large": "{{driverAssetsPath}}/images/large.png"
   },
+  "energy": {
+    "approximation": {
+      "usageOn": 1, 
+      "usageOff": 1 
+    }
+  },
+  "discovery": "bbxsrv",
   "pair": [
     {
-      "id": "list_switchboxdces",
+      "id": "list_wlightboxpro",
       "template": "list_devices",
-      "navigation": { "next": "add_switchboxdces"}
+      "navigation": { "next": "add_wlightboxpro"}
     },
     {
-      "id": "add_switchboxdces",
+      "id": "add_wlightboxpro",
       "template": "add_devices"    
     }
   ],
@@ -54,7 +89,15 @@
             "min": 500,
             "max": 60000
           }
-        }
+        },
+        {
+          "id": "on_value",
+          "type": "text",
+          "label": {
+            "en": "ON value"
+          },
+          "pattern":  "^[0-9A-F]{8}$"
+        }              
       ]
     },
     {

@@ -1,31 +1,44 @@
 {
   "name": {
-    "en": "switchBoxDC"
+    "en": "tempSensorAC"
   },
-  "class": "socket",
+  "class": "sensor",
   "capabilities": [
-    "onoff"
+    "measure_temperature.sensor1",
+    "measure_temperature.sensor2",
+    "measure_temperature.sensor3",
+    "measure_temperature.sensor4"
   ],
+  "capabilitiesOptions": {
+    "measure_temperature.sensor1": {"title": {"en": "Temperature 1"}},    
+    "measure_temperature.sensor2": {"title": {"en": "Temperature 2"}},    
+    "measure_temperature.sensor3": {"title": {"en": "Temperature 3"}},    
+    "measure_temperature.sensor4": {"title": {"en": "Temperature 4"}}    
+  },
   "platforms": [
     "local"
   ],
   "connectivity": [
     "lan"
   ],
-  "discovery": "bbxsrv",
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
-    "large": "{{driverAssetsPath}}/images/large.png",
-    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+    "large": "{{driverAssetsPath}}/images/large.png"
   },
+  "energy": {
+    "approximation": {
+      "usageConstant": 1
+    }
+  },
+  "discovery": "bbxsrv",
   "pair": [
     {
-      "id": "list_switchboxdces",
+      "id": "list_tempsensorsac",
       "template": "list_devices",
-      "navigation": { "next": "add_switchboxdces"}
+      "navigation": { "next": "add_tempsensorsac"}
     },
     {
-      "id": "add_switchboxdces",
+      "id": "add_tempsensorsac",
       "template": "add_devices"    
     }
   ],
@@ -94,5 +107,4 @@
         }
       ]
     }
-  ]
-}
+  ]}

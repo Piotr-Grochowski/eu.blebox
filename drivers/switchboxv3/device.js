@@ -99,6 +99,12 @@ class switchBoxDevice extends Device {
 							this.error(err);
 						})   
 				}
+        if(result.hasOwnProperty('powerMeasuring') && result.powerMeasuring.enabled==1)
+        {
+          this.setCapabilityValue('meter_power',result.powerMeasuring.powerConsumption[0].value);
+          if(result.sensors[0].type=='activePower')
+            this.setCapabilityValue('measure_power',result.sensors[0].value);
+        }
 
 			})
 			.catch(error => {

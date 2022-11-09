@@ -22,19 +22,21 @@ class shutterBoxDevice extends Device {
 		this.registerCapabilityListener('windowcoverings_set', this.onCapabilityPositionSet.bind(this));
 		this.registerCapabilityListener('windowcoverings_closed', this.onCapabilityClosed.bind(this));
 		this.registerCapabilityListener('favorite_position_button', this.onCapabilityButton.bind(this));
- 
+/* 
     await this.bbApi.shutterBoxGetExtendedState(this.getSetting('address'), this.getSetting('apiLevel'))
     .then(result => {
       if(result.shutter.controlType!=3)
         this.removeCapability('windowcoverings_tilt_set');
-      else 
+      else */
         this.registerCapabilityListener('windowcoverings_tilt_set', this.onCapabilityTiltSet.bind(this));
+/*
     })
     .catch(error => {
       console.log(error);
       this.error(error);
       return;
     })
+*/
     this.log('shutterBox '.concat(this.getName(), ' has been initialized'));
   }
 

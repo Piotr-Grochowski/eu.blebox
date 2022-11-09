@@ -55,12 +55,12 @@
   "discovery": "bbxsrv",
   "pair": [
     {
-      "id": "list_switchboxes",
+      "id": "list_wlightbox",
       "template": "list_devices",
-      "navigation": { "next": "add_switchboxes"}
+      "navigation": { "next": "add_wlightbox"}
     },
     {
-      "id": "add_switchboxes",
+      "id": "add_wlightbox",
       "template": "add_devices"    
     }
   ],
