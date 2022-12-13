@@ -13,6 +13,7 @@ At the moment this app supports the following devices:
 - switchBoxD - switchBoxD - “double” switchBox - can wirelessly turn on or off main voltage electrical devices. It can control two 5A loads (in total 2 kW). Suitable for smaller devices, wherever you want to control two independent electrical circuits with a single controller.
 - switchBoxDC - switchBoxDC is a smart switch powered by low voltage (12-24V DC) which allows you to control virtually any electrical device from any place in the world.
 - shutterBox - is a device designed to wireless control of electric roller shutters, awnings, screens, etc. (by using Smartphones and tablets), also from any place in the world.
+- shutterBoxDC - allows you to control roller blinds, awnings, venetian or windows equipped with low voltage (12-24V) DC motor by using a smartphone or tablet, also from anywhere in the World
 - dimmerBox - dimmerBox is the first device in the world which allows you to switch and dim 230V lights in your home or office. Control your lights from a smartphone or tablet, no matter where you are.
 - wLightBox - the smallest wireless light controller in the world, wlightbox allows you to control colourful (RGBW) and plain LED lighting. It can be managed not only by smartphones and tablets, but also from your computer.
 - wLightBox Pro - turns on and off RGBW LED lighting from anywhere, anytime. Install the controller in the place that best suits your needs, both indoors, outdoors or wherever you want. Use 4 ways to control the device.
@@ -29,6 +30,12 @@ At the moment this app supports the following devices:
 - rainSensor - detects the start and end of precipitation
 
 # Changelog
+v.3.4.1
+- shutterBoxDC bugfix
+
+v.3.4.0
+- shutterBoxDC support added
+
 v.3.3.0
 - shutterBox posiotion set bugfix
 - tempSensor AC support added

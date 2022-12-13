@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.blebox",
-  "version": "3.3.0",
+  "version": "3.4.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -1565,6 +1565,112 @@
         }
       ],
       "id": "shutterbox"
+    },
+    {
+      "name": {
+        "en": "shutterBoxDC"
+      },
+      "class": "blinds",
+      "capabilities": [
+        "windowcoverings_closed",
+        "windowcoverings_set",
+        "windowcoverings_state",
+        "windowcoverings_tilt_set",
+        "favorite_position_button"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "discovery": "bbxsrv",
+      "images": {
+        "small": "/drivers/shutterboxdc/assets/images/small.png",
+        "large": "/drivers/shutterboxdc/assets/images/large.png"
+      },
+      "pair": [
+        {
+          "id": "pair"
+        }
+      ],
+      "energy": {
+        "approximation": {
+          "usageConstant": 1
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            },
+            {
+              "id": "direction_swap",
+              "type": "checkbox",
+              "label": {
+                "en": "Move direction swap"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "shutterboxdc"
     },
     {
       "name": {

@@ -109,5 +109,11 @@
   },
   "3.3.0": {
     "en": "shutterBox position set bugfix. tempSensor AC, wLightBox Pro, wLightBoxS Pro, switchBox Light, switchBox v3 (with power meter) support added. Removed unused power meter capabilities from older (v1) switchBox and switchBoxDC drivers"
+  },
+  "3.4.0": {
+    "en": "shutterBoxDC support added"
+  },
+  "3.4.1": {
+    "en": "shutterBoxDC bugfix"
   }
 }
