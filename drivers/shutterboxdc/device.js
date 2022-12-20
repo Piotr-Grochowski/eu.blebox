@@ -1,5 +1,5 @@
 const Homey = require('homey');
-const util = require('/lib/util.js');
+const BleBoxAPI = require('/lib/bleboxapi.js')
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -86,9 +86,9 @@ module.exports = class shutterBoxDCDevice extends Homey.Device {
 	{
 		while (!this.polling && this.pinging) {
 			this.setUnavailable();
-			await util.sendGetCommand('/api/device/state',this.getSetting('address'))
+			await this.bbApi.getDeviceState(this.getSetting('address'))
 			.then(result => {
-				if(result.device.type=='shutterBox' && result.device.id==this.getData().id)
+				if(result.type=='shutterBox' && result.id==this.getData().id)
 				{
 					this.setAvailable();
 					this.polling = true;
@@ -96,7 +96,7 @@ module.exports = class shutterBoxDCDevice extends Homey.Device {
 					this.emit('poll');
 					return;
 				}
-			})	
+			})
 			.catch(error => {
 				this.log('Device is not reachable, pinging every 60 seconds to see if it comes online again.');
 			})
@@ -186,6 +186,7 @@ module.exports = class shutterBoxDCDevice extends Homey.Device {
 				// Error occured
 				// Set the device as unavailable
 				this.log(error);
+				this.polling = false;
 				this.pinging = true;
 				this.emit('ping');
 		})

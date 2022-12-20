@@ -37,7 +37,7 @@ module.exports = class saunaBoxDriver extends Homey.Driver {
 					else
 					{
 						// if the device is of wrong type
-						reject(new Error(Homey.__("wrong_device_type")+result.type));
+						reject(new Error(this.homey.__("wrong_device_type")+result.type));
 					}
 				})
 				.catch(error => {

@@ -18,7 +18,7 @@ module.exports = class shutterBoxDCDriver extends Homey.Driver {
 
 				bbApi.getDeviceState(data.ip)
 				.then(result => {
-					if(result.type=='shutterBox' && result.product=='shutterBoxDC')
+					if(result.type=='shutterBox')
 					{
 						// Retrieve device data
 						var device_data = {
@@ -26,7 +26,7 @@ module.exports = class shutterBoxDCDriver extends Homey.Driver {
 							name: result.deviceName,
 							address : data.ip,
 							poll_interval: 1000,
-							product: result.type,
+							product: 'n/a',
 							apiLevel: result.apiLevel,
 							hv: result.hv,
 							fv: result.fv
@@ -37,7 +37,7 @@ module.exports = class shutterBoxDCDriver extends Homey.Driver {
 					else
 					{
 						// if the device is of wrong type
-						reject(new Error(Homey.__("wrong_device_type")+result.type));
+						reject(new Error("Wrong device type: "+result.type));
 					}
 				})
 				.catch(error => {

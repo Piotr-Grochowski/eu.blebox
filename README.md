@@ -30,7 +30,7 @@ At the moment this app supports the following devices:
 - rainSensor - detects the start and end of precipitation
 
 # Changelog
-v.3.4.1
+v.3.4.6
 - shutterBoxDC bugfix
 
 v.3.4.0

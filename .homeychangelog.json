@@ -115,5 +115,20 @@
   },
   "3.4.1": {
     "en": "shutterBoxDC bugfix"
+  },
+  "3.4.2": {
+    "en": "pairing bugfix"
+  },
+  "3.4.3": {
+    "en": "pairing bugfix"
+  },
+  "3.4.4": {
+    "en": "shutterBoxDC pairing bugfix"
+  },
+  "3.4.5": {
+    "en": "shutterBoxDC bugfix"
+  },
+  "3.4.6": {
+    "en": "shutterBoxDC discovery fix"
   }
 }
