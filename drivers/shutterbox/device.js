@@ -173,6 +173,19 @@ class shutterBoxDevice extends Device {
     });
   }
 
+	// this method is called by Move To Favourite Position Flow Action Card
+	async moveToFavPos() 
+  {
+    this.bbApi.shutterBoxSetFavPos(this.getSetting('address'))
+    .catch(error => {
+      // Error occured
+      this.log(error);
+      this.error(error);
+      return;      
+    });
+  }
+
+
 	// this method is called when the Device has requested a position change
 	async onCapabilityPositionSet( value, opts ) {
 

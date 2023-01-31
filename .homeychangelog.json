@@ -130,5 +130,8 @@
   },
   "3.4.6": {
     "en": "shutterBoxDC discovery fix"
+  },
+  "3.5.0": {
+    "en": "Added FlowCards for switchBoxD relaysand additional FlowCards for: shutterBox/DC, wLightBox"
   }
 }

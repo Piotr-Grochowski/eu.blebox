@@ -5,6 +5,14 @@ const BleBoxAPI = require('/lib/bleboxapi.js')
 module.exports = class shutterBoxDCDriver extends Homey.Driver {
 	
 	async onInit() {
+
+		const moveToFavoritePosition = this.homey.flow.getActionCard('move_to_favorite_pos_dc');
+
+		moveToFavoritePosition.registerRunListener(async ( args, state ) => {
+	    	await args.device.moveToFavPos();
+		});
+
+
 		this.log('shutterBoxDCDriver has been initialized');
 	}
 	

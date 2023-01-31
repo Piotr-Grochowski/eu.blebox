@@ -318,6 +318,91 @@ class wLightBoxDevice extends Device {
    this.polling = false;
   }
 
+  async dimRedTo(brightness)
+  {
+    var hexChannelW = Math.round(this.getCapabilityValue('dim.channelW')*255).toString(16);
+    var hexChannelG = Math.round(this.getCapabilityValue('dim.channelG')*255).toString(16);
+    var hexChannelB = Math.round(this.getCapabilityValue('dim.channelB')*255).toString(16);
+    var hexChannelR = Math.round(brightness*255).toString(16);
+
+    if(hexChannelR.length==1) hexChannelR = '0'+hexChannelR;
+    if(hexChannelG.length==1) hexChannelG = '0'+hexChannelG;
+    if(hexChannelB.length==1) hexChannelB = '0'+hexChannelB;
+    if(hexChannelW.length==1) hexChannelW = '0'+hexChannelW;
+
+    // Change the color
+    await this.bbApi.wLightBoxSetState(this.getSetting('address'), hexChannelR+hexChannelG+hexChannelB+hexChannelW);
+
+  }
+
+  async dimGreenTo(brightness)
+  {
+    var hexChannelR = Math.round(this.getCapabilityValue('dim.channelR')*255).toString(16);
+    var hexChannelW = Math.round(this.getCapabilityValue('dim.channelW')*255).toString(16);
+    var hexChannelB = Math.round(this.getCapabilityValue('dim.channelB')*255).toString(16);
+    var hexChannelG = Math.round(brightness*255).toString(16);
+
+    if(hexChannelR.length==1) hexChannelR = '0'+hexChannelR;
+    if(hexChannelG.length==1) hexChannelG = '0'+hexChannelG;
+    if(hexChannelB.length==1) hexChannelB = '0'+hexChannelB;
+    if(hexChannelW.length==1) hexChannelW = '0'+hexChannelW;
+
+    // Change the color
+    await this.bbApi.wLightBoxSetState(this.getSetting('address'), hexChannelR+hexChannelG+hexChannelB+hexChannelW);
+  
+  }
+
+  async dimBlueTo(brightness)
+  {
+    var hexChannelR = Math.round(this.getCapabilityValue('dim.channelR')*255).toString(16);
+    var hexChannelG = Math.round(this.getCapabilityValue('dim.channelG')*255).toString(16);
+    var hexChannelW = Math.round(this.getCapabilityValue('dim.channelW')*255).toString(16);
+    var hexChannelB = Math.round(brightness*255).toString(16);
+
+    if(hexChannelR.length==1) hexChannelR = '0'+hexChannelR;
+    if(hexChannelG.length==1) hexChannelG = '0'+hexChannelG;
+    if(hexChannelB.length==1) hexChannelB = '0'+hexChannelB;
+    if(hexChannelW.length==1) hexChannelW = '0'+hexChannelW;
+
+    // Change the color
+    await this.bbApi.wLightBoxSetState(this.getSetting('address'), hexChannelR+hexChannelG+hexChannelB+hexChannelW);
+  
+  }
+
+  async dimWhiteTo(brightness)
+  {
+    var hexChannelR = Math.round(this.getCapabilityValue('dim.channelR')*255).toString(16);
+    var hexChannelG = Math.round(this.getCapabilityValue('dim.channelG')*255).toString(16);
+    var hexChannelB = Math.round(this.getCapabilityValue('dim.channelB')*255).toString(16);
+    var hexChannelW = Math.round(brightness*255).toString(16);
+
+    if(hexChannelR.length==1) hexChannelR = '0'+hexChannelR;
+    if(hexChannelG.length==1) hexChannelG = '0'+hexChannelG;
+    if(hexChannelB.length==1) hexChannelB = '0'+hexChannelB;
+    if(hexChannelW.length==1) hexChannelW = '0'+hexChannelW;
+
+    // Change the color
+    await this.bbApi.wLightBoxSetState(this.getSetting('address'), hexChannelR+hexChannelG+hexChannelB+hexChannelW);
+
+  }
+
+  async changeChannelsTo(red_channel,green_channel,blue_channel,white_channel)
+  {
+    var hexChannelR = Math.round(red_channel*255).toString(16);
+    var hexChannelG = Math.round(green_channel*255).toString(16);
+    var hexChannelB = Math.round(blue_channel*255).toString(16);
+    var hexChannelW = Math.round(white_channel*255).toString(16);
+
+    if(hexChannelR.length==1) hexChannelR = '0'+hexChannelR;
+    if(hexChannelG.length==1) hexChannelG = '0'+hexChannelG;
+    if(hexChannelB.length==1) hexChannelB = '0'+hexChannelB;
+    if(hexChannelW.length==1) hexChannelW = '0'+hexChannelW;
+
+    // Change the color
+    await this.bbApi.wLightBoxSetState(this.getSetting('address'), hexChannelR+hexChannelG+hexChannelB+hexChannelW);
+
+  }
+  
 
 }
 

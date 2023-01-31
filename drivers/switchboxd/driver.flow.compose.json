@@ -1,0 +1,80 @@
+{
+  "triggers": [
+    {
+      "id": "onoff.relay1_true", 
+      "title": {
+        "en": "Relay 1 turned on"
+      }
+    },
+    {
+      "id": "onoff.relay1_false", 
+      "title": {
+        "en": "Relay 1 turned off"
+      }
+    },
+    {
+      "id": "onoff.relay2_true", 
+      "title": {
+        "en": "Relay 2 turned on"
+      }
+    },
+    {
+      "id": "onoff.relay2_false", 
+      "title": {
+        "en": "Relay 2 turned off"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "id": "onoff.relay1_turnedonoff", 
+      "title": {
+        "en": "Is relay 1 turned !{{on|off}}"
+      }
+    },
+    {
+      "id": "onoff.relay2_turnedonoff", 
+      "title": {
+        "en": "Is relay 2 turned !{{on|off}}"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "onoff.relay1_on", 
+      "title": {
+        "en": "Turn relay 1 on"
+      }
+    },
+    {
+      "id": "onoff.relay1_off", 
+      "title": {
+        "en": "Turn relay 1 off"
+      }
+    },
+    {
+      "id": "onoff.relay2_on", 
+      "title": {
+        "en": "Turn relay 2 on"
+      }
+    },
+    {
+      "id": "onoff.relay2_off", 
+      "title": {
+        "en": "Turn relay 2 off"
+      }
+    },
+    {
+      "id": "onoff.relay1_toggle", 
+      "title": {
+        "en": "Toggle relay 1 on or off"
+      }
+    },
+    {
+      "id": "onoff.relay2_toggle", 
+      "title": {
+        "en": "Toggle relay 2 on or off"
+      }
+    }
+  ]
+}

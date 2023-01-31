@@ -130,6 +130,7 @@ class switchBoxDDevice extends Device {
     await this.bbApi.switchBoxDSetState(this.getSetting('address'),0,value);
   }
 
+  
   /**
    * Send the state to the relay 2
    */
@@ -138,7 +139,24 @@ class switchBoxDDevice extends Device {
      await this.bbApi.switchBoxDSetState(this.getSetting('address'),1,value);
    }
  
- 
+   async setRelay(rNum,Val)
+   {
+    await this.bbApi.switchBoxDSetState(this.getSetting('address'),rNum,Val);
+   }
+
+   async toggleRelay(rNum)
+   {
+    await this.bbApi.switchBoxDToggle(this.getSetting('address'),rNum);
+   }
+
+   isRelayOn(relNum)
+   {
+      if(relNum==0)
+        return this.getCapabilityValue('onoff.relay1')
+      else
+        return this.getCapabilityValue('onoff.relay2')
+   }
+
    async onDeleted()
    {
     this.polling = false;

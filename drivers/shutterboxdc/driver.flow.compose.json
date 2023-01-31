@@ -1,0 +1,10 @@
+{
+  "actions": [
+    {
+      "id": "move_to_favorite_pos_dc",
+      "title": {
+        "en": "Move to favorite position"
+      }
+    }
+  ]
+}
