@@ -133,5 +133,8 @@
   },
   "3.5.0": {
     "en": "Added FlowCards for switchBoxD relaysand additional FlowCards for: shutterBox/DC, wLightBox"
+  },
+  "3.5.1": {
+    "en": "BleBox API error logging bugfix"
   }
 }

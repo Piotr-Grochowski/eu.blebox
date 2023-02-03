@@ -30,6 +30,9 @@ At the moment this app supports the following devices:
 - rainSensor - detects the start and end of precipitation
 
 # Changelog
+v.3.5.1
+- BleBox API error logging bugfix
+
 v.3.5.0
 - added FlowCards for switchBoxD relays
 - added additional shutterBox, shutterBoxDC and wLightBox FlowCards 
