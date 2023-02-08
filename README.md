@@ -30,6 +30,9 @@ At the moment this app supports the following devices:
 - rainSensor - detects the start and end of precipitation
 
 # Changelog
+v.3.5.3
+- Bugfix for tempSensorAC v2
+
 v.3.5.1
 - BleBox API error logging bugfix
 
