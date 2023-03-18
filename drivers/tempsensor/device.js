@@ -1,7 +1,7 @@
 'use strict';
 
 const { Device } = require('homey');
-const BleBoxAPI = require('/lib/bleboxapi.js')
+const BleBoxAPI = require('../../lib/bleboxapi.js')
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -12,10 +12,12 @@ class tempSensorDevice extends Device {
    */
   async onInit() {
     this.bbApi = new BleBoxAPI();
-    this.polling = false;
+//    this.polling = false;
     this.addListener('poll', this.pollDevice);
 
     this.log('tempSensorDevice '.concat(this.getName(), ' has been initialized'));
+    this.emit('poll');
+
   }
 
   /**
@@ -31,7 +33,7 @@ class tempSensorDevice extends Device {
    */
    async onDiscoveryAvailable(discoveryResult) 
   {
-    this.emit('poll');
+//    this.emit('poll');
   }
 
   /**
@@ -44,7 +46,7 @@ class tempSensorDevice extends Device {
         address: discoveryResult.address
       });
 
-    this.emit('poll');
+//    this.emit('poll');
   }
 
   /**
@@ -52,7 +54,7 @@ class tempSensorDevice extends Device {
    */
    onDiscoveryLastSeenChanged(discoveryResult) 
   {
-    this.emit('poll');
+//    this.emit('poll');
   }
 
   /**
@@ -60,53 +62,61 @@ class tempSensorDevice extends Device {
    */
   async pollDevice() 
 	{
-    if(this.polling) return;
     this.polling = true;
-   // First check current device settings (which may change e.g. after firmware upgrade)
-    await this.bbApi.getDeviceState(this.getSetting('address'))
-    .then(result => {
-      this.setSettings(
-        {
-          product: result.product,
-          hv: result.hv,
-          fv: result.fv,
-          apiLevel: result.apiLevel
-        }
-      )
-    })
-    .catch(error => {
-      this.polling = false;
-      console.log(error);
-      this.error(error);
-      return;
-    })
+    while(this.polling)
+    {
+    //    if(this.polling) return;
+    //    this.polling = true;
+      // First check current device settings (which may change e.g. after firmware upgrade)
+      if(this.getAvailable())
+      {
+        await this.bbApi.getDeviceState(this.getSetting('address'))
+        .then(result => {
+          this.setSettings(
+            {
+              product: result.product,
+              hv: result.hv,
+              fv: result.fv,
+              apiLevel: result.apiLevel
+            }
+          )
+        })
+        .catch(error => {
+//          this.polling = false;
+          console.log(error);
+//          this.error(error);
+//          return;
+        })
 
-		while (this.getAvailable() && this.polling) {
-			// Read the device state
-			await this.bbApi.tempSensorGetState(this.getSetting('address'), this.getSetting('apiLevel'))
-			.then(result => {
+//        while (this.getAvailable() && this.polling) {
+          // Read the device state
+          await this.bbApi.tempSensorGetState(this.getSetting('address'), this.getSetting('apiLevel'))
+          .then(result => {
 
-				let temperature = 0.00;
-	
-				result.tempSensor.sensors.forEach(element => {
-					if(element.type=='temperature') temperature = element.value/100;
-				});
-	
-				this.setCapabilityValue('measure_temperature', temperature)
-					.catch( err => {
-						this.error(err);
-					});
+            let temperature = 0.00;
+      
+            result.tempSensor.sensors.forEach(element => {
+              if(element.type=='temperature') temperature = element.value/100;
+            });
+      
+            this.setCapabilityValue('measure_temperature', temperature)
+              .catch( err => {
+                console.log(error);
+//                this.error(err);
+              });
 
-			})
-			.catch(error => {
-        this.polling = false;
-				console.log(error);
-        this.error(error);
-				return;
-			})
-			await delay(this.getSetting('poll_interval'));
-		}  
-    this.polling = false;
+          })
+          .catch(error => {
+//            this.polling = false;
+            console.log(error);
+//            this.error(error);
+//            return;
+          })
+          await delay(this.getSetting('poll_interval'));
+//        }  
+//        this.polling = false;
+      }
+    }
 	}
 
   async onDeleted()

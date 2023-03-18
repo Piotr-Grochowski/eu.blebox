@@ -1,7 +1,7 @@
 'use strict';
 
 const { Device } = require('homey'); 
-const BleBoxAPI = require('/lib/bleboxapi.js')
+const BleBoxAPI = require('../../lib/bleboxapi.js')
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 

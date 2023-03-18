@@ -1,7 +1,7 @@
 'use strict';
  
 const { Driver } = require('homey');
-const BleBoxAPI = require('/lib/bleboxapi.js');
+const BleBoxAPI = require('../../lib/bleboxapi.js');
 
 class gateBoxDriver extends Driver {
 

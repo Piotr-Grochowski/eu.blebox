@@ -30,6 +30,12 @@ At the moment this app supports the following devices:
 - rainSensor - detects the start and end of precipitation
 
 # Changelog
+v.3.5.7
+- HomeyPro 2023 bugfixes
+
+v.3.5.4
+- tempSensor bugfix
+
 v.3.5.3
 - Bugfix for tempSensorAC v2
 

@@ -1,6 +1,6 @@
 'use strict';
 
-const BleBoxDriver = require('/lib/bleboxdriver.js');
+const BleBoxDriver = require('../../lib/bleboxdriver.js');
 
 class shutterBoxDriver extends BleBoxDriver {
 

@@ -1,5 +1,5 @@
 const Homey = require('homey');
-const BleBoxAPI = require('/lib/bleboxapi.js')
+const BleBoxAPI = require('../../lib/bleboxapi.js')
 
 
 module.exports = class dimmerBoxDriver extends Homey.Driver {

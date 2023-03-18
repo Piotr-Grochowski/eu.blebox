@@ -1,7 +1,7 @@
 'use strict';
 
 const Homey = require('homey');
-const BleBoxAPI = require('/lib/bleboxapi.js')
+const BleBoxAPI = require('../../lib/bleboxapi.js')
 
 class tempSensorACDriver extends Homey.Driver {
 

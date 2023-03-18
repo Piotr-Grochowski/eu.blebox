@@ -142,5 +142,17 @@
   },
   "3.5.3": {
     "en": "tempSensorAC pairing bugfix"
+  },
+  "3.5.4": {
+    "en": "tempSensor bugfix"
+  },
+  "3.5.5": {
+    "en": "HomeyPro 2023 installation bugfix"
+  },
+  "3.5.6": {
+    "en": "HomeyPro 2023 bugfixes"
+  },
+  "3.5.7": {
+    "en": "HomeyPro 2023 bugfix"
   }
 }
