@@ -154,5 +154,11 @@
   },
   "3.5.7": {
     "en": "HomeyPro 2023 bugfix"
+  },
+  "3.6.0": {
+    "en": "gateBoxPro support added"
+  },
+  "3.6.1": {
+    "en": "Polling optimization"
   }
 }

@@ -1,115 +1,32 @@
 'use strict';
 
-const { Device } = require('homey');
-const BleBoxAPI = require('../../lib/bleboxapi.js')
+const BleBoxMDNSDevice = require('../../lib/bleboxmdnsdevice.js');
 
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+class gateBoxDevice extends BleBoxMDNSDevice {
 
-
-class gateBoxDevice extends Device {
-
-  /**
-   * onInit is called when the device is initialized.
-   */
-  async onInit() {
-    this.bbApi = new BleBoxAPI();
-    this.polling = false;
-    this.addListener('poll', this.pollDevice);
-
-		// register a capability listener
-		this.registerCapabilityListener('button', this.onCapabilityButton.bind(this));
-
-    this.log('gateBox '.concat(this.getName(), ' has been initialized'));
-  }
- 
-  /**
-   * if the discovered device is this device - return true
-   */
-   onDiscoveryResult(discoveryResult) 
+  async onBleBoxInit()
   {
-    return discoveryResult.id === this.getData().id;
+    this.registerCapabilityListener('button', this.onCapabilityButton.bind(this));
   }
 
-  /**
-   * This method will be executed once when the device has been found (onDiscoveryResult returned true)
-   */
-   async onDiscoveryAvailable(discoveryResult) 
-  {
-    this.emit('poll');
-  }
-
-  /**
-   * Update the address and reconnect
-   */
-   onDiscoveryAddressChanged(discoveryResult) 
-  {
-    this.setSettings(
-      {
-        address: discoveryResult.address
-      });
-
-    this.emit('poll');
-  }
-
-  /**
-   * When device was offline and shows up again - reconnect
-   */
-   onDiscoveryLastSeenChanged(discoveryResult) 
-  {
-    this.emit('poll');
-  }
-
-  /**
-   * polling to get the current state and energy values
-   */
-  async pollDevice() 
+  async pollBleBox() 
 	{
-    if(this.polling) return;
-    this.polling = true;
-
-    // First check current device settings (which may change e.g. after firmware upgrade)
-    await this.bbApi.getDeviceState(this.getSetting('address'))
+    await this.bbApi.gateBoxGetState(this.getSetting('address'), this.getSetting('apiLevel'),this.getSetting('username'),this.getSetting('password'))
     .then(result => {
-      this.setSettings(
-        {
-          product: result.product,
-          hv: result.hv,
-          fv: result.fv,
-          apiLevel: result.apiLevel
+        // On success - update Homey's device state
+        let state = false;
+        if(result.gate.currentPos!=0) state = true;
+        
+        if (state != this.getCapabilityValue('alarm_contact')) {
+            this.setCapabilityValue('alarm_contact', state)
+                .catch( err => {
+                    this.log(err);
+                })
         }
-      )
     })
     .catch(error => {
-      this.polling = false;
-      console.log(error);
-      this.error(error);
-      return;
+      this.log(error);
     })
-
-		while (this.getAvailable() && this.polling) {
-			// Read the device state
-			await this.bbApi.gateBoxGetState(this.getSetting('address'), this.getSetting('apiLevel'),this.getSetting('username'),this.getSetting('password'))
-      .then(result => {
-          // On success - update Homey's device state
-          let state = false;
-          if(result.gate.currentPos!=0) state = true;
-          
-          if (state != this.getCapabilityValue('alarm_contact')) {
-              this.setCapabilityValue('alarm_contact', state)
-                  .catch( err => {
-                      this.error(err);
-                  })
-          }
-      })
-			.catch(error => {
-        this.polling = false;
-				console.log(error);
-        this.error(error);
-				return;
-			})
-			await delay(this.getSetting('poll_interval'));
-		}  
-    this.polling = false;
 	}
 
   /**
@@ -117,15 +34,14 @@ class gateBoxDevice extends Device {
    */
 	async onCapabilityButton( value, opts ) 
   {
-    await this.bbApi.gateBoxPrimaryButton(this.getSetting('address'),this.getSetting('username'),this.getSetting('password'));
+    this.bbApi.gateBoxPrimaryButton(this.getSetting('address'),this.getSetting('username'),this.getSetting('password'))
+    .catch(error => {
+      // Error occured
+      this.log(error);
+      this.error(error);
+      return;
+    });
   }
- 
-  async onDeleted()
-  {
-   this.polling = false;
-  }
-
-
 }
-
+ 
 module.exports = gateBoxDevice;

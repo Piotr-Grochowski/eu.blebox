@@ -3,7 +3,10 @@
     {
       "id": "dim_blue",
       "title": {
-        "en": "Dim blue to"
+        "en": "Dim blue to..."
+      },
+      "titleFormatted": {
+        "en": "Dim blue to [[brightness]]"
       },
       "args": [
         {
@@ -19,7 +22,10 @@
     {
       "id": "dim_green",
       "title": {
-        "en": "Dim green to"
+        "en": "Dim green to..."
+      },
+      "titleFormatted": {
+        "en": "Dim green to [[brightness]]"
       },
       "args": [
         {
@@ -35,7 +41,10 @@
     {
       "id": "dim_red",
       "title": {
-        "en": "Dim red to"
+        "en": "Dim red to..."
+      },
+      "titleFormatted": {
+        "en": "Dim red to [[brightness]]"
       },
       "args": [
         {
@@ -51,7 +60,10 @@
     {
       "id": "dim_white",
       "title": {
-        "en": "Dim white to"
+        "en": "Dim white to..."
+      },
+      "titleFormatted": {
+        "en": "Dim white to [[brightness]]"
       },
       "args": [
         {
@@ -67,7 +79,10 @@
     {
       "id": "set_channels",
       "title": {
-        "en": "Set channels to"
+        "en": "Set channels to..."
+      },
+      "titleFormatted": {
+        "en": "Set channels to RED=[[red_channel]] GREEN=[[green_channel]] BLUE=[[blue_channel]] WHITE=[[white_channel]]"
       },
       "args": [
         {

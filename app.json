@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.blebox",
-  "version": "3.5.7",
+  "version": "3.6.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -1088,6 +1088,130 @@
         }
       ],
       "id": "gatebox"
+    },
+    {
+      "name": {
+        "en": "gateBoxPro"
+      },
+      "class": "button",
+      "capabilities": [
+        "button",
+        "alarm_contact"
+      ],
+      "capabilitiesOptions": {
+        "alarm_contact": {
+          "title": "Gate open alarm"
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 1,
+          "usageOff": 1
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "discovery": "bbxsrv",
+      "images": {
+        "small": "/drivers/gateboxpro/assets/images/small.png",
+        "large": "/drivers/gateboxpro/assets/images/large.png"
+      },
+      "pair": [
+        {
+          "id": "list_gateboxes",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_gateboxes"
+          }
+        },
+        {
+          "id": "add_gateboxes",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "username",
+              "type": "text",
+              "label": {
+                "en": "Username"
+              }
+            },
+            {
+              "id": "password",
+              "type": "password",
+              "label": {
+                "en": "Password"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "gateboxpro"
     },
     {
       "name": {
@@ -4350,7 +4474,10 @@
       {
         "id": "dim_blue",
         "title": {
-          "en": "Dim blue to"
+          "en": "Dim blue to..."
+        },
+        "titleFormatted": {
+          "en": "Dim blue to [[brightness]]"
         },
         "args": [
           {
@@ -4371,7 +4498,10 @@
       {
         "id": "dim_green",
         "title": {
-          "en": "Dim green to"
+          "en": "Dim green to..."
+        },
+        "titleFormatted": {
+          "en": "Dim green to [[brightness]]"
         },
         "args": [
           {
@@ -4392,7 +4522,10 @@
       {
         "id": "dim_red",
         "title": {
-          "en": "Dim red to"
+          "en": "Dim red to..."
+        },
+        "titleFormatted": {
+          "en": "Dim red to [[brightness]]"
         },
         "args": [
           {
@@ -4413,7 +4546,10 @@
       {
         "id": "dim_white",
         "title": {
-          "en": "Dim white to"
+          "en": "Dim white to..."
+        },
+        "titleFormatted": {
+          "en": "Dim white to [[brightness]]"
         },
         "args": [
           {
@@ -4434,7 +4570,10 @@
       {
         "id": "set_channels",
         "title": {
-          "en": "Set channels to"
+          "en": "Set channels to..."
+        },
+        "titleFormatted": {
+          "en": "Set channels to RED=[[red_channel]] GREEN=[[green_channel]] BLUE=[[blue_channel]] WHITE=[[white_channel]]"
         },
         "args": [
           {

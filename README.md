@@ -30,6 +30,12 @@ At the moment this app supports the following devices:
 - rainSensor - detects the start and end of precipitation
 
 # Changelog
+v.3.6.1
+- Polling optimization
+
+v.3.6.0
+- gateBoxPro support
+
 v.3.5.7
 - HomeyPro 2023 bugfixes
 
