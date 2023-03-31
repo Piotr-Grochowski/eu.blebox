@@ -30,6 +30,14 @@ At the moment this app supports the following devices:
 - rainSensor - detects the start and end of precipitation
 
 # Changelog
+v.3.7.1
+- minor fixes
+
+v.3.7.0
+- dimmerBox V2 support added
+- gateBox 2022**** and 20230102 API Levels support added
+- rollerGate support added
+
 v.3.6.1
 - Polling optimization
 
