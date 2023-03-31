@@ -160,5 +160,11 @@
   },
   "3.6.1": {
     "en": "Polling optimization"
+  },
+  "3.7.0": {
+    "en": "1. dimmerBox v2 support added, 2. rollerGate support added, 3. gateBox 2022**** and 20230102 API Levels support added"
+  },
+  "3.7.1": {
+    "en": "Minor fixes"
   }
 }

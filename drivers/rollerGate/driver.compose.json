@@ -1,10 +1,12 @@
 {
   "name": {
-    "en": "rainSensor"
+    "en": "rollerGate"
   },
-  "class": "sensor",
+  "class": "garagedoor",
   "capabilities": [
-    "measure_rain", "alarm_water"
+    "garagedoor_closed",
+    "windowcoverings_set",
+    "windowcoverings_state"
   ],
   "platforms": [
     "local"
@@ -16,23 +18,16 @@
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png"
   },
+  "pair": [
+    {
+      "id": "pair"            
+    }
+  ],
   "energy": {
     "approximation": {
       "usageConstant": 1
     }
   },
-  "discovery": "bbxsrv",
-  "pair": [
-    {
-      "id": "list_rainsensorspro",
-      "template": "list_devices",
-      "navigation": { "next": "add_rainsensorspro"}
-    },
-    {
-      "id": "add_rainsensorspro",
-      "template": "add_devices"    
-    }
-  ],
   "settings": [
     {
       "type": "group",
@@ -56,7 +51,14 @@
           },
           "attr": {
             "min": 500,
-            "max": 600000
+            "max": 60000
+          }
+        },
+        {
+          "id": "direction_swap",
+          "type": "checkbox",
+          "label": {
+            "en": "Move direction swap"
           }
         }
       ]
@@ -99,4 +101,4 @@
       ]
     }
   ]
-}
+} 

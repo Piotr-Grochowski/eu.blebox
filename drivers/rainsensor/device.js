@@ -11,10 +11,25 @@ class rainSensorDevice extends BleBoxMDNSDevice {
 
       result.multiSensor.sensors.forEach(element => {
         if(element.type=='rain' && element.id == 0) 
-          this.setCapabilityValue('measure_rain', element.value)
-          .catch( err => {
-            this.log(err);
-          });
+          if(this.getCapabilityValue('measure_rain')!=element.value) 
+            this.setCapabilityValue('measure_rain', element.value)
+            .catch( err => {
+              this.log(err);
+            });
+          if(this.getCapabilityValue('alarm_water') && element.value==0)
+          {
+            this.setCapabilityValue('alarm_water', false)
+            .catch( err => {
+              this.log(err);
+            });
+          } 
+          if(!this.getCapabilityValue('alarm_water') && element.value>0)
+          {
+            this.setCapabilityValue('alarm_water', true)
+            .catch( err => {
+              this.log(err);
+            });
+          } 
       });
 
     })
