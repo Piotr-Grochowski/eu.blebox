@@ -1,0 +1,116 @@
+{
+  "triggers": [
+    {
+      "id": "onoff.relaypro1_true", 
+      "title": {
+        "en": "Relay 1 turned on"
+      }
+    },
+    {
+      "id": "onoff.relaypro1_false", 
+      "title": {
+        "en": "Relay 1 turned off"
+      }
+    },
+    {
+      "id": "onoff.relaypro2_true", 
+      "title": {
+        "en": "Relay 2 turned on"
+      }
+    },
+    {
+      "id": "onoff.relaypro2_false", 
+      "title": {
+        "en": "Relay 2 turned off"
+      }
+    },
+    {
+      "id": "onoff.relaypro3_true", 
+      "title": {
+        "en": "Relay 3 turned on"
+      }
+    },
+    {
+      "id": "onoff.relaypro3_false", 
+      "title": {
+        "en": "Relay 3 turned off"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "id": "onoff.relaypro1_turnedonoff", 
+      "title": {
+        "en": "Is relay 1 turned !{{on|off}}"
+      }
+    },
+    {
+      "id": "onoff.relaypro2_turnedonoff", 
+      "title": {
+        "en": "Is relay 2 turned !{{on|off}}"
+      }
+    },
+    {
+      "id": "onoff.relaypro3_turnedonoff", 
+      "title": {
+        "en": "Is relay 3 turned !{{on|off}}"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "onoff.relaypro1_on", 
+      "title": {
+        "en": "Turn relay 1 on"
+      }
+    },
+    {
+      "id": "onoff.relaypro1_off", 
+      "title": {
+        "en": "Turn relay 1 off"
+      }
+    },
+    {
+      "id": "onoff.relaypro2_on", 
+      "title": {
+        "en": "Turn relay 2 on"
+      }
+    },
+    {
+      "id": "onoff.relaypro2_off", 
+      "title": {
+        "en": "Turn relay 2 off"
+      }
+    },
+    {
+      "id": "onoff.relaypro3_on", 
+      "title": {
+        "en": "Turn relay 3 on"
+      }
+    },
+    {
+      "id": "onoff.relaypro3_off", 
+      "title": {
+        "en": "Turn relay 3 off"
+      }
+    },
+    {
+      "id": "onoff.relaypro1_toggle", 
+      "title": {
+        "en": "Toggle relay 1 on or off"
+      }
+    },
+    {
+      "id": "onoff.relaypro2_toggle", 
+      "title": {
+        "en": "Toggle relay 2 on or off"
+      }
+    },
+    {
+      "id": "onoff.relaypro3_toggle", 
+      "title": {
+        "en": "Toggle relay 3 on or off"
+      }
+    }
+  ]
+}

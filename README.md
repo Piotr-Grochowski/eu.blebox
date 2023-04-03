@@ -30,6 +30,12 @@ At the moment this app supports the following devices:
 - rainSensor - detects the start and end of precipitation
 
 # Changelog
+v.3.8.0
+- new device icons
+- switchBox DIN support added
+- switchBoxD DIN support added
+- switchBoxT PRO support added
+
 v.3.7.1
 - minor fixes
 
