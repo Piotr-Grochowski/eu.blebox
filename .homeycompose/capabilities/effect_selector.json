@@ -1,0 +1,71 @@
+{
+    "type": "enum",
+    "title": {
+      "en": "Effect selector"
+    },
+    "values": [
+      {
+        "id": "0",
+        "title": {
+          "en": "No effect"
+        }
+      },
+      {
+        "id": "1",
+        "title": {
+          "en": "Effect 1"
+        }
+      },
+      {
+        "id": "2",
+        "title": {
+          "en": "Effect 2"
+        }
+      },
+      {
+        "id": "3",
+        "title": {
+          "en": "Effect 3"
+        }
+      },
+      {
+        "id": "4",
+        "title": {
+          "en": "Effect 4"
+        }
+      },
+      {
+        "id": "5",
+        "title": {
+          "en": "Effect 5"
+        }
+      },
+      {
+        "id": "6",
+        "title": {
+          "en": "Effect 6"
+        }
+      },
+      {
+        "id": "7",
+        "title": {
+          "en": "Effect 7"
+        }
+      },
+      {
+        "id": "8",
+        "title": {
+          "en": "Effect 8"
+        }
+      },
+      {
+        "id": "9",
+        "title": {
+          "en": "Effect 9"
+        }
+      }
+    ],
+    "getable": true,
+    "setable": true,
+    "uiComponent": "picker"
+}

@@ -3,7 +3,7 @@
     "en": "wLightBoxPro"
   },
   "class": "light",
-  "capabilities": ["onoff","dim.brightness","dim.channelR","dim.channelG","dim.channelB","dim.channelW","light_hue","light_saturation"],
+  "capabilities": ["onoff","dim.brightness","dim.channelR","dim.channelG","dim.channelB","dim.channelW","light_hue","light_saturation","effect_selector"],
   "capabilitiesOptions": {
     "dim.brightness": {
       "title": {

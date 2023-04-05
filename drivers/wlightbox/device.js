@@ -6,11 +6,16 @@ class wLightBoxDevice extends BleBoxMDNSDevice {
 
   async onBleBoxInit()
   {
+    // Backward compatibility - add "effect_selector" capability if not exists
+    if (!this.hasCapability('effect_selector')) 
+      this.addCapability('effect_selector');
+
 		this.registerCapabilityListener('onoff', this.onCapabilityOnoff.bind(this));
 		this.registerCapabilityListener('dim.channelR', this.onCapabilityChannelR.bind(this));
 		this.registerCapabilityListener('dim.channelG', this.onCapabilityChannelG.bind(this));
 		this.registerCapabilityListener('dim.channelB', this.onCapabilityChannelB.bind(this));
 		this.registerCapabilityListener('dim.channelW', this.onCapabilityChannelW.bind(this));
+		this.registerCapabilityListener('effect_selector', this.onCapabilityEffectSelector.bind(this));
 		this.registerMultipleCapabilityListener(["light_hue","light_saturation","dim.brightness"], this.onCapabilityLightHSB.bind(this));
   }
 
@@ -32,6 +37,13 @@ class wLightBoxDevice extends BleBoxMDNSDevice {
       const hue = channels[0];
       const saturation = channels[1];
       const brightness = channels[2];
+
+      if (result.rgbw.effectID.toString() != this.getCapabilityValue('effect_selector')) {
+        this.setCapabilityValue('effect_selector', result.rgbw.effectID.toString())
+          .catch( err => {
+            this.log(err);
+          })
+      }
 
       if (levelR != this.getCapabilityValue('dim.channelR')) {
         this.setCapabilityValue('dim.channelR', levelR)
@@ -163,21 +175,21 @@ class wLightBoxDevice extends BleBoxMDNSDevice {
 
   // this method is called when the Device has requested a state change on channel G
   async onCapabilityChannelG( value, opts ) {
-  var hexChannelR = Math.round(this.getCapabilityValue('dim.channelR')*255).toString(16);
-  var hexChannelG = Math.round(value*255).toString(16);
-  var hexChannelB = Math.round(this.getCapabilityValue('dim.channelB')*255).toString(16);
-  var hexChannelW = Math.round(this.getCapabilityValue('dim.channelW')*255).toString(16);
+    var hexChannelR = Math.round(this.getCapabilityValue('dim.channelR')*255).toString(16);
+    var hexChannelG = Math.round(value*255).toString(16);
+    var hexChannelB = Math.round(this.getCapabilityValue('dim.channelB')*255).toString(16);
+    var hexChannelW = Math.round(this.getCapabilityValue('dim.channelW')*255).toString(16);
 
-  if(hexChannelR.length==1) hexChannelR = '0'+hexChannelR;
-  if(hexChannelG.length==1) hexChannelG = '0'+hexChannelG;
-  if(hexChannelB.length==1) hexChannelB = '0'+hexChannelB;
-  if(hexChannelW.length==1) hexChannelW = '0'+hexChannelW;
+    if(hexChannelR.length==1) hexChannelR = '0'+hexChannelR;
+    if(hexChannelG.length==1) hexChannelG = '0'+hexChannelG;
+    if(hexChannelB.length==1) hexChannelB = '0'+hexChannelB;
+    if(hexChannelW.length==1) hexChannelW = '0'+hexChannelW;
 
-  // Change the color
-  await this.bbApi.wLightBoxSetState(this.getSetting('address'),hexChannelR+hexChannelG+hexChannelB+hexChannelW)
-  .catch(error => {
-    this.log(error);
-  })
+    // Change the color
+    await this.bbApi.wLightBoxSetState(this.getSetting('address'),hexChannelR+hexChannelG+hexChannelB+hexChannelW)
+    .catch(error => {
+      this.log(error);
+    })
   }
 
   // this method is called when the Device has requested a state change on channel B
@@ -196,9 +208,6 @@ class wLightBoxDevice extends BleBoxMDNSDevice {
     await this.bbApi.wLightBoxSetState(this.getSetting('address'),hexChannelR+hexChannelG+hexChannelB+hexChannelW)
     .catch(error => {
       this.log(error);
-      this.polling = false;
-      this.pinging = true;
-      this.emit('ping');
     })
   }
 
@@ -218,11 +227,16 @@ class wLightBoxDevice extends BleBoxMDNSDevice {
     await this.bbApi.wLightBoxSetState(this.getSetting('address'),hexChannelR+hexChannelG+hexChannelB+hexChannelW)
     .catch(error => {
       this.log(error);
-      this.polling = false;
-      this.pinging = true;
-      this.emit('ping');
     })
   } 
+
+  async onCapabilityEffectSelector( value, opts ) {
+    // Change the effect
+    await this.bbApi.wLightBoxSetEffect(this.getSetting('address'),value)
+    .catch(error => {
+      this.log(error);
+    })
+  }
 
   async dimRedTo(brightness)
   {
@@ -309,6 +323,13 @@ class wLightBoxDevice extends BleBoxMDNSDevice {
 
   }
 
+  async changeEffectTo(effID)
+  {
+    await this.bbApi.wLightBoxSetEffect(this.getSetting('address'),effID)
+    .catch(error => {
+      this.log(error);
+    })
+  }
 }
 
 function hsvToRgb(h, s, v) {

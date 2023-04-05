@@ -1,45 +1,42 @@
 {
   "name": {
-    "en": "thermoBox"
+    "en": "shutterBox DIN"
   },
-  "class": "thermostat",
+  "class": "blinds",
   "capabilities": [
-    "target_temperature",
-    "measure_temperature",
-    "thermostat_state",
-    "measure_temperature.safety"
+    "windowcoverings_closed",
+    "windowcoverings_set",
+    "windowcoverings_state",
+    "windowcoverings_tilt_set",
+    "favorite_position_button"
   ],
-  "capabilitiesOptions": {
-    "measure_temperature.safety": {"title": {"en": "Safety temperature"}} 
-  },
   "platforms": [
     "local"
   ],
   "connectivity": [
     "lan"
   ],
+  "discovery": "bbxsrv",
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png"
   },
-  "energy": {
-    "approximation": {
-      "usageOn": 1, 
-      "usageOff": 1 
-    }
-  },
-  "discovery": "bbxsrv",
   "pair": [
     {
-      "id": "list_thermoboxes",
+      "id": "list_shutterboxes",
       "template": "list_devices",
-      "navigation": { "next": "add_thermoboxes"}
+      "navigation": { "next": "add_shutterboxes"}
     },
     {
-      "id": "add_thermoboxes",
+      "id": "add_shutterboxes",
       "template": "add_devices"    
     }
   ],
+  "energy": {
+    "approximation": {
+      "usageConstant": 1
+    }
+  },
   "settings": [
     {
       "type": "group",
@@ -64,6 +61,13 @@
           "attr": {
             "min": 500,
             "max": 60000
+          }
+        },
+        {
+          "id": "direction_swap",
+          "type": "checkbox",
+          "label": {
+            "en": "Move direction swap"
           }
         }
       ]
@@ -106,4 +110,4 @@
       ]
     }
   ]
-}
+} 

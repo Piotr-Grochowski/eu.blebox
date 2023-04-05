@@ -2458,6 +2458,120 @@
     },
     {
       "name": {
+        "en": "shutterBox DIN"
+      },
+      "class": "blinds",
+      "capabilities": [
+        "windowcoverings_closed",
+        "windowcoverings_set",
+        "windowcoverings_state",
+        "windowcoverings_tilt_set",
+        "favorite_position_button"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "discovery": "bbxsrv",
+      "images": {
+        "small": "/drivers/shutterboxdin/assets/images/small.png",
+        "large": "/drivers/shutterboxdin/assets/images/large.png"
+      },
+      "pair": [
+        {
+          "id": "list_shutterboxes",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_shutterboxes"
+          }
+        },
+        {
+          "id": "add_shutterboxes",
+          "template": "add_devices"
+        }
+      ],
+      "energy": {
+        "approximation": {
+          "usageConstant": 1
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            },
+            {
+              "id": "direction_swap",
+              "type": "checkbox",
+              "label": {
+                "en": "Move direction swap"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "shutterboxdin"
+    },
+    {
+      "name": {
         "en": "switchBox"
       },
       "class": "socket",
@@ -3698,7 +3812,8 @@
       },
       "energy": {
         "approximation": {
-          "usageConstant": 1
+          "usageOn": 1,
+          "usageOff": 1
         }
       },
       "discovery": "bbxsrv",
@@ -3794,7 +3909,8 @@
         "dim.channelB",
         "dim.channelW",
         "light_hue",
-        "light_saturation"
+        "light_saturation",
+        "effect_selector"
       ],
       "capabilitiesOptions": {
         "dim.brightness": {
@@ -3945,7 +4061,8 @@
         "dim.channelB",
         "dim.channelW",
         "light_hue",
-        "light_saturation"
+        "light_saturation",
+        "effect_selector"
       ],
       "capabilitiesOptions": {
         "dim.brightness": {
@@ -5555,6 +5672,19 @@
         ]
       },
       {
+        "id": "shutterboxdin_move_to_favorite_pos",
+        "title": {
+          "en": "Move to favorite position"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=shutterboxdin"
+          }
+        ]
+      },
+      {
         "id": "onoff.relay1_on",
         "title": {
           "en": "Turn relay 1 on"
@@ -5970,6 +6100,89 @@
             "placeholder": "White channel"
           }
         ]
+      },
+      {
+        "id": "wlightbox_set_effect",
+        "title": {
+          "en": "Set effect to..."
+        },
+        "titleFormatted": {
+          "en": "Set effect to [[effID]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightbox"
+          },
+          {
+            "name": "effID",
+            "type": "dropdown",
+            "title": "Effect",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "None"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Effect 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Effect 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Effect 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Effect 4"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "Effect 5"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "Effect 6"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "Effect 7"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "Effect 8"
+                }
+              },
+              {
+                "id": "9",
+                "label": {
+                  "en": "Effect 9"
+                }
+              }
+            ]
+          }
+        ]
       }
     ],
     "triggers": [
@@ -6251,6 +6464,77 @@
     ]
   },
   "capabilities": {
+    "effect_selector": {
+      "type": "enum",
+      "title": {
+        "en": "Effect selector"
+      },
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "No effect"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Effect 1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "Effect 2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Effect 3"
+          }
+        },
+        {
+          "id": "4",
+          "title": {
+            "en": "Effect 4"
+          }
+        },
+        {
+          "id": "5",
+          "title": {
+            "en": "Effect 5"
+          }
+        },
+        {
+          "id": "6",
+          "title": {
+            "en": "Effect 6"
+          }
+        },
+        {
+          "id": "7",
+          "title": {
+            "en": "Effect 7"
+          }
+        },
+        {
+          "id": "8",
+          "title": {
+            "en": "Effect 8"
+          }
+        },
+        {
+          "id": "9",
+          "title": {
+            "en": "Effect 9"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker"
+    },
     "favorite_position_button": {
       "title": {
         "en": "Move to favorite position"

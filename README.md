@@ -30,6 +30,10 @@ At the moment this app supports the following devices:
 - rainSensor - detects the start and end of precipitation
 
 # Changelog
+v.3.9.0
+- wLightBox & wLightBox PRO effects support added
+- shutterBox DIN support added
+
 v.3.8.0
 - new device icons
 - switchBox DIN support added
