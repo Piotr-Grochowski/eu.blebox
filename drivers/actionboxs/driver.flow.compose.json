@@ -1,0 +1,34 @@
+{
+    "triggers": [
+      {
+        "id": "button_clicked", 
+        "title": {
+          "en": "Button has been clicked shortly"
+        }
+      },
+      {
+        "id": "button_clicked_long", 
+        "title": {
+          "en": "Button has been clicked long"
+        }
+      },
+      {
+        "id": "button_falling_edge", 
+        "title": {
+          "en": "Falling edge has been detected on input"
+        }
+      },
+      {
+        "id": "button_rising_edge", 
+        "title": {
+          "en": "Rising edge has been detected on input"
+        }
+      },
+      {
+        "id": "button_any_edge", 
+        "title": {
+          "en": "Any edge has been detected on input"
+        }
+      }
+    ]
+}  

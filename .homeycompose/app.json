@@ -1,6 +1,6 @@
 {
   "id": "eu.blebox",
-  "version": "3.8.0",
+  "version": "3.11.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -36,5 +36,17 @@
   "author": {
     "name": "Piotr Grochowski",
     "email": "piotr@grochowski.org"
+  },
+  "api": {
+    "actionBox": {
+      "method": "GET",
+      "path": "/actionBox",
+      "public": true
+    },
+    "actionBoxS": {
+      "method": "GET",
+      "path": "/actionBoxS",
+      "public": true
+    }
   }
 }

@@ -19,29 +19,5 @@
     "decimals": 2,
     "getable": true,
     "setable": false,
-    "uiComponent": "sensor",
-    "$flow": {
-      "triggers": [
-        {
-          "id": "measure_pm10_changed",
-          "title": {
-            "en": "The PM10 value has changed",
-            "nl": "De PM10 waarde is veranderd",
-            "de": "Der PM10-Wert hat sich geändert"
-          },
-          "tokens": [
-            {
-              "name": "measure_pm10",
-              "title": {
-                "en": "PM10",
-                "nl": "PM10",
-                "de": "PM10"
-              },
-              "type": "number",
-              "example": 2
-            }
-          ]
-        }
-      ]
-    }
+    "uiComponent": "sensor"
   }

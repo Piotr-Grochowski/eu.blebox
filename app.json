@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.blebox",
-  "version": "3.8.0",
+  "version": "3.11.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -38,7 +38,2555 @@
     "name": "Piotr Grochowski",
     "email": "piotr@grochowski.org"
   },
+  "api": {
+    "actionBox": {
+      "method": "GET",
+      "path": "/actionBox",
+      "public": true
+    },
+    "actionBoxS": {
+      "method": "GET",
+      "path": "/actionBoxS",
+      "public": true
+    }
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "effect_selector_changed",
+        "title": {
+          "en": "The effect selector changed"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=wlightbox|wlightboxpro|pixelbox"
+          }
+        ]
+      },
+      {
+        "id": "thermostat_state_changed",
+        "title": {
+          "en": "Thermostat state changed"
+        },
+        "titleFormatted": {
+          "en": "[[device]] state changed."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "capabilities=thermostat_state"
+          }
+        ]
+      },
+      {
+        "id": "button1_clicked",
+        "title": {
+          "en": "Button 1 has been clicked shortly"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button1_clicked_long",
+        "title": {
+          "en": "Button 1 has been clicked long"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button1_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input 1"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button1_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input 1"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button1_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input 1"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button2_clicked",
+        "title": {
+          "en": "Button 2 has been clicked shortly"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button2_clicked_long",
+        "title": {
+          "en": "Button 2 has been clicked long"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button2_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input 2"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button2_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input 2"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button2_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input 2"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button3_clicked",
+        "title": {
+          "en": "Button 3 has been clicked shortly"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button3_clicked_long",
+        "title": {
+          "en": "Button 3 has been clicked long"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button3_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input 3"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button3_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input 3"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button3_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input 3"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button4_clicked",
+        "title": {
+          "en": "Button 4 has been clicked shortly"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button4_clicked_long",
+        "title": {
+          "en": "Button 4 has been clicked long"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button4_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input 4"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button4_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input 4"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button4_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input 4"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button_clicked",
+        "title": {
+          "en": "Button has been clicked shortly"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionboxs"
+          }
+        ]
+      },
+      {
+        "id": "button_clicked_long",
+        "title": {
+          "en": "Button has been clicked long"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionboxs"
+          }
+        ]
+      },
+      {
+        "id": "button_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionboxs"
+          }
+        ]
+      },
+      {
+        "id": "button_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionboxs"
+          }
+        ]
+      },
+      {
+        "id": "button_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=actionboxs"
+          }
+        ]
+      },
+      {
+        "id": "measure_pm1_changed",
+        "title": {
+          "en": "The PM1.0 value has changed",
+          "nl": "De PM1.0 waarde is veranderd",
+          "de": "Der PM1.0-Wert hat sich geändert"
+        },
+        "tokens": [
+          {
+            "name": "measure_pm1",
+            "title": {
+              "en": "PM1.0",
+              "nl": "PM1.0",
+              "de": "PM1.0"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=airsensor"
+          }
+        ]
+      },
+      {
+        "id": "measure_pm10_changed",
+        "title": {
+          "en": "The PM10 value has changed",
+          "nl": "De PM10 waarde is veranderd",
+          "de": "Der PM10-Wert hat sich geändert"
+        },
+        "tokens": [
+          {
+            "name": "measure_pm10",
+            "title": {
+              "en": "PM10",
+              "nl": "PM10",
+              "de": "PM10"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=airsensor"
+          }
+        ]
+      },
+      {
+        "id": "measure_absolute_humidity_changed",
+        "title": {
+          "en": "The absolute humidity changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_absolute_humidity",
+            "title": {
+              "en": "Absolute humidity"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=humiditysensor"
+          }
+        ]
+      },
+      {
+        "id": "measure_dew_point_changed",
+        "title": {
+          "en": "The dew point changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_dew_point",
+            "title": {
+              "en": "Dew point"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=humiditysensor"
+          }
+        ]
+      },
+      {
+        "id": "measure_heat_index_changed",
+        "title": {
+          "en": "The Heat Index changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_heat_index",
+            "title": {
+              "en": "Heat Index"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=humiditysensor"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relay1_true",
+        "title": {
+          "en": "Relay 1 turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relay1_false",
+        "title": {
+          "en": "Relay 1 turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relay2_true",
+        "title": {
+          "en": "Relay 2 turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relay2_false",
+        "title": {
+          "en": "Relay 2 turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin1_true",
+        "title": {
+          "en": "Relay 1 turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin1_false",
+        "title": {
+          "en": "Relay 1 turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin2_true",
+        "title": {
+          "en": "Relay 2 turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin2_false",
+        "title": {
+          "en": "Relay 2 turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro1_true",
+        "title": {
+          "en": "Relay 1 turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro1_false",
+        "title": {
+          "en": "Relay 1 turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro2_true",
+        "title": {
+          "en": "Relay 2 turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro2_false",
+        "title": {
+          "en": "Relay 2 turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro3_true",
+        "title": {
+          "en": "Relay 3 turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro3_false",
+        "title": {
+          "en": "Relay 3 turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sens1_changed",
+        "title": {
+          "en": "The temperature on sensor 1 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sens1",
+            "title": {
+              "en": "Temperature of sensor 1"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tempsensorac"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sens2_changed",
+        "title": {
+          "en": "The temperature on sensor 2 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sens2",
+            "title": {
+              "en": "Temperature of sensor 2"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tempsensorac"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sens3_changed",
+        "title": {
+          "en": "The temperature on sensor 3 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sens3",
+            "title": {
+              "en": "Temperature of sensor 3"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tempsensorac"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sens4_changed",
+        "title": {
+          "en": "The temperature on sensor 4 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sens4",
+            "title": {
+              "en": "Temperature of sensor 4"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tempsensorac"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sensor1_changed",
+        "title": {
+          "en": "The temperature on sensor 1 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sensor1",
+            "title": {
+              "en": "Temperature of sensor 1"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tempsensorpro"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sensor2_changed",
+        "title": {
+          "en": "The temperature on sensor 2 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sensor2",
+            "title": {
+              "en": "Temperature of sensor 2"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tempsensorpro"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sensor3_changed",
+        "title": {
+          "en": "The temperature on sensor 3 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sensor3",
+            "title": {
+              "en": "Temperature of sensor 3"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tempsensorpro"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sensor4_changed",
+        "title": {
+          "en": "The temperature on sensor 4 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sensor4",
+            "title": {
+              "en": "Temperature of sensor 4"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tempsensorpro"
+          }
+        ]
+      },
+      {
+        "id": "target_hightemperature_changed",
+        "title": {
+          "en": "The target temperature changed",
+          "nl": "De ingestelde temperatuur is veranderd",
+          "de": "Die Ziel-Temperatur hat sich geändert",
+          "fr": "La température cible a été modifiée",
+          "it": "La temperatura nominale è cambiata",
+          "sv": "Måltemperaturen ändrades",
+          "no": "Ønsket temperatur ble endret",
+          "es": "La temperatura configurada ha cambiado",
+          "da": "Måltemperaturen blev ændret",
+          "ru": "Целевая температура изменена",
+          "pl": "Zmiana celu temperatury"
+        },
+        "tokens": [
+          {
+            "name": "target_hightemperature",
+            "title": {
+              "en": "Target temperature",
+              "nl": "Ingestelde temperatuur",
+              "de": "Ziel-Temperatur",
+              "fr": "Température cible",
+              "it": "Temperatura nominale",
+              "sv": "Måltemperatur",
+              "no": "Ønsket temperatur",
+              "es": "Temperatura configurada",
+              "da": "Måltemperatur",
+              "ru": "Целевая температура",
+              "pl": "Cel temperatury"
+            },
+            "type": "number",
+            "example": 23.5
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=thermobox"
+          }
+        ]
+      },
+      {
+        "id": "measure_wind_strength.avg_changed",
+        "title": {
+          "en": "The average wind strength changed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=windsensorpro"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "set_thermostat_state_to",
+        "title": {
+          "en": "Set thermostat state to..."
+        },
+        "titleFormatted": {
+          "en": "Set thermostat state of [[device]] to [[state]]"
+        },
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "state",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Off"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "On (temperature set)"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "On (no temperature set)"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Boost"
+                }
+              }
+            ]
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "capabilities=thermostat_state"
+          }
+        ]
+      },
+      {
+        "id": "pixelbox_dim_blue",
+        "title": {
+          "en": "Dim blue to..."
+        },
+        "titleFormatted": {
+          "en": "Dim blue to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pixelbox"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "pixelbox_dim_green",
+        "title": {
+          "en": "Dim green to..."
+        },
+        "titleFormatted": {
+          "en": "Dim green to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pixelbox"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "pixelbox_dim_red",
+        "title": {
+          "en": "Dim red to..."
+        },
+        "titleFormatted": {
+          "en": "Dim red to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pixelbox"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "pixelbox_dim_white",
+        "title": {
+          "en": "Dim white to..."
+        },
+        "titleFormatted": {
+          "en": "Dim white to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pixelbox"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "pixelbox_set_channels",
+        "title": {
+          "en": "Set channels to..."
+        },
+        "titleFormatted": {
+          "en": "Set channels to RED=[[red_channel]] GREEN=[[green_channel]] BLUE=[[blue_channel]] WHITE=[[white_channel]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pixelbox"
+          },
+          {
+            "name": "red_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Red channel"
+          },
+          {
+            "name": "green_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Green channel"
+          },
+          {
+            "name": "blue_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Blue channel"
+          },
+          {
+            "name": "white_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "White channel"
+          }
+        ]
+      },
+      {
+        "id": "pixelbox_set_effect",
+        "title": {
+          "en": "Set effect to..."
+        },
+        "titleFormatted": {
+          "en": "Set effect to [[effID]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pixelbox"
+          },
+          {
+            "name": "effID",
+            "type": "dropdown",
+            "title": "Effect",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "None"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Effect 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Effect 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Effect 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Effect 4"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "Effect 5"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "Effect 6"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "Effect 7"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "Effect 8"
+                }
+              },
+              {
+                "id": "9",
+                "label": {
+                  "en": "Effect 9"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "move_to_favorite_pos",
+        "title": {
+          "en": "Move to favorite position"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=shutterbox"
+          }
+        ]
+      },
+      {
+        "id": "move_to_favorite_pos_dc",
+        "title": {
+          "en": "Move to favorite position"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=shutterboxdc"
+          }
+        ]
+      },
+      {
+        "id": "shutterboxdin_move_to_favorite_pos",
+        "title": {
+          "en": "Move to favorite position"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=shutterboxdin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relay1_on",
+        "title": {
+          "en": "Turn relay 1 on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relay1_off",
+        "title": {
+          "en": "Turn relay 1 off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relay2_on",
+        "title": {
+          "en": "Turn relay 2 on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relay2_off",
+        "title": {
+          "en": "Turn relay 2 off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relay1_toggle",
+        "title": {
+          "en": "Toggle relay 1 on or off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relay2_toggle",
+        "title": {
+          "en": "Toggle relay 2 on or off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin1_on",
+        "title": {
+          "en": "Turn relay 1 on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin1_off",
+        "title": {
+          "en": "Turn relay 1 off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin2_on",
+        "title": {
+          "en": "Turn relay 2 on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin2_off",
+        "title": {
+          "en": "Turn relay 2 off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin1_toggle",
+        "title": {
+          "en": "Toggle relay 1 on or off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin2_toggle",
+        "title": {
+          "en": "Toggle relay 2 on or off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro1_on",
+        "title": {
+          "en": "Turn relay 1 on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro1_off",
+        "title": {
+          "en": "Turn relay 1 off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro2_on",
+        "title": {
+          "en": "Turn relay 2 on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro2_off",
+        "title": {
+          "en": "Turn relay 2 off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro3_on",
+        "title": {
+          "en": "Turn relay 3 on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro3_off",
+        "title": {
+          "en": "Turn relay 3 off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro1_toggle",
+        "title": {
+          "en": "Toggle relay 1 on or off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro2_toggle",
+        "title": {
+          "en": "Toggle relay 2 on or off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro3_toggle",
+        "title": {
+          "en": "Toggle relay 3 on or off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "target_hightemperature_set",
+        "highlight": true,
+        "title": {
+          "en": "Set the temperature",
+          "nl": "Stel de temperatuur in",
+          "de": "Die Temperatur setzen",
+          "fr": "Définir la température",
+          "it": "Imposta la temperatura",
+          "sv": "Ställ in temperaturen",
+          "no": "Innstill temperaturen",
+          "es": "Configurar la temperatura",
+          "da": "Indstil temperaturen",
+          "ru": "Установить температуру",
+          "pl": "Ustaw temperaturę"
+        },
+        "titleFormatted": {
+          "en": "Set the temperature to [[target_hightemperature]]",
+          "nl": "Stel de temperatuur in [[target_hightemperature]]",
+          "de": "Die Temperatur setzen [[target_hightemperature]]",
+          "fr": "Définir la température [[target_hightemperature]]",
+          "it": "Imposta la temperatura [[target_hightemperature]]",
+          "sv": "Ställ in temperaturen [[target_hightemperature]]",
+          "no": "Innstill temperaturen [[target_hightemperature]]",
+          "es": "Configurar la temperatura [[target_hightemperature]]",
+          "da": "Indstil temperaturen [[target_hightemperature]]",
+          "ru": "Установить температуру [[target_hightemperature]]",
+          "pl": "Ustaw temperaturę [[target_hightemperature]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=thermobox"
+          },
+          {
+            "name": "target_hightemperature",
+            "type": "range",
+            "min": 4,
+            "max": 120,
+            "step": 0.5,
+            "label": "°C",
+            "labelDecimals": 1
+          }
+        ]
+      },
+      {
+        "id": "dim_blue",
+        "title": {
+          "en": "Dim blue to..."
+        },
+        "titleFormatted": {
+          "en": "Dim blue to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightbox"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "dim_green",
+        "title": {
+          "en": "Dim green to..."
+        },
+        "titleFormatted": {
+          "en": "Dim green to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightbox"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "dim_red",
+        "title": {
+          "en": "Dim red to..."
+        },
+        "titleFormatted": {
+          "en": "Dim red to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightbox"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "dim_white",
+        "title": {
+          "en": "Dim white to..."
+        },
+        "titleFormatted": {
+          "en": "Dim white to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightbox"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "set_channels",
+        "title": {
+          "en": "Set channels to..."
+        },
+        "titleFormatted": {
+          "en": "Set channels to RED=[[red_channel]] GREEN=[[green_channel]] BLUE=[[blue_channel]] WHITE=[[white_channel]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightbox"
+          },
+          {
+            "name": "red_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Red channel"
+          },
+          {
+            "name": "green_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Green channel"
+          },
+          {
+            "name": "blue_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Blue channel"
+          },
+          {
+            "name": "white_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "White channel"
+          }
+        ]
+      },
+      {
+        "id": "wlightbox_set_effect",
+        "title": {
+          "en": "Set effect to..."
+        },
+        "titleFormatted": {
+          "en": "Set effect to [[effID]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightbox"
+          },
+          {
+            "name": "effID",
+            "type": "dropdown",
+            "title": "Effect",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "None"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Effect 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Effect 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Effect 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Effect 4"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "Effect 5"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "Effect 6"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "Effect 7"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "Effect 8"
+                }
+              },
+              {
+                "id": "9",
+                "label": {
+                  "en": "Effect 9"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "wlightboxpro_dim_blue",
+        "title": {
+          "en": "Dim blue to..."
+        },
+        "titleFormatted": {
+          "en": "Dim blue to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxpro"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "wlightboxpro_dim_green",
+        "title": {
+          "en": "Dim green to..."
+        },
+        "titleFormatted": {
+          "en": "Dim green to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxpro"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "wlightboxpro_dim_red",
+        "title": {
+          "en": "Dim red to..."
+        },
+        "titleFormatted": {
+          "en": "Dim red to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxpro"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "wlightboxpro_dim_white",
+        "title": {
+          "en": "Dim white to..."
+        },
+        "titleFormatted": {
+          "en": "Dim white to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxpro"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "wlightboxpro_set_channels",
+        "title": {
+          "en": "Set channels to..."
+        },
+        "titleFormatted": {
+          "en": "Set channels to RED=[[red_channel]] GREEN=[[green_channel]] BLUE=[[blue_channel]] WHITE=[[white_channel]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxpro"
+          },
+          {
+            "name": "red_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Red channel"
+          },
+          {
+            "name": "green_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Green channel"
+          },
+          {
+            "name": "blue_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Blue channel"
+          },
+          {
+            "name": "white_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "White channel"
+          }
+        ]
+      },
+      {
+        "id": "wlightboxpro_set_effect",
+        "title": {
+          "en": "Set effect to..."
+        },
+        "titleFormatted": {
+          "en": "Set effect to [[effID]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxpro"
+          },
+          {
+            "name": "effID",
+            "type": "dropdown",
+            "title": "Effect",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "None"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Effect 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Effect 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Effect 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Effect 4"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "Effect 5"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "Effect 6"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "Effect 7"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "Effect 8"
+                }
+              },
+              {
+                "id": "9",
+                "label": {
+                  "en": "Effect 9"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "v3_dim_blue",
+        "title": {
+          "en": "Dim blue to..."
+        },
+        "titleFormatted": {
+          "en": "Dim blue to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxv3"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "v3_dim_green",
+        "title": {
+          "en": "Dim green to..."
+        },
+        "titleFormatted": {
+          "en": "Dim green to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxv3"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "v3_dim_red",
+        "title": {
+          "en": "Dim red to..."
+        },
+        "titleFormatted": {
+          "en": "Dim red to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxv3"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "v3_dim_wwhite",
+        "title": {
+          "en": "Dim warm white to..."
+        },
+        "titleFormatted": {
+          "en": "Dim warm white to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxv3"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "v3_dim_cwhite",
+        "title": {
+          "en": "Dim cold white to..."
+        },
+        "titleFormatted": {
+          "en": "Dim cold white to [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxv3"
+          },
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          }
+        ]
+      },
+      {
+        "id": "v3_set_channels",
+        "title": {
+          "en": "Set channels to..."
+        },
+        "titleFormatted": {
+          "en": "Set channels to RED=[[red_channel]] GREEN=[[green_channel]] BLUE=[[blue_channel]] WARM WHITE=[[wwhite_channel]] COLD WHITE=[[cwhite_channel]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxv3"
+          },
+          {
+            "name": "red_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Red channel"
+          },
+          {
+            "name": "green_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Green channel"
+          },
+          {
+            "name": "blue_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Blue channel"
+          },
+          {
+            "name": "wwhite_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Warm white channel"
+          },
+          {
+            "name": "cwhite_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Cold white channel"
+          }
+        ]
+      },
+      {
+        "id": "v3_set_effect",
+        "title": {
+          "en": "Set effect to..."
+        },
+        "titleFormatted": {
+          "en": "Set effect to [[effID]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=wlightboxv3"
+          },
+          {
+            "name": "effID",
+            "type": "dropdown",
+            "title": "Effect",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "None"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Effect 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Effect 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Effect 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Effect 4"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "Effect 5"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "Effect 6"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "Effect 7"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "Effect 8"
+                }
+              },
+              {
+                "id": "9",
+                "label": {
+                  "en": "Effect 9"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "onoff.relay1_turnedonoff",
+        "title": {
+          "en": "Is relay 1 turned !{{on|off}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relay2_turnedonoff",
+        "title": {
+          "en": "Is relay 2 turned !{{on|off}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxd"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin1_turnedonoff",
+        "title": {
+          "en": "Is relay 1 turned !{{on|off}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaydin2_turnedonoff",
+        "title": {
+          "en": "Is relay 2 turned !{{on|off}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxddin"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro1_turnedonoff",
+        "title": {
+          "en": "Is relay 1 turned !{{on|off}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro2_turnedonoff",
+        "title": {
+          "en": "Is relay 2 turned !{{on|off}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "onoff.relaypro3_turnedonoff",
+        "title": {
+          "en": "Is relay 3 turned !{{on|off}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      }
+    ]
+  },
   "drivers": [
+    {
+      "name": {
+        "en": "actionBox"
+      },
+      "class": "other",
+      "capabilities": [],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "pair": [
+        {
+          "id": "list_actionboxes",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_actionboxes"
+          }
+        },
+        {
+          "id": "add_actionboxes",
+          "template": "add_devices"
+        }
+      ],
+      "discovery": "bbxsrv",
+      "images": {
+        "small": "/drivers/actionbox/assets/images/small.png",
+        "large": "/drivers/actionbox/assets/images/large.png",
+        "xlarge": "/drivers/actionbox/assets/images/xlarge.png"
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "actionbox"
+    },
+    {
+      "name": {
+        "en": "actionBoxS"
+      },
+      "class": "other",
+      "capabilities": [],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "pair": [
+        {
+          "id": "list_actionboxes",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_actionboxes"
+          }
+        },
+        {
+          "id": "add_actionboxes",
+          "template": "add_devices"
+        }
+      ],
+      "discovery": "bbxsrv",
+      "images": {
+        "small": "/drivers/actionboxs/assets/images/small.png",
+        "large": "/drivers/actionboxs/assets/images/large.png",
+        "xlarge": "/drivers/actionboxs/assets/images/xlarge.png"
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "actionboxs"
+    },
     {
       "name": {
         "en": "airSensor"
@@ -1690,7 +4238,7 @@
       "name": {
         "en": "gateBox"
       },
-      "class": "button",
+      "class": "garagedoor",
       "capabilities": [
         "button",
         "alarm_contact"
@@ -1814,7 +4362,7 @@
       "name": {
         "en": "gateBoxPro"
       },
-      "class": "button",
+      "class": "garagedoor",
       "capabilities": [
         "button",
         "alarm_contact"
@@ -1933,6 +4481,265 @@
         }
       ],
       "id": "gateboxpro"
+    },
+    {
+      "name": {
+        "en": "humiditySensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_temperature",
+        "measure_humidity",
+        "measure_absolute_humidity",
+        "measure_dew_point",
+        "measure_heat_index"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/humiditysensor/assets/images/small.png",
+        "large": "/drivers/humiditysensor/assets/images/large.png"
+      },
+      "energy": {
+        "approximation": {
+          "usageConstant": 1
+        }
+      },
+      "discovery": "bbxsrv",
+      "pair": [
+        {
+          "id": "list_humiditysensor",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_humiditysensor"
+          }
+        },
+        {
+          "id": "add_humiditysensor",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "humiditysensor"
+    },
+    {
+      "name": {
+        "en": "pixelBox"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim.brightness",
+        "dim.channelR",
+        "dim.channelG",
+        "dim.channelB",
+        "dim.channelW",
+        "light_hue",
+        "light_saturation",
+        "effect_selector"
+      ],
+      "capabilitiesOptions": {
+        "dim.brightness": {
+          "title": {
+            "en": "RGB Brightness",
+            "nl": "RGB Brightness"
+          }
+        },
+        "dim.channelW": {
+          "title": {
+            "en": "White brightness",
+            "nl": "White brightness"
+          }
+        },
+        "dim.channelR": {
+          "title": {
+            "en": "Channel R",
+            "nl": "Channel R"
+          }
+        },
+        "dim.channelG": {
+          "title": {
+            "en": "Channel G",
+            "nl": "Channel G"
+          }
+        },
+        "dim.channelB": {
+          "title": {
+            "en": "Channel B",
+            "nl": "Channel B"
+          }
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/pixelbox/assets/images/small.png",
+        "large": "/drivers/pixelbox/assets/images/large.png"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 1,
+          "usageOff": 1
+        }
+      },
+      "discovery": "bbxsrv",
+      "pair": [
+        {
+          "id": "list_pixelboxes",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_pixelboxes"
+          }
+        },
+        {
+          "id": "add_pixelboxes",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            },
+            {
+              "id": "on_value",
+              "type": "text",
+              "label": {
+                "en": "ON value"
+              },
+              "pattern": "^[0-9A-F]{8}$"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "pixelbox"
     },
     {
       "name": {
@@ -2055,8 +4862,8 @@
         "lan"
       ],
       "images": {
-        "small": "/drivers/rollerGate/assets/images/small.png",
-        "large": "/drivers/rollerGate/assets/images/large.png"
+        "small": "/drivers/rollergate/assets/images/small.png",
+        "large": "/drivers/rollergate/assets/images/large.png"
       },
       "pair": [
         {
@@ -2139,7 +4946,7 @@
           ]
         }
       ],
-      "id": "rollerGate"
+      "id": "rollergate"
     },
     {
       "name": {
@@ -3532,28 +6339,28 @@
       },
       "class": "sensor",
       "capabilities": [
-        "measure_temperature.sensor1",
-        "measure_temperature.sensor2",
-        "measure_temperature.sensor3",
-        "measure_temperature.sensor4"
+        "measure_temperature.sens1",
+        "measure_temperature.sens2",
+        "measure_temperature.sens3",
+        "measure_temperature.sens4"
       ],
       "capabilitiesOptions": {
-        "measure_temperature.sensor1": {
+        "measure_temperature.sens1": {
           "title": {
             "en": "Temperature 1"
           }
         },
-        "measure_temperature.sensor2": {
+        "measure_temperature.sens2": {
           "title": {
             "en": "Temperature 2"
           }
         },
-        "measure_temperature.sensor3": {
+        "measure_temperature.sens3": {
           "title": {
             "en": "Temperature 3"
           }
         },
-        "measure_temperature.sensor4": {
+        "measure_temperature.sens4": {
           "title": {
             "en": "Temperature 4"
           }
@@ -3784,6 +6591,156 @@
     },
     {
       "name": {
+        "en": "thermoBox (high temp.)"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "target_hightemperature",
+        "measure_temperature",
+        "thermostat_state",
+        "measure_temperature.safety",
+        "measure_temperature.target",
+        "measure_power"
+      ],
+      "capabilitiesOptions": {
+        "measure_temperature.safety": {
+          "title": {
+            "en": "Safety temperature"
+          }
+        },
+        "measure_temperature.target": {
+          "title": {
+            "en": "Target temperature"
+          }
+        },
+        "measure_power": {
+          "approximated": true
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/thermobox/assets/images/small.png",
+        "large": "/drivers/thermobox/assets/images/large.png"
+      },
+      "discovery": "bbxsrv",
+      "pair": [
+        {
+          "id": "list_thermoboxes",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_thermoboxes"
+          }
+        },
+        {
+          "id": "add_thermoboxes",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Energy usage"
+          },
+          "children": [
+            {
+              "id": "power_idle",
+              "type": "number",
+              "label": {
+                "en": "Power usage when IDLE [Watts]"
+              },
+              "value": 1
+            },
+            {
+              "id": "power_on",
+              "type": "number",
+              "label": {
+                "en": "Power usage when ON [Watts]"
+              },
+              "value": 1
+            },
+            {
+              "id": "power_boost",
+              "type": "number",
+              "label": {
+                "en": "Power usage when BOOST [Watts]"
+              },
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "id": "thermobox"
+    },
+    {
+      "name": {
         "en": "thermoBox"
       },
       "class": "thermostat",
@@ -3807,8 +6764,8 @@
         "lan"
       ],
       "images": {
-        "small": "/drivers/thermobox/assets/images/small.png",
-        "large": "/drivers/thermobox/assets/images/large.png"
+        "small": "/drivers/thermoboxclassic/assets/images/small.png",
+        "large": "/drivers/thermoboxclassic/assets/images/large.png"
       },
       "energy": {
         "approximation": {
@@ -3894,7 +6851,119 @@
           ]
         }
       ],
-      "id": "thermobox"
+      "id": "thermoboxclassic"
+    },
+    {
+      "name": {
+        "en": "windSensor PRO"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_wind_strength",
+        "measure_wind_strength.avg",
+        "measure_gust_strength"
+      ],
+      "capabilitiesOptions": {
+        "measure_wind_strength.avg": {
+          "title": {
+            "en": "Average wind strength"
+          }
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/windsensorpro/assets/images/small.png",
+        "large": "/drivers/windsensorpro/assets/images/large.png"
+      },
+      "energy": {
+        "approximation": {
+          "usageConstant": 1
+        }
+      },
+      "discovery": "bbxsrv",
+      "pair": [
+        {
+          "id": "list_windsensorspro",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_windsensorspro"
+          }
+        },
+        {
+          "id": "add_windsensorspro",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 600000
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "windsensorpro"
     },
     {
       "name": {
@@ -5641,828 +8710,165 @@
         }
       ],
       "id": "wlightboxspro"
+    },
+    {
+      "name": {
+        "en": "wLightBox v3"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim.brightness",
+        "dim.channelR",
+        "dim.channelG",
+        "dim.channelB",
+        "dim.channelWW",
+        "dim.channelCW",
+        "light_hue",
+        "light_saturation",
+        "effect_selector"
+      ],
+      "capabilitiesOptions": {
+        "dim.brightness": {
+          "title": {
+            "en": "RGB Brightness",
+            "nl": "RGB Brightness"
+          }
+        },
+        "dim.channelCW": {
+          "title": {
+            "en": "Cold white brightness"
+          }
+        },
+        "dim.channelWW": {
+          "title": {
+            "en": "Warm white brightness"
+          }
+        },
+        "dim.channelR": {
+          "title": {
+            "en": "Channel R",
+            "nl": "Channel R"
+          }
+        },
+        "dim.channelG": {
+          "title": {
+            "en": "Channel G",
+            "nl": "Channel G"
+          }
+        },
+        "dim.channelB": {
+          "title": {
+            "en": "Channel B",
+            "nl": "Channel B"
+          }
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/wlightboxv3/assets/images/small.png",
+        "large": "/drivers/wlightboxv3/assets/images/large.png"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 1,
+          "usageOff": 1
+        }
+      },
+      "discovery": "bbxsrv",
+      "pair": [
+        {
+          "id": "list_wlightbox",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_wlightbox"
+          }
+        },
+        {
+          "id": "add_wlightbox",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            },
+            {
+              "id": "on_value",
+              "type": "text",
+              "label": {
+                "en": "ON value"
+              },
+              "pattern": "^[0-9A-F]{10}$"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "wlightboxv3"
     }
   ],
-  "flow": {
-    "actions": [
-      {
-        "id": "move_to_favorite_pos",
-        "title": {
-          "en": "Move to favorite position"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=shutterbox"
-          }
-        ]
-      },
-      {
-        "id": "move_to_favorite_pos_dc",
-        "title": {
-          "en": "Move to favorite position"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=shutterboxdc"
-          }
-        ]
-      },
-      {
-        "id": "shutterboxdin_move_to_favorite_pos",
-        "title": {
-          "en": "Move to favorite position"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=shutterboxdin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relay1_on",
-        "title": {
-          "en": "Turn relay 1 on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relay1_off",
-        "title": {
-          "en": "Turn relay 1 off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relay2_on",
-        "title": {
-          "en": "Turn relay 2 on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relay2_off",
-        "title": {
-          "en": "Turn relay 2 off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relay1_toggle",
-        "title": {
-          "en": "Toggle relay 1 on or off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relay2_toggle",
-        "title": {
-          "en": "Toggle relay 2 on or off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin1_on",
-        "title": {
-          "en": "Turn relay 1 on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin1_off",
-        "title": {
-          "en": "Turn relay 1 off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin2_on",
-        "title": {
-          "en": "Turn relay 2 on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin2_off",
-        "title": {
-          "en": "Turn relay 2 off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin1_toggle",
-        "title": {
-          "en": "Toggle relay 1 on or off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin2_toggle",
-        "title": {
-          "en": "Toggle relay 2 on or off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro1_on",
-        "title": {
-          "en": "Turn relay 1 on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro1_off",
-        "title": {
-          "en": "Turn relay 1 off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro2_on",
-        "title": {
-          "en": "Turn relay 2 on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro2_off",
-        "title": {
-          "en": "Turn relay 2 off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro3_on",
-        "title": {
-          "en": "Turn relay 3 on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro3_off",
-        "title": {
-          "en": "Turn relay 3 off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro1_toggle",
-        "title": {
-          "en": "Toggle relay 1 on or off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro2_toggle",
-        "title": {
-          "en": "Toggle relay 2 on or off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro3_toggle",
-        "title": {
-          "en": "Toggle relay 3 on or off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "dim_blue",
-        "title": {
-          "en": "Dim blue to..."
-        },
-        "titleFormatted": {
-          "en": "Dim blue to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "dim_green",
-        "title": {
-          "en": "Dim green to..."
-        },
-        "titleFormatted": {
-          "en": "Dim green to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "dim_red",
-        "title": {
-          "en": "Dim red to..."
-        },
-        "titleFormatted": {
-          "en": "Dim red to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "dim_white",
-        "title": {
-          "en": "Dim white to..."
-        },
-        "titleFormatted": {
-          "en": "Dim white to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "set_channels",
-        "title": {
-          "en": "Set channels to..."
-        },
-        "titleFormatted": {
-          "en": "Set channels to RED=[[red_channel]] GREEN=[[green_channel]] BLUE=[[blue_channel]] WHITE=[[white_channel]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "red_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Red channel"
-          },
-          {
-            "name": "green_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Green channel"
-          },
-          {
-            "name": "blue_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Blue channel"
-          },
-          {
-            "name": "white_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "White channel"
-          }
-        ]
-      },
-      {
-        "id": "wlightbox_set_effect",
-        "title": {
-          "en": "Set effect to..."
-        },
-        "titleFormatted": {
-          "en": "Set effect to [[effID]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "effID",
-            "type": "dropdown",
-            "title": "Effect",
-            "values": [
-              {
-                "id": "0",
-                "label": {
-                  "en": "None"
-                }
-              },
-              {
-                "id": "1",
-                "label": {
-                  "en": "Effect 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Effect 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Effect 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Effect 4"
-                }
-              },
-              {
-                "id": "5",
-                "label": {
-                  "en": "Effect 5"
-                }
-              },
-              {
-                "id": "6",
-                "label": {
-                  "en": "Effect 6"
-                }
-              },
-              {
-                "id": "7",
-                "label": {
-                  "en": "Effect 7"
-                }
-              },
-              {
-                "id": "8",
-                "label": {
-                  "en": "Effect 8"
-                }
-              },
-              {
-                "id": "9",
-                "label": {
-                  "en": "Effect 9"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "triggers": [
-      {
-        "id": "onoff.relay1_true",
-        "title": {
-          "en": "Relay 1 turned on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relay1_false",
-        "title": {
-          "en": "Relay 1 turned off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relay2_true",
-        "title": {
-          "en": "Relay 2 turned on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relay2_false",
-        "title": {
-          "en": "Relay 2 turned off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin1_true",
-        "title": {
-          "en": "Relay 1 turned on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin1_false",
-        "title": {
-          "en": "Relay 1 turned off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin2_true",
-        "title": {
-          "en": "Relay 2 turned on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin2_false",
-        "title": {
-          "en": "Relay 2 turned off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro1_true",
-        "title": {
-          "en": "Relay 1 turned on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro1_false",
-        "title": {
-          "en": "Relay 1 turned off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro2_true",
-        "title": {
-          "en": "Relay 2 turned on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro2_false",
-        "title": {
-          "en": "Relay 2 turned off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro3_true",
-        "title": {
-          "en": "Relay 3 turned on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro3_false",
-        "title": {
-          "en": "Relay 3 turned off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      }
-    ],
-    "conditions": [
-      {
-        "id": "onoff.relay1_turnedonoff",
-        "title": {
-          "en": "Is relay 1 turned !{{on|off}}"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relay2_turnedonoff",
-        "title": {
-          "en": "Is relay 2 turned !{{on|off}}"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxd"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin1_turnedonoff",
-        "title": {
-          "en": "Is relay 1 turned !{{on|off}}"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaydin2_turnedonoff",
-        "title": {
-          "en": "Is relay 2 turned !{{on|off}}"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxddin"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro1_turnedonoff",
-        "title": {
-          "en": "Is relay 1 turned !{{on|off}}"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro2_turnedonoff",
-        "title": {
-          "en": "Is relay 2 turned !{{on|off}}"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      },
-      {
-        "id": "onoff.relaypro3_turnedonoff",
-        "title": {
-          "en": "Is relay 3 turned !{{on|off}}"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=switchboxtpro"
-          }
-        ]
-      }
-    ]
-  },
   "capabilities": {
     "effect_selector": {
       "type": "enum",
@@ -6545,6 +8951,62 @@
       "uiComponent": "button",
       "uiQuickAction": true
     },
+    "measure_absolute_humidity": {
+      "type": "number",
+      "title": {
+        "en": "Absolute humidity"
+      },
+      "units": {
+        "en": "g/m³"
+      },
+      "insights": true,
+      "icon": "/assets/measure_absolute_humidity.svg",
+      "desc": {
+        "en": "Absolute humidity in g/m³"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "measure_dew_point": {
+      "type": "number",
+      "title": {
+        "en": "Dew point"
+      },
+      "units": {
+        "en": "°C"
+      },
+      "insights": true,
+      "icon": "/assets/measure_dew_point.svg",
+      "desc": {
+        "en": "Dew point in °C"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "measure_heat_index": {
+      "type": "number",
+      "title": {
+        "en": "Heat index"
+      },
+      "units": {
+        "en": "°C"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Heat index in °C"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
     "measure_pm1": {
       "type": "number",
       "title": {
@@ -6590,6 +9052,34 @@
       "getable": true,
       "setable": false,
       "uiComponent": "sensor"
+    },
+    "target_hightemperature": {
+      "type": "number",
+      "min": 4,
+      "max": 120,
+      "title": {
+        "en": "Target temperature",
+        "nl": "Ingestelde temperatuur",
+        "de": "Ziel-Temperatur",
+        "fr": "Température cible",
+        "it": "Temperatura nominale",
+        "sv": "Måltemperatur",
+        "no": "Ønsket temperatur",
+        "es": "Temperatura configurada",
+        "da": "Måltemperatur",
+        "ru": "Целевая температура",
+        "pl": "Cel temperatury"
+      },
+      "units": {
+        "en": "°C",
+        "ru": "°C"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "insights": true,
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider"
     },
     "thermostat_state": {
       "type": "enum",

@@ -1,0 +1,109 @@
+{
+  "name": {
+    "en": "windSensor PRO"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_wind_strength", "measure_wind_strength.avg", "measure_gust_strength"
+  ],
+  "capabilitiesOptions": {
+    "measure_wind_strength.avg": {
+      "title": {
+        "en": "Average wind strength"
+      }
+    }
+  },  
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png"
+  },
+  "energy": {
+    "approximation": {
+      "usageConstant": 1
+    }
+  },
+  "discovery": "bbxsrv",
+  "pair": [
+    {
+      "id": "list_windsensorspro",
+      "template": "list_devices",
+      "navigation": { "next": "add_windsensorspro"}
+    },
+    {
+      "id": "add_windsensorspro",
+      "template": "add_devices"    
+    }
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+          "en": "General settings"
+      },
+      "children":
+      [
+        {
+          "id": "address",
+          "type": "text",
+          "label": {
+            "en": "IP Address"
+          }
+        },
+        {
+          "id": "poll_interval",
+          "type": "number",
+          "label": {
+            "en": "Poll interval [ms]"
+          },
+          "attr": {
+            "min": 500,
+            "max": 600000
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+          "en": "Device properties"
+      },
+      "children":
+      [
+        {
+          "id": "product",
+          "type": "label",
+          "label": {
+            "en": "Product name"
+          }
+        },
+        {
+          "id": "apiLevel",
+          "type": "label",
+          "label": {
+            "en": "API Level"
+          }
+        },
+        {
+          "id": "hv",
+          "type": "label",
+          "label": {
+            "en": "Hardware version"
+          }
+        },
+        {
+          "id": "fv",
+          "type": "label",
+          "label": {
+            "en": "Firmware version"
+          }
+        }
+      ]
+    }
+  ]
+}

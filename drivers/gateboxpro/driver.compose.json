@@ -2,7 +2,7 @@
   "name": {
     "en": "gateBoxPro" 
   },
-  "class": "button",
+  "class": "garagedoor",
   "capabilities": [
     "button",
     "alarm_contact"

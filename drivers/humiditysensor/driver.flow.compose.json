@@ -1,0 +1,55 @@
+{
+    "triggers": [
+
+        {
+            "id": "measure_absolute_humidity_changed",
+            "title": {
+              "en": "The absolute humidity changed"
+            },
+            "tokens": [
+              {
+                "name": "measure_absolute_humidity",
+                "title": {
+                  "en": "Absolute humidity"
+                },
+                "type": "number",
+                "example": 2
+              }
+            ]
+        },
+        {
+            "id": "measure_dew_point_changed",
+            "title": {
+              "en": "The dew point changed"
+            },
+            "tokens": [
+              {
+                "name": "measure_dew_point",
+                "title": {
+                  "en": "Dew point"
+                },
+                "type": "number",
+                "example": 2
+              }
+            ]
+        },
+        {
+            "id": "measure_heat_index_changed",
+            "title": {
+              "en": "The Heat Index changed"
+            },
+            "tokens": [
+              {
+                "name": "measure_heat_index",
+                "title": {
+                  "en": "Heat Index"
+                },
+                "type": "number",
+                "example": 2
+              }
+            ]
+          }
+
+    ]
+}
+

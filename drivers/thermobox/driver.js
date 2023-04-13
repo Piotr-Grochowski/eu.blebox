@@ -9,7 +9,19 @@ class thermoBoxDriver extends BleBoxDriver {
   {
     this.bleBoxType = 'thermoBox';
     this.bleBoxProduct = 'thermoBox';
-    this.bleBoxPoll = 1000;
+    this.bleBoxPoll = 5000;
+
+    const setThermostatStateAction = this.homey.flow.getActionCard('set_thermostat_state_to');
+    const setTargetHighTemperatureAction = this.homey.flow.getActionCard('target_hightemperature_set');
+
+		setThermostatStateAction.registerRunListener(async ( args, state ) => {
+      await args.device.setThermostatStateTo(args.state);
+      });
+
+    setTargetHighTemperatureAction.registerRunListener(async ( args, state ) => {
+      await args.device.setTargetTemperature(args.target_hightemperature);
+      });
+  
     this.log('thermoBoxDriver has been initialized');
   }
 

@@ -30,9 +30,30 @@ At the moment this app supports the following devices:
 - rainSensor - detects the start and end of precipitation
 
 # Changelog
+v.3.11.0
+- wLightBox bugfix
+- wLightBox v3 support added
+- thermoBox power usage approximation added
+
+v.3.10.0
+- actionBox and actionBoxS support added
+- gateBox and gateBoxPro device class changed
+
+v.3.9.2
+- two thermoBox drivers - for room thermostat and high temperature (e.g. water tank) scenarios
+
+v.3.9.1
+- pixelBox bugfix
+- thermoBox bugfix
+
 v.3.9.0
 - wLightBox & wLightBox PRO effects support added
 - shutterBox DIN support added
+- pixelBox support added
+- windSensor PRO support added
+- humiditySensor support added
+- added new Trigger Flow Cards for some devices
+- thermoBox rewrite to support more scenarios and higher temperatures
 
 v.3.8.0
 - new device icons

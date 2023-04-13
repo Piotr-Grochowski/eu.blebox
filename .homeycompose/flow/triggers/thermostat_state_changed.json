@@ -1,0 +1,16 @@
+{
+    "id": "thermostat_state_changed",
+    "title": {
+       "en": "Thermostat state changed"
+    },
+    "titleFormatted": {
+        "en": "[[device]] state changed."
+      },
+    "args":[
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "capabilities=thermostat_state"
+        }
+    ]
+}

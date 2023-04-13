@@ -1,0 +1,18 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Heat index"
+  },
+  "units": {
+    "en": "°C"
+  },
+  "insights": true,
+  "desc": {
+    "en": "Heat index in °C"
+  },
+  "chartType": "spline",
+  "decimals": 2,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

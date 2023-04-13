@@ -1,16 +1,20 @@
 {
   "name": {
-    "en": "thermoBox"
+    "en": "thermoBox (high temp.)"
   },
   "class": "thermostat",
   "capabilities": [
-    "target_temperature",
+    "target_hightemperature",
     "measure_temperature",
     "thermostat_state",
-    "measure_temperature.safety"
+    "measure_temperature.safety",
+    "measure_temperature.target",
+    "measure_power"
   ],
   "capabilitiesOptions": {
-    "measure_temperature.safety": {"title": {"en": "Safety temperature"}} 
+    "measure_temperature.safety": {"title": {"en": "Safety temperature"}},
+    "measure_temperature.target": {"title": {"en": "Target temperature"}},
+    "measure_power": { "approximated": true}
   },
   "platforms": [
     "local"
@@ -21,12 +25,6 @@
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png"
-  },
-  "energy": {
-    "approximation": {
-      "usageOn": 1, 
-      "usageOff": 1 
-    }
   },
   "discovery": "bbxsrv",
   "pair": [
@@ -102,6 +100,39 @@
           "label": {
             "en": "Firmware version"
           }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+          "en": "Energy usage"
+      },
+      "children":
+      [
+        {
+          "id": "power_idle",
+          "type": "number",
+          "label": {
+            "en": "Power usage when IDLE [Watts]"
+          },
+          "value": 1
+        },
+        {
+          "id": "power_on",
+          "type": "number",
+          "label": {
+            "en": "Power usage when ON [Watts]"
+          },
+          "value": 1
+        },
+        {
+          "id": "power_boost",
+          "type": "number",
+          "label": {
+            "en": "Power usage when BOOST [Watts]"
+          },
+          "value": 1
         }
       ]
     }

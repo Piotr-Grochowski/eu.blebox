@@ -1,0 +1,69 @@
+{
+    "triggers": [
+        {
+            "id": "measure_temperature.sensor1_changed",
+            "title": {
+              "en": "The temperature on sensor 1 changed"
+            },
+            "tokens": [
+              {
+                "name": "measure_temperature.sensor1",
+                "title": {
+                  "en": "Temperature of sensor 1"
+                },
+                "type": "number",
+                "example": 2
+              }
+            ]
+        },
+        {
+            "id": "measure_temperature.sensor2_changed",
+            "title": {
+              "en": "The temperature on sensor 2 changed"
+            },
+            "tokens": [
+              {
+                "name": "measure_temperature.sensor2",
+                "title": {
+                  "en": "Temperature of sensor 2"
+                },
+                "type": "number",
+                "example": 2
+              }
+            ]
+        },
+        {
+            "id": "measure_temperature.sensor3_changed",
+            "title": {
+              "en": "The temperature on sensor 3 changed"
+            },
+            "tokens": [
+              {
+                "name": "measure_temperature.sensor3",
+                "title": {
+                  "en": "Temperature of sensor 3"
+                },
+                "type": "number",
+                "example": 2
+              }
+            ]
+        },
+        {
+            "id": "measure_temperature.sensor4_changed",
+            "title": {
+              "en": "The temperature on sensor 4 changed"
+            },
+            "tokens": [
+              {
+                "name": "measure_temperature.sensor4",
+                "title": {
+                  "en": "Temperature of sensor 4"
+                },
+                "type": "number",
+                "example": 2
+              }
+            ]
+        }
+
+    ]
+}

@@ -4,16 +4,16 @@
   },
   "class": "sensor",
   "capabilities": [
-    "measure_temperature.sensor1",
-    "measure_temperature.sensor2",
-    "measure_temperature.sensor3",
-    "measure_temperature.sensor4"
+    "measure_temperature.sens1",
+    "measure_temperature.sens2",
+    "measure_temperature.sens3",
+    "measure_temperature.sens4"
   ],
   "capabilitiesOptions": {
-    "measure_temperature.sensor1": {"title": {"en": "Temperature 1"}},    
-    "measure_temperature.sensor2": {"title": {"en": "Temperature 2"}},    
-    "measure_temperature.sensor3": {"title": {"en": "Temperature 3"}},    
-    "measure_temperature.sensor4": {"title": {"en": "Temperature 4"}}    
+    "measure_temperature.sens1": {"title": {"en": "Temperature 1"}},    
+    "measure_temperature.sens2": {"title": {"en": "Temperature 2"}},    
+    "measure_temperature.sens3": {"title": {"en": "Temperature 3"}},    
+    "measure_temperature.sens4": {"title": {"en": "Temperature 4"}}    
   },
   "platforms": [
     "local"

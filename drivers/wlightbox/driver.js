@@ -35,7 +35,7 @@ class wLightBoxDriver extends BleBoxDriver {
 		});
 
 		setChannelsAction.registerRunListener(async ( args, state ) => {
-      await args.device.changeChannelsTo(args.brightness);
+         await args.device.changeChannelsTo(args.red_channel, args.green_channel, args.blue_channel, args.white_channel);
 		});
 
 		setEffectAction.registerRunListener(async ( args, state ) => {

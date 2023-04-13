@@ -169,5 +169,20 @@
   },
   "3.8.0": {
     "en": "1. new device icons, 2. switchBox DIN support added, 3. switchBoxD DIN support added, 4. switchBoxT PRO support added"
+  },
+  "3.9.0": {
+    "en": "wLightBox* effects support added, new devices: shutterBox DIN, pixelBox, windSensor PRO, humiditySensor; new Trigger Flow Cards for some devices; thermoBox rewrite to support more scenarios and higher temperatures."
+  },
+  "3.9.1": {
+    "en": "pixelBox and thermoBox bugfixes."
+  },
+  "3.9.2": {
+    "en": "two thermoBox drivers - for room thermostat and high temperature (e.g. water tank) scenarios"
+  },
+  "3.10.0": {
+    "en": "actionBox and actionBoxS support added, gateBox and gateBoxPro device call changed."
+  },
+  "3.11.0": {
+    "en": "- thermoBox power usage approximation added"
   }
 }

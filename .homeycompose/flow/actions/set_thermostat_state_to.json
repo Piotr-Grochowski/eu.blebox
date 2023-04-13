@@ -1,0 +1,46 @@
+{
+    "id": "set_thermostat_state_to",
+    "title": {
+      "en": "Set thermostat state to..."
+    },
+    "titleFormatted": {
+      "en": "Set thermostat state of [[device]] to [[state]]"
+    },
+    "args": [
+      {
+        "type": "dropdown",
+        "name": "state",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Off"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "On (temperature set)"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "On (no temperature set)"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Boost"
+            }
+          }
+        ]
+      },
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "capabilities=thermostat_state"
+      }
+    ]
+  }

@@ -1,0 +1,141 @@
+{
+  "name": {
+    "en": "pixelBox"
+  },
+  "class": "light",
+  "capabilities": ["onoff","dim.brightness","dim.channelR","dim.channelG","dim.channelB","dim.channelW","light_hue","light_saturation","effect_selector"],
+  "capabilitiesOptions": {
+    "dim.brightness": {
+      "title": {
+        "en": "RGB Brightness",
+        "nl": "RGB Brightness"
+      }
+    },
+    "dim.channelW": {
+      "title": {
+        "en": "White brightness",
+        "nl": "White brightness"
+      }
+    },
+    "dim.channelR": {
+      "title": {
+        "en": "Channel R",
+        "nl": "Channel R"
+      }
+    },
+    "dim.channelG": {
+      "title": {
+        "en": "Channel G",
+        "nl": "Channel G"
+      }
+    },
+    "dim.channelB": {
+      "title": {
+        "en": "Channel B",
+        "nl": "Channel B"
+      }
+    }
+  },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png"
+  },
+  "energy": {
+    "approximation": {
+      "usageOn": 1, 
+      "usageOff": 1 
+    }
+  },
+  "discovery": "bbxsrv",
+  "pair": [
+    {
+      "id": "list_pixelboxes",
+      "template": "list_devices",
+      "navigation": { "next": "add_pixelboxes"}
+    },
+    {
+      "id": "add_pixelboxes",
+      "template": "add_devices"    
+    }
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+          "en": "General settings"
+      },
+      "children":
+      [
+        {
+          "id": "address",
+          "type": "text",
+          "label": {
+            "en": "IP Address"
+          }
+        },
+        {
+          "id": "poll_interval",
+          "type": "number",
+          "label": {
+            "en": "Poll interval [ms]"
+          },
+          "attr": {
+            "min": 500,
+            "max": 60000
+          }
+        },
+        {
+          "id": "on_value",
+          "type": "text",
+          "label": {
+            "en": "ON value"
+          },
+          "pattern":  "^[0-9A-F]{8}$"
+        }              
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+          "en": "Device properties"
+      },
+      "children":
+      [
+        {
+          "id": "product",
+          "type": "label",
+          "label": {
+            "en": "Product name"
+          }
+        },
+        {
+          "id": "apiLevel",
+          "type": "label",
+          "label": {
+            "en": "API Level"
+          }
+        },
+        {
+          "id": "hv",
+          "type": "label",
+          "label": {
+            "en": "Hardware version"
+          }
+        },
+        {
+          "id": "fv",
+          "type": "label",
+          "label": {
+            "en": "Firmware version"
+          }
+        }
+      ]
+    }
+  ]
+}

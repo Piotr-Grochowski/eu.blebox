@@ -1,0 +1,10 @@
+{
+    "triggers": [
+    {
+      "id": "measure_wind_strength.avg_changed",
+      "title": {
+        "en": "The average wind strength changed"
+      }
+    }
+  ]
+}

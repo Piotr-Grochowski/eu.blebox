@@ -1,0 +1,19 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Absolute humidity"
+  },
+  "units": {
+    "en": "g/m³"
+  },
+  "insights": true,
+  "icon": "/assets/measure_absolute_humidity.svg",
+  "desc": {
+    "en": "Absolute humidity in g/m³"
+  },
+  "chartType": "spline",
+  "decimals": 2,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

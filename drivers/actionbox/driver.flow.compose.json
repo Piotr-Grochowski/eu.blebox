@@ -1,0 +1,124 @@
+{
+    "triggers": [
+      {
+        "id": "button1_clicked", 
+        "title": {
+          "en": "Button 1 has been clicked shortly"
+        }
+      },
+      {
+        "id": "button1_clicked_long", 
+        "title": {
+          "en": "Button 1 has been clicked long"
+        }
+      },
+      {
+        "id": "button1_falling_edge", 
+        "title": {
+          "en": "Falling edge has been detected on input 1"
+        }
+      },
+      {
+        "id": "button1_rising_edge", 
+        "title": {
+          "en": "Rising edge has been detected on input 1"
+        }
+      },
+      {
+        "id": "button1_any_edge", 
+        "title": {
+          "en": "Any edge has been detected on input 1"
+        }
+      },
+      {
+        "id": "button2_clicked", 
+        "title": {
+          "en": "Button 2 has been clicked shortly"
+        }
+      },
+      {
+        "id": "button2_clicked_long", 
+        "title": {
+          "en": "Button 2 has been clicked long"
+        }
+      },
+      {
+        "id": "button2_falling_edge", 
+        "title": {
+          "en": "Falling edge has been detected on input 2"
+        }
+      },
+      {
+        "id": "button2_rising_edge", 
+        "title": {
+          "en": "Rising edge has been detected on input 2"
+        }
+      },
+      {
+        "id": "button2_any_edge", 
+        "title": {
+          "en": "Any edge has been detected on input 2"
+        }
+      },
+      {
+        "id": "button3_clicked", 
+        "title": {
+          "en": "Button 3 has been clicked shortly"
+        }
+      },
+      {
+        "id": "button3_clicked_long", 
+        "title": {
+          "en": "Button 3 has been clicked long"
+        }
+      },
+      {
+        "id": "button3_falling_edge", 
+        "title": {
+          "en": "Falling edge has been detected on input 3"
+        }
+      },
+      {
+        "id": "button3_rising_edge", 
+        "title": {
+          "en": "Rising edge has been detected on input 3"
+        }
+      },
+      {
+        "id": "button3_any_edge", 
+        "title": {
+          "en": "Any edge has been detected on input 3"
+        }
+      },
+      {
+        "id": "button4_clicked", 
+        "title": {
+          "en": "Button 4 has been clicked shortly"
+        }
+      },
+      {
+        "id": "button4_clicked_long", 
+        "title": {
+          "en": "Button 4 has been clicked long"
+        }
+      },
+      {
+        "id": "button4_falling_edge", 
+        "title": {
+          "en": "Falling edge has been detected on input 4"
+        }
+      },
+      {
+        "id": "button4_rising_edge", 
+        "title": {
+          "en": "Rising edge has been detected on input 4"
+        }
+      },
+      {
+        "id": "button4_any_edge", 
+        "title": {
+          "en": "Any edge has been detected on input 4"
+        }
+      }
+    ]
+}  

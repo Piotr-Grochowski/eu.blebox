@@ -1,0 +1,19 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Dew point"
+  },
+  "units": {
+    "en": "°C"
+  },
+  "insights": true,
+  "icon": "/assets/measure_dew_point.svg",
+  "desc": {
+    "en": "Dew point in °C"
+  },
+  "chartType": "spline",
+  "decimals": 2,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}
