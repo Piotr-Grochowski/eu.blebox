@@ -7,27 +7,37 @@ Blebox.eu is a brand of high-quality products related to home automation. Create
 # Supported devices
 
 At the moment this app supports the following devices:
+- actionBox - physical or virtual multifunctional action trigger
+- actionBoxS - 230V mini action trigger
+- airSensor - airSensor is your personal air quality sensor - it keeps you informed about the presence of harmful dust suspended in - dimmerBox - dimmerBox is the first device in the world which allows you to switch and dim 230V lights in your home or office. Control your lights from a smartphone or tablet, no matter where you are.
+- doorBox - an integrated, miniature controller: electric bolt lock, electric strikes and safety devices designed for access control
+- gateBox - gateBox allows you to not only open and close gates, but also check on their status 
+- gateBoxPro - open and close the gate from anywhere in the world
+- humiditySensor - humidity and air temperature sensor
+- pixelBox - change magically the lighting in your home
+- rainSensor - detects the start and end of precipitation
+- rollerGate - open and close the gate from anywhere in the world
+- saunaBox - it is is the world’s first sauna controller that allows you to turn on and off and control the sauna temperature from anywhere in the World without the use of additional peripherals
+your home and outside.
+- shutterBox - is a device designed to wireless control of electric roller shutters, awnings, screens, etc. (by using Smartphones and tablets), also from any place in the world.
+- shutterBoxDC - allows you to control roller blinds, awnings, venetian or windows equipped with low voltage (12-24V) DC motor by using a smartphone or tablet, also from anywhere in the World
+- shutterBoxDIN
 - switchBox - this device allows you to wirelessly turn on or off electric devices powered by network voltage of 230V and up to 3kW of power. You can control the load via mobile devices and/or personal computers wherever you are.
 - switchBox v3 - you can turn on and off virtually any electrical device using your smartphone and tablet. It doesn’t matter if you are at home, at work or skiing. If you want to turn on the heat before going home, switchBox is the solution for you. And it also has many other possibilities…
 - switchBox Light - the smallest controller in the world that allows wireless switching on and off of electrical devices powered by a 230 V mains voltage with a power of up to 1 kW from anywhere in the world
 - switchBoxD - switchBoxD - “double” switchBox - can wirelessly turn on or off main voltage electrical devices. It can control two 5A loads (in total 2 kW). Suitable for smaller devices, wherever you want to control two independent electrical circuits with a single controller.
 - switchBoxDC - switchBoxDC is a smart switch powered by low voltage (12-24V DC) which allows you to control virtually any electrical device from any place in the world.
-- shutterBox - is a device designed to wireless control of electric roller shutters, awnings, screens, etc. (by using Smartphones and tablets), also from any place in the world.
-- shutterBoxDC - allows you to control roller blinds, awnings, venetian or windows equipped with low voltage (12-24V) DC motor by using a smartphone or tablet, also from anywhere in the World
-- dimmerBox - dimmerBox is the first device in the world which allows you to switch and dim 230V lights in your home or office. Control your lights from a smartphone or tablet, no matter where you are.
+- switchBox DIN - on/off or "on time" high power switch for DIN rail
+- switchBoxD DIN - double on/off or "on time" switch for DIN rail
+- switchBox T PRO - tripple potential-free on/off switch or "turn on time". Schedule, buttons, actions, notifications.
+- tempSensor - a device that indicates the temperature, equipped with a waterproof measuring probe, operating in the range of -55 to + 125 degrees Celsius.
+- tempSensor PRO - is an accurate temperature sensor with an extended range and increased resistance to weather conditions. It allows you to control the temperature with a smartphone from anywhere in the world.
+- tempSensor AC - temperature measurment from -55 to +255 degree, AC powered
+- thermoBox - the device designed for the intelligent control of heating or cooling with the possibility of cooperation of 2 digital probes
 - wLightBox - the smallest wireless light controller in the world, wlightbox allows you to control colourful (RGBW) and plain LED lighting. It can be managed not only by smartphones and tablets, but also from your computer.
 - wLightBox Pro - turns on and off RGBW LED lighting from anywhere, anytime. Install the controller in the place that best suits your needs, both indoors, outdoors or wherever you want. Use 4 ways to control the device.
 - wLightBoxS - Using wLightBoxS you can switch on, off and also adjust brightness of single color LED lights using your smartphone or tablet, also from anywhere in the World. It's an alternative in compare with wLightBox (RGBW LED controller) for people who only want to control one color per device.
 - wLightBoxS Pro - turns on, off and dims single-color LED lighting from anywhere, anytime. Install the controller in the place that best suits your needs, both indoors, outdoors or wherever you want. Use 4 ways to control the device.
-- gateBox - gateBox allows you to not only open and close gates, but also check on their status 
-- doorBox - an integrated, miniature controller: electric bolt lock, electric strikes and safety devices designed for access control
-- thermoBox - the device designed for the intelligent control of heating or cooling with the possibility of cooperation of 2 digital probes
-- saunaBox - it is is the world’s first sauna controller that allows you to turn on and off and control the sauna temperature from anywhere in the World without the use of additional peripherals
-- airSensor - airSensor is your personal air quality sensor - it keeps you informed about the presence of harmful dust suspended in your home and outside.
-- tempSensor - a device that indicates the temperature, equipped with a waterproof measuring probe, operating in the range of -55 to + 125 degrees Celsius.
-- tempSensor PRO - is an accurate temperature sensor with an extended range and increased resistance to weather conditions. It allows you to control the temperature with a smartphone from anywhere in the world.
-- tempSensor AC - temperature measurment from -55 to +255 degree, AC powered
-- rainSensor - detects the start and end of precipitation
 
 # Changelog
 v.3.11.0
