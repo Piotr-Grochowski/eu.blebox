@@ -12,11 +12,11 @@ module.exports = {
                             break;
                 case 'clickLong': element.onButtonClickedLong(query.input);
                             break;
-                case 'fallingEdge': element.onFallingEdge(query.input);
+                case 'fallingEdge': element.onButtonFallingEdge(query.input);
                             break;
-                case 'risingEdge': element.onRisingEdge(query.input);
+                case 'risingEdge': element.onButtonRisingEdge(query.input);
                             break;
-                case 'anyEdge': element.onAnyEdge(query.input);
+                case 'anyEdge': element.onButtonAnyEdge(query.input);
                             break;
             }
             
@@ -41,11 +41,11 @@ module.exports = {
                             break;
                 case 'clickLong': element.onButtonClickedLong();
                             break;
-                case 'fallingEdge': element.onFallingEdge();
+                case 'fallingEdge': element.onButtonFallingEdge();
                             break;
-                case 'risingEdge': element.onRisingEdge();
+                case 'risingEdge': element.onButtonRisingEdge();
                             break;
-                case 'anyEdge': element.onAnyEdge();
+                case 'anyEdge': element.onButtonAnyEdge();
                             break;
             }
             

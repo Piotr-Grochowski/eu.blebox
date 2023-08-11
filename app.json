@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.blebox",
-  "version": "3.11.0",
+  "version": "3.11.2",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -8998,6 +8998,7 @@
         "en": "°C"
       },
       "insights": true,
+      "icon": "/assets/measure_heat_index.svg",
       "desc": {
         "en": "Heat index in °C"
       },

@@ -7,6 +7,7 @@
     "en": "°C"
   },
   "insights": true,
+  "icon": "/assets/measure_heat_index.svg",
   "desc": {
     "en": "Heat index in °C"
   },
