@@ -11,10 +11,12 @@ At the moment this app supports the following devices:
 - actionBoxS - 230V mini action trigger
 - airSensor - airSensor is your personal air quality sensor - it keeps you informed about the presence of harmful dust suspended in - dimmerBox - dimmerBox is the first device in the world which allows you to switch and dim 230V lights in your home or office. Control your lights from a smartphone or tablet, no matter where you are.
 - doorBox - an integrated, miniature controller: electric bolt lock, electric strikes and safety devices designed for access control
+- floodSensor - detects flood and water leakage
 - gateBox - gateBox allows you to not only open and close gates, but also check on their status 
 - gateBoxPro - open and close the gate from anywhere in the world
 - humiditySensor - humidity and air temperature sensor
 - pixelBox - change magically the lighting in your home
+- proxiBox - multifuncional proximity action trigger
 - rainSensor - detects the start and end of precipitation
 - rollerGate - open and close the gate from anywhere in the world
 - saunaBox - it is is the world’s first sauna controller that allows you to turn on and off and control the sauna temperature from anywhere in the World without the use of additional peripherals
@@ -40,6 +42,13 @@ your home and outside.
 - wLightBoxS Pro - turns on, off and dims single-color LED lighting from anywhere, anytime. Install the controller in the place that best suits your needs, both indoors, outdoors or wherever you want. Use 4 ways to control the device.
 
 # Changelog
+v.3.12
+- floodSensor support added
+- proxiBox support added
+
+v.3.11.3
+- saunaBox bugfix
+
 v.3.11.2
 - discovery bugfix
 

@@ -1,6 +1,6 @@
 {
   "id": "eu.blebox",
-  "version": "3.11.2",
+  "version": "3.12.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -46,6 +46,11 @@
     "actionBoxS": {
       "method": "GET",
       "path": "/actionBoxS",
+      "public": true
+    },
+    "proxiBox": {
+      "method": "GET",
+      "path": "/proxiBox",
       "public": true
     }
   }

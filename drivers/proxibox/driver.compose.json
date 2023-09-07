@@ -1,38 +1,32 @@
 {
   "name": {
-    "en": "saunaBox"
+    "en": "proxiBox"
   },
-  "class": "thermostat",
-  "capabilities": [
-    "target_temperature",
-    "measure_temperature",
-    "onoff"
-  ],
-  "capabilitiesOptions": {
-    "target_temperature": {
-                            "min": -55, 
-                            "max": 125}
-  },
+  "class": "other",
+  "capabilities": [],
   "platforms": [
     "local"
   ],
   "connectivity": [
     "lan"
   ],
-  "images": {
-    "small": "{{driverAssetsPath}}/images/small.png",
-    "large": "{{driverAssetsPath}}/images/large.png"
-  },
-  "energy": {
-    "approximation": {
-      "usageConstant": 1
-    }
-  },
   "pair": [
     {
-      "id": "pair"            
+      "id": "list_proxiboxes",
+      "template": "list_devices",
+      "navigation": { "next": "add_proxiboxes"}
+    },
+    {
+      "id": "add_proxiboxes",
+      "template": "add_devices"    
     }
   ],
+  "discovery": "bbxsrv",
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
   "settings": [
     {
       "type": "group",

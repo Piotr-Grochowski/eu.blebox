@@ -190,5 +190,11 @@
   },
   "3.11.2": {
     "en": "Discovery bugfix"
+  },
+  "3.11.3": {
+    "en": "saunaBox bugfix"
+  },
+  "3.12.0": {
+    "en": "floodSensor and proxiBox support added"
   }
 }

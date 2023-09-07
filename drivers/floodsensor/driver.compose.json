@@ -1,18 +1,11 @@
 {
   "name": {
-    "en": "saunaBox"
+    "en": "floodSensor"
   },
-  "class": "thermostat",
+  "class": "sensor",
   "capabilities": [
-    "target_temperature",
-    "measure_temperature",
-    "onoff"
+    "alarm_water"
   ],
-  "capabilitiesOptions": {
-    "target_temperature": {
-                            "min": -55, 
-                            "max": 125}
-  },
   "platforms": [
     "local"
   ],
@@ -28,9 +21,16 @@
       "usageConstant": 1
     }
   },
+  "discovery": "bbxsrv",
   "pair": [
     {
-      "id": "pair"            
+      "id": "list_floodsensors",
+      "template": "list_devices",
+      "navigation": { "next": "add_floodsensors"}
+    },
+    {
+      "id": "add_floodsensors",
+      "template": "add_devices"    
     }
   ],
   "settings": [
@@ -56,7 +56,7 @@
           },
           "attr": {
             "min": 500,
-            "max": 60000
+            "max": 600000
           }
         }
       ]

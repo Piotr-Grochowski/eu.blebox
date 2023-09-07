@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.blebox",
-  "version": "3.11.2",
+  "version": "3.12.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -47,6 +47,11 @@
     "actionBoxS": {
       "method": "GET",
       "path": "/actionBoxS",
+      "public": true
+    },
+    "proxiBox": {
+      "method": "GET",
+      "path": "/proxiBox",
       "public": true
     }
   },
@@ -526,6 +531,71 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=humiditysensor"
+          }
+        ]
+      },
+      {
+        "id": "proxi_clicked",
+        "title": {
+          "en": "Short proximity received"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=proxibox"
+          }
+        ]
+      },
+      {
+        "id": "proxi_clicked_long",
+        "title": {
+          "en": "Long proximity received"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=proxibox"
+          }
+        ]
+      },
+      {
+        "id": "proxi_falling_edge",
+        "title": {
+          "en": "Proximity end received"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=proxibox"
+          }
+        ]
+      },
+      {
+        "id": "proxi_rising_edge",
+        "title": {
+          "en": "Proximity start received"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=proxibox"
+          }
+        ]
+      },
+      {
+        "id": "proxi_any_edge",
+        "title": {
+          "en": "Proximity change received"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=proxibox"
           }
         ]
       },
@@ -4236,6 +4306,109 @@
     },
     {
       "name": {
+        "en": "floodSensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_water"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/floodsensor/assets/images/small.png",
+        "large": "/drivers/floodsensor/assets/images/large.png"
+      },
+      "energy": {
+        "approximation": {
+          "usageConstant": 1
+        }
+      },
+      "discovery": "bbxsrv",
+      "pair": [
+        {
+          "id": "list_floodsensors",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_floodsensors"
+          }
+        },
+        {
+          "id": "add_floodsensors",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 600000
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "floodsensor"
+    },
+    {
+      "name": {
         "en": "gateBox"
       },
       "class": "garagedoor",
@@ -4743,6 +4916,103 @@
     },
     {
       "name": {
+        "en": "proxiBox"
+      },
+      "class": "other",
+      "capabilities": [],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "pair": [
+        {
+          "id": "list_proxiboxes",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_proxiboxes"
+          }
+        },
+        {
+          "id": "add_proxiboxes",
+          "template": "add_devices"
+        }
+      ],
+      "discovery": "bbxsrv",
+      "images": {
+        "small": "/drivers/proxibox/assets/images/small.png",
+        "large": "/drivers/proxibox/assets/images/large.png",
+        "xlarge": "/drivers/proxibox/assets/images/xlarge.png"
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "proxibox"
+    },
+    {
+      "name": {
         "en": "rainSensor"
       },
       "class": "sensor",
@@ -4958,6 +5228,12 @@
         "measure_temperature",
         "onoff"
       ],
+      "capabilitiesOptions": {
+        "target_temperature": {
+          "min": -55,
+          "max": 125
+        }
+      },
       "platforms": [
         "local"
       ],
