@@ -1,17 +1,18 @@
 {
   "name": {
-    "en": "thermoBox"
+    "en": "wind&RainSensor"
   },
-  "class": "thermostat",
+  "class": "sensor",
   "capabilities": [
-    "target_temperature",
-    "measure_temperature",
-    "thermostat_state",
-    "measure_temperature.safety"
+    "measure_wind_strength", "measure_wind_strength.avg1", "measure_gust_strength", "measure_rain", "alarm_water"
   ],
   "capabilitiesOptions": {
-    "measure_temperature.safety": {"title": {"en": "Safety temperature"}} 
-  },
+    "measure_wind_strength.avg": {
+      "title": {
+        "en": "Average wind strength"
+      }
+    }
+  },  
   "platforms": [
     "local"
   ],
@@ -24,19 +25,18 @@
   },
   "energy": {
     "approximation": {
-      "usageOn": 1, 
-      "usageOff": 1 
+      "usageConstant": 1
     }
   },
   "discovery": "bbxsrv",
   "pair": [
     {
-      "id": "list_thermoboxes",
+      "id": "list_windrainsensors",
       "template": "list_devices",
-      "navigation": { "next": "add_thermoboxes"}
+      "navigation": { "next": "add_windrainsensors"}
     },
     {
-      "id": "add_thermoboxes",
+      "id": "add_windrainsensors",
       "template": "add_devices"    
     }
   ],
@@ -63,7 +63,7 @@
           },
           "attr": {
             "min": 500,
-            "max": 60000
+            "max": 600000
           }
         }
       ]

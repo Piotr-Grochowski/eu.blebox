@@ -36,12 +36,24 @@ your home and outside.
 - tempSensor PRO - is an accurate temperature sensor with an extended range and increased resistance to weather conditions. It allows you to control the temperature with a smartphone from anywhere in the world.
 - tempSensor AC - temperature measurment from -55 to +255 degree, AC powered
 - thermoBox - the device designed for the intelligent control of heating or cooling with the possibility of cooperation of 2 digital probes
+- wind&RainSensor - wind&rainSensor is a miniature module that allows you to connect external wind and rain sensors to the BleBox system
+- windSensor Pro - wind sensor from 0.5 to 30 m/s
 - wLightBox - the smallest wireless light controller in the world, wlightbox allows you to control colourful (RGBW) and plain LED lighting. It can be managed not only by smartphones and tablets, but also from your computer.
 - wLightBox Pro - turns on and off RGBW LED lighting from anywhere, anytime. Install the controller in the place that best suits your needs, both indoors, outdoors or wherever you want. Use 4 ways to control the device.
 - wLightBoxS - Using wLightBoxS you can switch on, off and also adjust brightness of single color LED lights using your smartphone or tablet, also from anywhere in the World. It's an alternative in compare with wLightBox (RGBW LED controller) for people who only want to control one color per device.
 - wLightBoxS Pro - turns on, off and dims single-color LED lighting from anywhere, anytime. Install the controller in the place that best suits your needs, both indoors, outdoors or wherever you want. Use 4 ways to control the device.
 
 # Changelog
+v.3.13.1
+- Removed depreciated nodeJS methods
+- thermoBox separate drivers rejoined into one driver
+
+v.3.13.0
+- wind&RainSensor support added
+
+v.3.12.1
+- thermoBox modification
+
 v.3.12
 - floodSensor support added
 - proxiBox support added

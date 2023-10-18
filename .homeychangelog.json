@@ -196,5 +196,14 @@
   },
   "3.12.0": {
     "en": "floodSensor and proxiBox support added"
+  },
+  "3.12.1": {
+    "en": "thermoBox change"
+  },
+  "3.13.0": {
+    "en": "wind&RainSensor support added"
+  },
+  "3.13.1": {
+    "en": "Removed depreciated nodeJS methods. thermoBox separate drivers rejoined into one driver."
   }
 }

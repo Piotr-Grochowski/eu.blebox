@@ -1,20 +1,21 @@
 {
   "name": {
-    "en": "thermoBox (high temp.)"
+    "en": "thermoBox"
   },
   "class": "thermostat",
   "capabilities": [
-    "target_hightemperature",
+    "target_temperature",
     "measure_temperature",
     "thermostat_state",
     "measure_temperature.safety",
-    "measure_temperature.target",
     "measure_power"
   ],
   "capabilitiesOptions": {
+    "target_temperature": {
+                            "min": -55, 
+                            "max": 125},
     "measure_temperature.safety": {"title": {"en": "Safety temperature"}},
-    "measure_temperature.target": {"title": {"en": "Target temperature"}},
-    "measure_power": { "approximated": true}
+    "measure_power": { "approximated": true} 
   },
   "platforms": [
     "local"
@@ -25,6 +26,12 @@
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png"
+  },
+  "energy": {
+    "approximation": {
+      "usageOn": 1, 
+      "usageOff": 1 
+    }
   },
   "discovery": "bbxsrv",
   "pair": [
