@@ -205,5 +205,14 @@
   },
   "3.13.1": {
     "en": "Removed depreciated nodeJS methods. thermoBox separate drivers rejoined into one driver."
+  },
+  "3.13.2": {
+    "en": "wind&rainSensor bugfix"
+  },
+  "3.13.3": {
+    "en": "dimmerBox v1 bugfix"
+  },
+  "3.13.4": {
+    "en": "wLightBoxS effects support, bugfixes."
   }
 }

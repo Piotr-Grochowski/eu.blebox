@@ -10,6 +10,14 @@ class wLightBoxSDriver extends BleBoxDriver {
     this.bleBoxType = 'wLightBox';
     this.bleBoxProduct = 'wLightBoxS';
     this.bleBoxPoll = 1000;
+
+    const setEffectAction = this.homey.flow.getActionCard('wlightboxs_set_effect');
+
+		setEffectAction.registerRunListener(async ( args, state ) => {
+      await args.device.changeEffectTo(args.effID);
+      });
+
+
     this.log('wLightBoxSDriver has been initialized');
   }
 

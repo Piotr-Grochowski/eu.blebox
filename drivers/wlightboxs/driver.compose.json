@@ -5,7 +5,8 @@
   "class": "light",
   "capabilities": [
     "dim",
-    "onoff"
+    "onoff",
+    "effect_selector"
   ],
   "platforms": [
     "local"

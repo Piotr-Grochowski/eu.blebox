@@ -6,8 +6,15 @@ class wLightBoxSDevice extends BleBoxMDNSDevice {
 
   async onBleBoxInit()
   {
+    // Backward compatibility - add "effect_selector" capability if not exists
+    if (!this.hasCapability('effect_selector')) 
+      this.addCapability('effect_selector');
+
+
     this.registerCapabilityListener('onoff', this.onCapabilityOnoff.bind(this));
 		this.registerCapabilityListener('dim', this.onCapabilityDim.bind(this));
+    this.registerCapabilityListener('effect_selector', this.onCapabilityEffectSelector.bind(this));
+
   }
 
   async pollBleBox() 
@@ -34,6 +41,14 @@ class wLightBoxSDevice extends BleBoxMDNSDevice {
             this.log(err);
           })
       }
+
+      if (result.rgbw.effectID.toString() != this.getCapabilityValue('effect_selector')) {
+        this.setCapabilityValue('effect_selector', result.rgbw.effectID.toString())
+          .catch( err => {
+            this.log(err);
+          })
+      }
+
 
     })
     .catch(error => {
@@ -78,6 +93,15 @@ class wLightBoxSDevice extends BleBoxMDNSDevice {
         this.log(error);
     })
   }
+
+  async onCapabilityEffectSelector( value, opts ) {
+    // Change the effect
+    await this.bbApi.wLightBoxSetEffect(this.getSetting('address'),value)
+    .catch(error => {
+      this.log(error);
+    })
+  }
+
 
 }
 

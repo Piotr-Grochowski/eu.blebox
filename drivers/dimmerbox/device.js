@@ -34,30 +34,35 @@ module.exports = class dimmerBoxDevice extends Homey.Device {
 					hv: result.hv,
 					fv: result.fv
 				});
-				this.polling = true;
-				this.pinging = false;
+//				this.polling = true;
+//				this.pinging = false;
 						
 				// Enable device polling
-				this.emit('poll');
+//				this.emit('poll');
 			}
 			else
 			{
-				this.log('Device is not reachable, pinging every 60 seconds to see if it comes online again.');
-				this.polling = false;
-				this.pinging = true;
+				this.log('Device is not reachable.');
+//				this.polling = false;
+//				this.pinging = true;
 
 				// Enable device pinging
-				this.emit('ping');
+//				this.emit('ping');
+//				this.emit('poll');
+
 			}
 
 		})
 		.catch(error => {
-			this.log('Device is not reachable, pinging every 60 seconds to see if it comes online again.');
-			this.polling = false;
-			this.pinging = true;
+			this.log('Device is not reachable.');
+//			this.polling = false;
+//			this.pinging = true;
+//			this.log(error);
 			// Enable device pinging
-			this.emit('ping');
+//			this.emit('ping');
 		})
+		this.emit('poll');
+
 	}
 
 	async pollDevice() 
@@ -89,10 +94,13 @@ module.exports = class dimmerBoxDevice extends Homey.Device {
 				}
 			})
 			.catch(error => {
-				this.polling = false;
-				this.pinging = true;
-				this.emit('ping');
-				return;
+				this.setUnavailable();
+
+//				this.polling = false;
+//				this.pinging = true;
+//				this.emit('ping');
+				this.log(error);
+//				return;
 			});					
 			await delay(this.getSetting('poll_interval'));
 		}  
@@ -115,6 +123,7 @@ module.exports = class dimmerBoxDevice extends Homey.Device {
 			})
 			.catch(error => {
 				this.log('Device is not reachable, pinging every 60 seconds to see if it comes online again.');
+				this.log(error);
 			})
 			await delay(60000);
 		}
@@ -123,7 +132,7 @@ module.exports = class dimmerBoxDevice extends Homey.Device {
 	// Cancel pooling when device is deleted
 	async onDeleted() {
 		this.polling = false;
-		this.pinging = false;
+//		this.pinging = false;
 	}
 
 	// this method is called when the Device has requested a state change (turned on or off)
@@ -145,9 +154,10 @@ module.exports = class dimmerBoxDevice extends Homey.Device {
 				// Error occured
 				// Set the device as unavailable
 				this.log(error);
-				this.polling = false;
-				this.pinging = true;
-				this.emit('ping');
+//				this.polling = false;
+//				this.pinging = true;
+//				this.log(error);
+//				this.emit('ping');
 			})
 		}
         else
@@ -158,9 +168,10 @@ module.exports = class dimmerBoxDevice extends Homey.Device {
 				this.log(error);
 				// Error occured
 				// Set the device as unavailable
-				this.polling = false;
-				this.pinging = true;
-				this.emit('ping');
+//				this.polling = false;
+//				this.pinging = true;
+//				this.log(error);
+//				this.emit('ping');
 
 			})
 		}
@@ -174,13 +185,19 @@ module.exports = class dimmerBoxDevice extends Homey.Device {
 		if(hexBrightness.length==1) hexBrightness='0'+hexBrightness;
 
 		// Dim the device
-    await this.bbApi.dimmerBoxSetState(this.getSetting('address'),hexBrightness)
+	    await this.bbApi.dimmerBoxSetState(this.getSetting('address'),hexBrightness)
 		.catch(error => {
 			// Error occured
 			// Set the device as unavailable
-			this.polling = false;
-			this.pinging = true;
-			this.emit('ping');
+//			this.polling = false;
+//			this.pinging = true;
+			this.log(error);
+//			this.emit('ping');
 		})
+
+		if(value==0)
+			this.setCapabilityValue('onoff', false);
+		else 
+			this.setCapabilityValue('onoff', true);
 	}
 }
