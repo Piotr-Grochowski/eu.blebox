@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.blebox",
-  "version": "3.13.4",
+  "version": "3.14.2",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -12,7 +12,7 @@
   },
   "brandColor": "#0099FF",
   "description": {
-    "en": "Adds support for BleBox devices."
+    "en": "Unique solutions for unique value!"
   },
   "category": [
     "appliances"
@@ -4201,6 +4201,130 @@
         }
       ],
       "id": "dimmerbox_v2"
+    },
+    {
+      "name": {
+        "en": "doorBox v2"
+      },
+      "class": "button",
+      "capabilities": [
+        "button",
+        "alarm_contact"
+      ],
+      "capabilitiesOptions": {
+        "alarm_contact": {
+          "title": "Gate open alarm"
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 1,
+          "usageOff": 1
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "discovery": "bbxsrv",
+      "images": {
+        "small": "/drivers/doorBox_v2/assets/images/small.png",
+        "large": "/drivers/doorBox_v2/assets/images/large.png"
+      },
+      "pair": [
+        {
+          "id": "list_doorBoxesv2",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_doorBoxesv2"
+          }
+        },
+        {
+          "id": "add_doorBoxesv2",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "username",
+              "type": "text",
+              "label": {
+                "en": "Username"
+              }
+            },
+            {
+              "id": "password",
+              "type": "password",
+              "label": {
+                "en": "Password"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              }
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              }
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              }
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "doorBox_v2"
     },
     {
       "name": {

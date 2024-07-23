@@ -1,6 +1,6 @@
 {
   "id": "eu.blebox",
-  "version": "3.13.4",
+  "version": "3.14.2",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -11,7 +11,7 @@
   },
   "brandColor": "#0099FF",
   "description": {
-    "en": "Adds support for BleBox devices."
+    "en": "Unique solutions for unique value!"
   },
   "category": [
     "appliances"

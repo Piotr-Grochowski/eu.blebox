@@ -214,5 +214,17 @@
   },
   "3.13.4": {
     "en": "wLightBoxS effects support, bugfixes."
+  },
+  "3.13.5": {
+    "en": "doorBox v2 test support"
+  },
+  "3.14.0": {
+    "en": "doorBox v2 support"
+  },
+  "3.14.1": {
+    "en": "doorBox v2 discovery bugfix"
+  },
+  "3.14.2": {
+    "en": "rainSensor bugfix"
   }
 }

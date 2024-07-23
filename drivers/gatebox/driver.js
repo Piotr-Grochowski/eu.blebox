@@ -22,7 +22,7 @@ class gateBoxDriver extends Driver {
       await bbApi.getDeviceState(currDevice.address)
       .then (result => 
       {
-        if((result.type=='gateBox') && (result.product == 'gateBox' || result.product == 'RiCo'))
+        if((result.type=='gateBox') && (result.product == 'gateBox' || result.product == 'RiCo' || result.product == 'doorBox_v2'))
         {
           const apiLevel = result.hasOwnProperty('apiLevel') ? result.apiLevel : '20151206';
           devices.push(

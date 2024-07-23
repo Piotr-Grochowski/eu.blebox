@@ -44,6 +44,12 @@ your home and outside.
 - wLightBoxS Pro - turns on, off and dims single-color LED lighting from anywhere, anytime. Install the controller in the place that best suits your needs, both indoors, outdoors or wherever you want. Use 4 ways to control the device.
 
 # Changelog
+v.3.14.2
+- rainSensor bugfix
+
+v.3.14.0
+- doorBox v2 support
+
 v.3.13.4
 - effects support for wLightBoxS
 - bugfixes
