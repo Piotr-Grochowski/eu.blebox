@@ -1,17 +1,21 @@
 'use strict';
 
-const BleBoxDriver = require('../../lib/bleboxdriver.js');
+const BleBoxDriver_v2 = require('../../lib/bleboxdriver_v2.js');
 
-class tempSensorProDriver extends BleBoxDriver {
+class tempSensorProDriver extends BleBoxDriver_v2 {
 
-  // Overload onInit - to specify which type and product to search in discovery results.
-  async onInit()
+  onInitAddOn()
   {
-    this.bleBoxType = 'multiSensor';
-    this.bleBoxProduct = 'tempSensorPro';
-    this.bleBoxPoll = 1000;
-    this.log('tempSensorProDriver has been initialized');
+    this.driverName = 'tempSensorProDriver';
+    this.driverType = 'multiSensor';
+    this.driverProduct = ['tempSensorPro','tempSensorPro_v2'];
+    this.drivermDNSSDMethod = true;
+    this.driverIPAddressMethod = true;
+    this.driverActions = false;
+    this.driverPolling = true;
+    this.driverPollingInterval = 5000;    
   }
+
 
 }
 

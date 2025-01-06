@@ -21,16 +21,19 @@
       "usageConstant": 1
     }
   },
-  "discovery": "bbxsrv",
   "pair": [
     {
-      "id": "list_rainsensorspro",
-      "template": "list_devices",
-      "navigation": { "next": "add_rainsensorspro"}
+      "id":"add_blebox_device",
+      "navigation": {"next": "list_blebox_devices"}
     },
     {
-      "id": "add_rainsensorspro",
-      "template": "add_devices"    
+      "id":"list_blebox_devices",
+      "template": "list_devices",
+      "navigation": {"next": "add_devices", "prev": "add_blebox_device"}
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
     }
   ],
   "settings": [
@@ -49,6 +52,38 @@
           }
         },
         {
+          "id": "webhooks_enabled",
+          "type": "dropdown",
+          "value": "Yes",
+          "label": {"en": "Action webhooks enabled"},
+          "values": [
+            {
+              "id": "Yes",
+              "label": { "en": "Yes" }
+            },
+            {
+              "id": "No",
+              "label": { "en": "No" }
+            }
+          ]
+        },
+        {
+          "id": "polling_enabled",
+          "type": "dropdown",
+          "value": "Yes",
+          "label": {"en": "Polling enabled"},
+          "values": [
+            {
+              "id": "Yes",
+              "label": { "en": "Yes" }
+            },
+            {
+              "id": "No",
+              "label": { "en": "No" }
+            }
+          ]
+        },
+        {
           "id": "poll_interval",
           "type": "number",
           "label": {
@@ -58,6 +93,12 @@
             "min": 500,
             "max": 600000
           }
+        },
+        {
+          "id": "last_poll",
+          "type": "label",
+          "value": "",
+          "label": {"en": "Last poll"}
         }
       ]
     },

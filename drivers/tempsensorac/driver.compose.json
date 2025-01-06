@@ -4,16 +4,16 @@
   },
   "class": "sensor",
   "capabilities": [
-    "measure_temperature.sens1",
-    "measure_temperature.sens2",
-    "measure_temperature.sens3",
-    "measure_temperature.sens4"
+    "measure_temperature.sensor1",
+    "measure_temperature.sensor2",
+    "measure_temperature.sensor3",
+    "measure_temperature.sensor4"
   ],
   "capabilitiesOptions": {
-    "measure_temperature.sens1": {"title": {"en": "Temperature 1"}},    
-    "measure_temperature.sens2": {"title": {"en": "Temperature 2"}},    
-    "measure_temperature.sens3": {"title": {"en": "Temperature 3"}},    
-    "measure_temperature.sens4": {"title": {"en": "Temperature 4"}}    
+    "measure_temperature.sensor1": {"title": {"en": "Temperature 1"}},    
+    "measure_temperature.sensor2": {"title": {"en": "Temperature 2"}},    
+    "measure_temperature.sensor3": {"title": {"en": "Temperature 3"}},    
+    "measure_temperature.sensor4": {"title": {"en": "Temperature 4"}}    
   },
   "platforms": [
     "local"
@@ -30,16 +30,19 @@
       "usageConstant": 1
     }
   },
-  "discovery": "bbxsrv",
   "pair": [
     {
-      "id": "list_tempsensorsac",
-      "template": "list_devices",
-      "navigation": { "next": "add_tempsensorsac"}
+      "id":"add_blebox_device",
+      "navigation": {"next": "list_blebox_devices"}
     },
     {
-      "id": "add_tempsensorsac",
-      "template": "add_devices"    
+      "id":"list_blebox_devices",
+      "template": "list_devices",
+      "navigation": {"next": "add_devices", "prev": "add_blebox_device"}
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
     }
   ],
   "settings": [
@@ -58,6 +61,18 @@
           }
         },
         {
+          "id": "webhooks_enabled",
+          "type": "label",
+          "value": "No",
+          "label": {"en": "Action webhooks enabled"}
+        },
+        {
+          "id": "polling_enabled",
+          "type": "label",
+          "value": "Yes",
+          "label": {"en": "Polling enabled"}
+        },        
+        {
           "id": "poll_interval",
           "type": "number",
           "label": {
@@ -67,6 +82,12 @@
             "min": 500,
             "max": 60000
           }
+        },
+        {
+          "id": "last_poll",
+          "type": "label",
+          "value": "",
+          "label": {"en": "Last poll"}
         }
       ]
     },

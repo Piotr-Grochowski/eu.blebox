@@ -1,16 +1,19 @@
 'use strict';
 
-const BleBoxDriver = require('../../lib/bleboxdriver.js');
+const BleBoxDriver_v2 = require('../../lib/bleboxdriver_v2.js');
 
-class actionBoxDriver extends BleBoxDriver {
+class actionBoxDriver extends BleBoxDriver_v2 {
 
-  // Overload onInit - to specify which type and product to search in discovery results.
-  async onInit()
+  onInitAddOn()
   {
-    this.bleBoxType = 'buttonBox';
-    this.bleBoxProduct = 'actionBox';
-    this.bleBoxPoll = 600000;
-    this.log('actionBoxDriver has been initialized');
+    this.driverName = 'actionBox';
+    this.driverType = 'buttonBox';
+    this.driverProduct = ['actionBox'];
+    this.drivermDNSSDMethod = true;
+    this.driverIPAddressMethod = true;
+    this.driverActions = true;
+    this.driverPolling = false;
+    this.driverPollingInterval = 600000;    
   }
 
 }

@@ -1,0 +1,13 @@
+{
+    "id": "button1_clicked_long", 
+    "title": {
+      "en": "Button 1 has been clicked long"
+    },
+    "args":[
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+        }
+    ]
+  }

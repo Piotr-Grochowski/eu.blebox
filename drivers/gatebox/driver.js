@@ -46,7 +46,7 @@ class gateBoxDriver extends Driver {
         }
       })
       .catch(err => {
-        console.log(err);
+        this.log(err);
       }
       );
     };

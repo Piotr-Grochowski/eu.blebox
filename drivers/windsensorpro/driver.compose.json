@@ -28,16 +28,19 @@
       "usageConstant": 1
     }
   },
-  "discovery": "bbxsrv",
   "pair": [
     {
-      "id": "list_windsensorspro",
-      "template": "list_devices",
-      "navigation": { "next": "add_windsensorspro"}
+      "id":"add_blebox_device",
+      "navigation": {"next": "list_blebox_devices"}
     },
     {
-      "id": "add_windsensorspro",
-      "template": "add_devices"    
+      "id":"list_blebox_devices",
+      "template": "list_devices",
+      "navigation": {"next": "add_devices", "prev": "add_blebox_device"}
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
     }
   ],
   "settings": [
@@ -56,6 +59,18 @@
           }
         },
         {
+          "id": "webhooks_enabled",
+          "type": "label",
+          "value": "No",
+          "label": {"en": "Action webhooks enabled"}
+        },
+        {
+          "id": "polling_enabled",
+          "type": "label",
+          "value": "Yes",
+          "label": {"en": "Polling enabled"}
+        },
+        {
           "id": "poll_interval",
           "type": "number",
           "label": {
@@ -65,6 +80,12 @@
             "min": 500,
             "max": 600000
           }
+        },
+        {
+          "id": "last_poll",
+          "type": "label",
+          "value": "",
+          "label": {"en": "Last poll"}
         }
       ]
     },

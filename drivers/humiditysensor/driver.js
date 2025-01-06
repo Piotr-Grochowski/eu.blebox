@@ -1,18 +1,20 @@
 'use strict';
 
-const BleBoxDriver = require('../../lib/bleboxdriver.js');
+const BleBoxDriver_v2 = require('../../lib/bleboxdriver_v2.js');
+ 
+class humiditySensorDriver extends BleBoxDriver_v2 {
 
-class humiditySensorDriver extends BleBoxDriver {
-
-  // Overload onInit - to specify which type and product to search in discovery results.
-  async onInit()
+  onInitAddOn()
   {
-    this.bleBoxType = 'multiSensor';
-    this.bleBoxProduct = 'humiditySensor';
-    this.bleBoxPoll = 1000;
-    this.log('humiditySensorDriver has been initialized');
+    this.driverName = 'humiditySensorDriver';
+    this.driverType = 'multiSensor';
+    this.driverProduct = ['humiditySensor'];
+    this.drivermDNSSDMethod = true;
+    this.driverIPAddressMethod = true;
+    this.driverActions = false;
+    this.driverPolling = true;
+    this.driverPollingInterval = 5000;    
   }
-
 }
 
 module.exports = humiditySensorDriver;

@@ -1,101 +1,6 @@
 {
   "actions": [
     {
-      "id": "v3_dim_blue",
-      "title": {
-        "en": "Dim blue to..."
-      },
-      "titleFormatted": {
-        "en": "Dim blue to [[brightness]]"
-      },
-      "args": [
-        {
-          "name": "brightness",
-          "type": "number",
-          "min":  0,
-          "max":  1,
-          "step": 0.01,
-          "placeholder": "Dim value"
-        }
-      ]
-    },
-    {
-      "id": "v3_dim_green",
-      "title": {
-        "en": "Dim green to..."
-      },
-      "titleFormatted": {
-        "en": "Dim green to [[brightness]]"
-      },
-      "args": [
-        {
-          "name": "brightness",
-          "type": "number",
-          "min":  0,
-          "max":  1,
-          "step": 0.01,
-          "placeholder": "Dim value"
-        }
-      ]
-    },
-    {
-      "id": "v3_dim_red",
-      "title": {
-        "en": "Dim red to..."
-      },
-      "titleFormatted": {
-        "en": "Dim red to [[brightness]]"
-      },
-      "args": [
-        {
-          "name": "brightness",
-          "type": "number",
-          "min":  0,
-          "max":  1,
-          "step": 0.01,
-          "placeholder": "Dim value"
-        }
-      ]
-    },
-    {
-      "id": "v3_dim_wwhite",
-      "title": {
-        "en": "Dim warm white to..."
-      },
-      "titleFormatted": {
-        "en": "Dim warm white to [[brightness]]"
-      },
-      "args": [
-        {
-          "name": "brightness",
-          "type": "number",
-          "min":  0,
-          "max":  1,
-          "step": 0.01,
-          "placeholder": "Dim value"
-        }
-      ]
-    },
-    {
-      "id": "v3_dim_cwhite",
-      "title": {
-        "en": "Dim cold white to..."
-      },
-      "titleFormatted": {
-        "en": "Dim cold white to [[brightness]]"
-      },
-      "args": [
-        {
-          "name": "brightness",
-          "type": "number",
-          "min":  0,
-          "max":  1,
-          "step": 0.01,
-          "placeholder": "Dim value"
-        }
-      ]
-    },
-    {
       "id": "v3_set_channels",
       "title": {
         "en": "Set channels to..."
@@ -143,33 +48,6 @@
           "max":  1,
           "step": 0.01,
           "placeholder": "Cold white channel"
-        }
-      ]
-    },
-    {
-      "id": "v3_set_effect",
-      "title": {
-        "en": "Set effect to..."
-      },
-      "titleFormatted": {
-        "en": "Set effect to [[effID]]"
-      },
-      "args": [
-        {
-          "name": "effID",
-          "type": "dropdown",
-          "title": "Effect",
-          "values": [{"id": "0", "label": {"en":"None"}},
-                      {"id": "1", "label": {"en":"Effect 1"}},
-                      {"id": "2", "label": {"en":"Effect 2"}},
-                      {"id": "3", "label": {"en":"Effect 3"}},
-                      {"id": "4", "label": {"en":"Effect 4"}},
-                      {"id": "5", "label": {"en":"Effect 5"}},
-                      {"id": "6", "label": {"en":"Effect 6"}},
-                      {"id": "7", "label": {"en":"Effect 7"}},
-                      {"id": "8", "label": {"en":"Effect 8"}},
-                      {"id": "9", "label": {"en":"Effect 9"}}
-                    ]
         }
       ]
     }

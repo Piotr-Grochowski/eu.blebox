@@ -226,5 +226,26 @@
   },
   "3.14.2": {
     "en": "rainSensor bugfix"
+  },
+  "3.14.3": {
+    "en": "switchBoxD quickfix for new firmware"
+  },
+  "3.14.4": {
+    "en": "tempSensor v2 support"
+  },
+  "3.14.5": {
+    "en": "tempSensor v2 bugfix"
+  },
+  "3.14.6": {
+    "en": "tempSensor v2 bugfix"
+  },
+  "3.14.7": {
+    "en": "Bugfixes"
+  },
+  "3.99.0": {
+    "en": "New Add device process. From now on for selected drivers you can select to automatically search for devices using mDNS-SD or to do it manually using user provided IP Address. New integration methods for selected drivers - the user can choose to integrate using traditional polling or by using actions or both. Redesigned polling. Now you can see on selected devices last poll action in settings (to see if connectivity with device works right), soon you will be able to restart polling if failed. Devices with new adding process: actionBox, actionBoxS, airSensor, dimmerBox, humiditySensor, pixelBox, proxiBox, rainSensor, rollerGate, saunaBox, shutterBox, shutterBoxDC, shutterBoxDIN, tempSensor, tempSensorPro, tempSensorAC,  windSensorPro, wind&RainSensor, wLightBox, wLightBoxV3, wLightBoxPro, wLightBoxS, wLightBoxS. Devices with actions and polling: floodSensor, rainSensor. Devices with actions only: actionBox, actionBoxS, proxiBox. AirSensor with new Homey build-in capabilities. New unified dimmerBox driver (for v1 & v2), v2 only driver now depreciated - recommended change to unified one. Unified wLightBox* and pixelBox* flow cards (may broke some flows using old flow cards)"
+  },
+  "3.99.1": {
+    "en": "Changelog fix"
   }
 }

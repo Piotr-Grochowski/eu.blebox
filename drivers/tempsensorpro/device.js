@@ -1,8 +1,8 @@
 'use strict';
 
-const BleBoxMDNSDevice = require('../../lib/bleboxmdnsdevice.js');
+const BleBoxDevice = require('../../lib/bleboxdevice.js');
 
-class tempSensorProDevice extends BleBoxMDNSDevice {
+class tempSensorProDevice extends BleBoxDevice {
 
   async pollBleBox() 
 	{

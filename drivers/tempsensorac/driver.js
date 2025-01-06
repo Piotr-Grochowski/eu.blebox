@@ -1,59 +1,20 @@
 'use strict';
 
-const Homey = require('homey');
-const BleBoxAPI = require('../../lib/bleboxapi.js')
+const BleBoxDriver_v2 = require('../../lib/bleboxdriver_v2.js');
 
-class tempSensorACDriver extends Homey.Driver {
+class tempSensorACDriver extends BleBoxDriver_v2 {
 
-  // Overload onInit - to specify which type and product to search in discovery results.
-  async onInit() {
-    this.bleBoxPoll = 1000;
-    this.log('tempSensorACDriver has been initialized');
+  onInitAddOn()
+  {
+    this.driverName = 'tempSensorACDriver';
+    this.driverType = 'multiSensor';
+    this.driverProduct = ['tempSensorAC','tempSensorAC_v2'];
+    this.drivermDNSSDMethod = true;
+    this.driverIPAddressMethod = true;
+    this.driverActions = false;
+    this.driverPolling = true;
+    this.driverPollingInterval = 5000;    
   }
-
-  async onPairListDevices() {
-    const discoveryStrategy = this.getDiscoveryStrategy();
-    const discoveryResults = discoveryStrategy.getDiscoveryResults();
-    const bbApi = new BleBoxAPI();
-
-    const devices = [];
-    
-    for(const currDevice of Object.values(discoveryResults))
-    {
-      await bbApi.getDeviceState(currDevice.address)
-      .then (result => 
-      {
-        if((result.type=='multiSensor') && (result.product == 'tempSensorAC' || result.product == 'tempSensorAC_v2'))
-        {
-          const apiLevel = result.hasOwnProperty('apiLevel') ? result.apiLevel : '20151206';
-          devices.push(
-            {
-              name: result.deviceName,
-              data: {
-                id: currDevice.id
-              },
-              settings: 
-              {
-                address: currDevice.address,
-                poll_interval : this.bleBoxPoll,
-                product: result.product,
-                apiLevel: apiLevel,
-                hv: result.hv,
-                fv: result.fv
-              }
-            }
-          );
-          return;
-        }
-      })
-      .catch(err => {
-        console.log(err);
-      }
-      );
-    };
-    return devices;
-  }
-
 }
 
 module.exports = tempSensorACDriver;

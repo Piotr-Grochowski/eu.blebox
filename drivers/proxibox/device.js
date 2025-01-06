@@ -1,6 +1,6 @@
 'use strict';
 
-const BleBoxMDNSDevice = require('../../lib/bleboxmdnsdevice.js');
+const BleBoxDevice = require('../../lib/bleboxdevice.js');
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -28,31 +28,31 @@ class proxiBoxDevice extends BleBoxMDNSDevice {
 
   async onButtonClicked()
   {
-    const buttonClicked = this.homey.flow.getDeviceTriggerCard('proxi_clicked');
+    const buttonClicked = this.homey.flow.getDeviceTriggerCard('button_clicked');
     await buttonClicked.trigger(this,{},{});
   }
 
   async onButtonClickedLong()
   {
-    const buttonClickedLong = this.homey.flow.getDeviceTriggerCard('proxi_clicked_long');
+    const buttonClickedLong = this.homey.flow.getDeviceTriggerCard('button_clicked_long');
     await buttonClickedLong.trigger(this,{},{});
   }
 
   async onButtonFallingEdge()
   {
-    const buttonFallingEdge = this.homey.flow.getDeviceTriggerCard('proxi_falling_edge');
+    const buttonFallingEdge = this.homey.flow.getDeviceTriggerCard('button_falling_edge');
     await buttonFallingEdge.trigger(this,{},{});
   }
 
   async onButtonRisingEdge()
   {
-    const buttonRisingEdge = this.homey.flow.getDeviceTriggerCard('proxi_rising_edge');
+    const buttonRisingEdge = this.homey.flow.getDeviceTriggerCard('button_rising_edge');
     await buttonRisingEdge.trigger(this,{},{});
   }
 
   async onButtonAnyEdge()
   {
-    const buttonAnyEdge = this.homey.flow.getDeviceTriggerCard('proxi_any_edge');
+    const buttonAnyEdge = this.homey.flow.getDeviceTriggerCard('button_any_edge');
     await buttonAnyEdge.trigger(this,{},{});
   }
 }

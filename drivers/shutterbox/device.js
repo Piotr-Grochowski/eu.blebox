@@ -1,8 +1,8 @@
 'use strict';
 
-const BleBoxMDNSDevice = require('../../lib/bleboxmdnsdevice.js');
+const BleBoxDevice = require('../../lib/bleboxdevice.js');
 
-class shutterBoxDevice extends BleBoxMDNSDevice {
+class shutterBoxDevice extends BleBoxDevice {
 
   async onBleBoxInit()
   {
@@ -67,7 +67,6 @@ class shutterBoxDevice extends BleBoxMDNSDevice {
     .catch(error => {
       // Error occured
       this.log(error);
-      this.error(error);
       return;
     });
   }
@@ -79,7 +78,6 @@ class shutterBoxDevice extends BleBoxMDNSDevice {
     .catch(error => {
       // Error occured
       this.log(error);
-      this.error(error);
       return;      
     });
   }
@@ -95,7 +93,6 @@ class shutterBoxDevice extends BleBoxMDNSDevice {
     .catch(error => {
       // Error occured
       this.log(error);
-      this.error(error);
       return;
       
     });
@@ -109,7 +106,6 @@ class shutterBoxDevice extends BleBoxMDNSDevice {
     .catch(error => {
       // Error occured
       this.log(error);
-      this.error(error);
       return;
       
     });
@@ -122,7 +118,6 @@ class shutterBoxDevice extends BleBoxMDNSDevice {
     .catch(error => {
       // Error occured
       this.log(error);
-      this.error(error);
       return;
       
     });
@@ -138,7 +133,6 @@ class shutterBoxDevice extends BleBoxMDNSDevice {
     .catch(error => {
       // Error occured
       this.log(error);
-      this.error(error);
       return;
       
     });

@@ -1,0 +1,13 @@
+{
+    "id": "button1_any_edge", 
+    "title": {
+      "en": "Any edge has been detected on input 1"
+    },
+    "args":[
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+        }
+    ]
+  }

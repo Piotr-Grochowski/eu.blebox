@@ -1,16 +1,19 @@
 'use strict';
 
-const BleBoxDriver = require('../../lib/bleboxdriver.js');
+const BleBoxDriver_v2 = require('../../lib/bleboxdriver_v2.js');
 
-class floodSensorDriver extends BleBoxDriver {
+class floodSensorDriver extends BleBoxDriver_v2 {
 
-  // Overload onInit - to specify which type and product to search in discovery results.
-  async onInit()
+  onInitAddOn()
   {
-    this.bleBoxType = 'multiSensor';
-    this.bleBoxProduct = 'floodSensor';
-    this.bleBoxPoll = 1000;
-    this.log('floodSensorDriver has been initialized');
+    this.driverName = 'floodSensorDriver';
+    this.driverType = 'multiSensor';
+    this.driverProduct = ['floodSensor'];
+    this.drivermDNSSDMethod = true;
+    this.driverIPAddressMethod = true;
+    this.driverActions = true;
+    this.driverPolling = true;
+    this.driverPollingInterval = 60000;    
   }
 
 }

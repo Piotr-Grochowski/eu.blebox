@@ -1,17 +1,20 @@
 'use strict';
 
-const BleBoxDriver = require('../../lib/bleboxdriver.js');
+const BleBoxDriver_v2 = require('../../lib/bleboxdriver_v2.js');
 
-class wLightBoxSProDriver extends BleBoxDriver {
+class wLightBoxSProDriver extends BleBoxDriver_v2 {
 
-  // Overload onInit - to specify which type and product to search in discovery results.
-  async onInit()
-  {
-    this.bleBoxType = 'wLightBox';
-    this.bleBoxProduct = 'wLightBoxSPro';
-    this.bleBoxPoll = 1000;
-    this.log('wLightBoxSProDriver has been initialized');
-  }
+	onInitAddOn()
+	{
+	  this.driverName = 'wLightBoxSProDriver';
+	  this.driverType = 'wLightBox';
+	  this.driverProduct = ['wLightBoxSPro'];
+	  this.drivermDNSSDMethod = true;
+	  this.driverIPAddressMethod = true;
+	  this.driverActions = false;
+	  this.driverPolling = true;
+	  this.driverPollingInterval = 1000;    
+   }
 
 }
 

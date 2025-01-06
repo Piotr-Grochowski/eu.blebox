@@ -1,0 +1,13 @@
+{
+    "id": "button2_clicked", 
+    "title": {
+      "en": "Button 2 has been clicked shortly"
+    },
+    "args":[
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+        }
+    ]
+  }

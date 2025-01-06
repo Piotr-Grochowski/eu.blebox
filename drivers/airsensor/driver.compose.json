@@ -14,20 +14,23 @@
   "connectivity": [
     "lan"
   ],
-  "discovery": "bbxsrv",
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png"
   },
   "pair": [
     {
-      "id": "list_airsensors",
-      "template": "list_devices",
-      "navigation": { "next": "add_airsensors"}
+      "id":"add_blebox_device",
+      "navigation": {"next": "list_blebox_devices"}
     },
     {
-      "id": "add_airsensors",
-      "template": "add_devices"    
+      "id":"list_blebox_devices",
+      "template": "list_devices",
+      "navigation": {"next": "add_devices", "prev": "add_blebox_device"}
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
     }
   ],
   "energy": {
@@ -51,6 +54,18 @@
           }
         },
         {
+          "id": "webhooks_enabled",
+          "type": "label",
+          "value": "No",
+          "label": {"en": "Action webhooks enabled"}
+        },
+        {
+          "id": "polling_enabled",
+          "type": "label",
+          "value": "Yes",
+          "label": {"en": "Polling enabled"}
+        },
+        {
           "id": "poll_interval",
           "type": "number",
           "label": {
@@ -60,6 +75,12 @@
             "min": 60000,
             "max": 360000
           }
+        },
+        {
+          "id": "last_poll",
+          "type": "label",
+          "value": "",
+          "label": {"en": "Last poll"}
         }
       ]
     },

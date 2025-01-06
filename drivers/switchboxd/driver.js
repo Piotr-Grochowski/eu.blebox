@@ -7,7 +7,7 @@ class switchBoxDDriver extends BleBoxDriver {
   // Overload onInit - to specify which type and product to search in discovery results.
   async onInit()
   {
-    this.bleBoxType = 'switchBoxD';
+    this.bleBoxType = '';
     this.bleBoxProduct = 'switchBoxD';
     this.bleBoxPoll = 1000;
 

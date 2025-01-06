@@ -1,8 +1,8 @@
 'use strict';
 
-const BleBoxMDNSDevice = require('../../lib/bleboxmdnsdevice.js');
+const BleBoxDevice = require('../../lib/bleboxdevice.js');
 
-class thermoBoxClassicDevice extends BleBoxMDNSDevice {
+class thermoBoxClassicDevice extends BleBoxDevice {
 
   async onBleBoxInit()
   {
@@ -77,7 +77,6 @@ class thermoBoxClassicDevice extends BleBoxMDNSDevice {
     .catch(error => {
       // Error occured
       this.log(error);
-      this.error(error);
       return;
     });
   }
@@ -91,7 +90,6 @@ class thermoBoxClassicDevice extends BleBoxMDNSDevice {
     .catch(error => {
       // Error occured
       this.log(error);
-      this.error(error);
       return;
     });
   }

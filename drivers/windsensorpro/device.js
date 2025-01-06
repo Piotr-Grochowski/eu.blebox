@@ -1,8 +1,8 @@
 'use strict';
 
-const BleBoxMDNSDevice = require('../../lib/bleboxmdnsdevice.js');
+const BleBoxDevice = require('../../lib/bleboxdevice.js');
 
-class windSensorProDevice extends BleBoxMDNSDevice {
+class windSensorProDevice extends BleBoxDevice {
 
   async pollBleBox() 
 	{
@@ -34,7 +34,7 @@ class windSensorProDevice extends BleBoxMDNSDevice {
         });
 
     })
-  .catch(error => {
+    .catch(error => {
       this.log(error);
     })
 	}

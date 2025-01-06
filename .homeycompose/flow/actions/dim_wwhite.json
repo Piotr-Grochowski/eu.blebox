@@ -1,0 +1,24 @@
+{
+  "id": "dim_wwhite",
+  "title": {
+    "en": "Dim warm white to..."
+  },
+  "titleFormatted": {
+    "en": "Dim warm white to [[brightness]]"
+  },
+  "args": [
+    {
+      "name": "brightness",
+      "type": "number",
+      "min":  0,
+      "max":  1,
+      "step": 0.01,
+      "placeholder": "Dim value"
+    },
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=wlightboxv3"
+    }
+  ]
+}

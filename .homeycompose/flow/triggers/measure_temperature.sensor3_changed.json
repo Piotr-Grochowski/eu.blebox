@@ -1,0 +1,23 @@
+{
+    "id": "measure_temperature.sensor3_changed", 
+    "title": {
+      "en": "The temperature on sensor 3 changed"
+    },
+    "tokens": [
+      {
+        "name": "measure_temperature.sensor3",
+        "title": {
+          "en": "Temperature of sensor 3"
+        },
+        "type": "number",
+        "example": 2
+      }
+    ],
+    "args":[
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tempsensorpro|tempsensorac"
+        }
+    ]
+  }

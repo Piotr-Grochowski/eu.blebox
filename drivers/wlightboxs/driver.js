@@ -1,25 +1,20 @@
 'use strict';
 
-const BleBoxDriver = require('../../lib/bleboxdriver.js');
+const BleBoxDriver_v2 = require('../../lib/bleboxdriver_v2.js');
 
-class wLightBoxSDriver extends BleBoxDriver {
+class wLightBoxSDriver extends BleBoxDriver_v2 {
 
-  // Overload onInit - to specify which type and product to search in discovery results.
-  async onInit()
-  {
-    this.bleBoxType = 'wLightBox';
-    this.bleBoxProduct = 'wLightBoxS';
-    this.bleBoxPoll = 1000;
-
-    const setEffectAction = this.homey.flow.getActionCard('wlightboxs_set_effect');
-
-		setEffectAction.registerRunListener(async ( args, state ) => {
-      await args.device.changeEffectTo(args.effID);
-      });
-
-
-    this.log('wLightBoxSDriver has been initialized');
-  }
+	onInitAddOn()
+	{
+	  this.driverName = 'wLightBoxSDriver';
+	  this.driverType = 'wLightBox';
+	  this.driverProduct = ['wLightBoxS'];
+	  this.drivermDNSSDMethod = true;
+	  this.driverIPAddressMethod = true;
+	  this.driverActions = false;
+	  this.driverPolling = true;
+	  this.driverPollingInterval = 1000;    
+   }
 
 }
 

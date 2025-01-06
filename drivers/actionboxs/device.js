@@ -1,10 +1,10 @@
 'use strict';
 
-const BleBoxMDNSDevice = require('../../lib/bleboxmdnsdevice.js');
+const BleBoxDevice = require('../../lib/bleboxdevice.js');
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-class actionBoxSDevice extends BleBoxMDNSDevice {
+class actionBoxSDevice extends BleBoxDevice {
 
   async onBleBoxInit()
   {

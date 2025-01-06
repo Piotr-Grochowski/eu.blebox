@@ -1,8 +1,8 @@
 'use strict';
 
-const BleBoxMDNSDevice = require('../../lib/bleboxmdnsdevice.js');
+const BleBoxDevice = require('../../lib/bleboxdevice.js');
 
-class wLightBoxDevice extends BleBoxMDNSDevice {
+class wLightBoxDevice extends BleBoxDevice {
 
   async onBleBoxInit()
   {

@@ -1,8 +1,8 @@
 'use strict';
 
-const BleBoxMDNSDevice = require('../../lib/bleboxmdnsdevice.js');
+const BleBoxDevice = require('../../lib/bleboxdevice.js');
 
-class airSensorDevice extends BleBoxMDNSDevice {
+class airSensorDevice extends BleBoxDevice {
 
   async pollBleBox() 
 	{
@@ -21,20 +21,17 @@ class airSensorDevice extends BleBoxMDNSDevice {
 
       this.setCapabilityValue('measure_pm25', pm25value)
         .catch( err => {
-          this.polling = false;
-          this.error(err);
+          this.log(err);
         });
 
       this.setCapabilityValue('measure_pm1', pm1value)
         .catch( err => {
-          this.polling = false;
-          this.error(err);
+          this.log(err);
         });
 
       this.setCapabilityValue('measure_pm10', pm10value)
         .catch( err => {
-          this.polling = false;
-          this.error(err);
+          this.log(err);
         });
     })
     .catch(error => {

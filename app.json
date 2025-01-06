@@ -1,8 +1,8 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.blebox",
-  "version": "3.14.2",
-  "compatibility": ">=5.0.0",
+  "version": "3.99.1",
+  "compatibility": ">=12.2.0",
   "sdk": 3,
   "platforms": [
     "local"
@@ -49,14 +49,349 @@
       "path": "/actionBoxS",
       "public": true
     },
+    "floodSensor": {
+      "method": "GET",
+      "path": "/floodSensor",
+      "public": true
+    },
     "proxiBox": {
       "method": "GET",
       "path": "/proxiBox",
+      "public": true
+    },
+    "rainSensor": {
+      "method": "GET",
+      "path": "/rainSensor",
       "public": true
     }
   },
   "flow": {
     "triggers": [
+      {
+        "id": "button_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionboxs|proxibox"
+          }
+        ]
+      },
+      {
+        "id": "button_clicked",
+        "title": {
+          "en": "Button has been clicked shortly"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionboxs|proxibox"
+          }
+        ]
+      },
+      {
+        "id": "button_clicked_long",
+        "title": {
+          "en": "Button has been clicked long"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionboxs|proxibox"
+          }
+        ]
+      },
+      {
+        "id": "button_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionboxs|proxibox"
+          }
+        ]
+      },
+      {
+        "id": "button_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionboxs|proxibox"
+          }
+        ]
+      },
+      {
+        "id": "button1_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input 1"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button1_clicked",
+        "title": {
+          "en": "Button 1 has been clicked shortly"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button1_clicked_long",
+        "title": {
+          "en": "Button 1 has been clicked long"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button1_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input 1"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button1_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input 1"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button2_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input 2"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button2_clicked",
+        "title": {
+          "en": "Button 2 has been clicked shortly"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button2_clicked_long",
+        "title": {
+          "en": "Button 2 has been clicked long"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button2_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input 2"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button2_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input 2"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button3_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input 3"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button3_clicked",
+        "title": {
+          "en": "Button 3 has been clicked shortly"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button3_clicked_long",
+        "title": {
+          "en": "Button 3 has been clicked long"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button3_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input 3"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button3_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input 3"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button4_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input 4"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button4_clicked",
+        "title": {
+          "en": "Button 4 has been clicked shortly"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button4_clicked_long",
+        "title": {
+          "en": "Button 4 has been clicked long"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button4_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input 4"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
+      {
+        "id": "button4_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input 4"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+          }
+        ]
+      },
       {
         "id": "effect_selector_changed",
         "title": {
@@ -67,6 +402,98 @@
             "name": "device",
             "type": "device",
             "filter": "driver_id=wlightbox|wlightboxpro|pixelbox"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sensor1_changed",
+        "title": {
+          "en": "The temperature on sensor 1 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sensor1",
+            "title": {
+              "en": "Temperature of sensor 1"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tempsensorpro|tempsensorac"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sensor2_changed",
+        "title": {
+          "en": "The temperature on sensor 2 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sensor2",
+            "title": {
+              "en": "Temperature of sensor 2"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tempsensorpro|tempsensorac"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sensor3_changed",
+        "title": {
+          "en": "The temperature on sensor 3 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sensor3",
+            "title": {
+              "en": "Temperature of sensor 3"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tempsensorpro|tempsensorac"
+          }
+        ]
+      },
+      {
+        "id": "measure_temperature.sensor4_changed",
+        "title": {
+          "en": "The temperature on sensor 4 changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_temperature.sensor4",
+            "title": {
+              "en": "Temperature of sensor 4"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tempsensorpro|tempsensorac"
           }
         ]
       },
@@ -83,385 +510,6 @@
             "name": "device",
             "type": "device",
             "filter": "capabilities=thermostat_state"
-          }
-        ]
-      },
-      {
-        "id": "button1_clicked",
-        "title": {
-          "en": "Button 1 has been clicked shortly"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button1_clicked_long",
-        "title": {
-          "en": "Button 1 has been clicked long"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button1_falling_edge",
-        "title": {
-          "en": "Falling edge has been detected on input 1"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button1_rising_edge",
-        "title": {
-          "en": "Rising edge has been detected on input 1"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button1_any_edge",
-        "title": {
-          "en": "Any edge has been detected on input 1"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button2_clicked",
-        "title": {
-          "en": "Button 2 has been clicked shortly"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button2_clicked_long",
-        "title": {
-          "en": "Button 2 has been clicked long"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button2_falling_edge",
-        "title": {
-          "en": "Falling edge has been detected on input 2"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button2_rising_edge",
-        "title": {
-          "en": "Rising edge has been detected on input 2"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button2_any_edge",
-        "title": {
-          "en": "Any edge has been detected on input 2"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button3_clicked",
-        "title": {
-          "en": "Button 3 has been clicked shortly"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button3_clicked_long",
-        "title": {
-          "en": "Button 3 has been clicked long"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button3_falling_edge",
-        "title": {
-          "en": "Falling edge has been detected on input 3"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button3_rising_edge",
-        "title": {
-          "en": "Rising edge has been detected on input 3"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button3_any_edge",
-        "title": {
-          "en": "Any edge has been detected on input 3"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button4_clicked",
-        "title": {
-          "en": "Button 4 has been clicked shortly"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button4_clicked_long",
-        "title": {
-          "en": "Button 4 has been clicked long"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button4_falling_edge",
-        "title": {
-          "en": "Falling edge has been detected on input 4"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button4_rising_edge",
-        "title": {
-          "en": "Rising edge has been detected on input 4"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button4_any_edge",
-        "title": {
-          "en": "Any edge has been detected on input 4"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionbox"
-          }
-        ]
-      },
-      {
-        "id": "button_clicked",
-        "title": {
-          "en": "Button has been clicked shortly"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionboxs"
-          }
-        ]
-      },
-      {
-        "id": "button_clicked_long",
-        "title": {
-          "en": "Button has been clicked long"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionboxs"
-          }
-        ]
-      },
-      {
-        "id": "button_falling_edge",
-        "title": {
-          "en": "Falling edge has been detected on input"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionboxs"
-          }
-        ]
-      },
-      {
-        "id": "button_rising_edge",
-        "title": {
-          "en": "Rising edge has been detected on input"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionboxs"
-          }
-        ]
-      },
-      {
-        "id": "button_any_edge",
-        "title": {
-          "en": "Any edge has been detected on input"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=actionboxs"
-          }
-        ]
-      },
-      {
-        "id": "measure_pm1_changed",
-        "title": {
-          "en": "The PM1.0 value has changed",
-          "nl": "De PM1.0 waarde is veranderd",
-          "de": "Der PM1.0-Wert hat sich geändert"
-        },
-        "tokens": [
-          {
-            "name": "measure_pm1",
-            "title": {
-              "en": "PM1.0",
-              "nl": "PM1.0",
-              "de": "PM1.0"
-            },
-            "type": "number",
-            "example": 2
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=airsensor"
-          }
-        ]
-      },
-      {
-        "id": "measure_pm10_changed",
-        "title": {
-          "en": "The PM10 value has changed",
-          "nl": "De PM10 waarde is veranderd",
-          "de": "Der PM10-Wert hat sich geändert"
-        },
-        "tokens": [
-          {
-            "name": "measure_pm10",
-            "title": {
-              "en": "PM10",
-              "nl": "PM10",
-              "de": "PM10"
-            },
-            "type": "number",
-            "example": 2
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=airsensor"
           }
         ]
       },
@@ -531,71 +579,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=humiditysensor"
-          }
-        ]
-      },
-      {
-        "id": "proxi_clicked",
-        "title": {
-          "en": "Short proximity received"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=proxibox"
-          }
-        ]
-      },
-      {
-        "id": "proxi_clicked_long",
-        "title": {
-          "en": "Long proximity received"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=proxibox"
-          }
-        ]
-      },
-      {
-        "id": "proxi_falling_edge",
-        "title": {
-          "en": "Proximity end received"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=proxibox"
-          }
-        ]
-      },
-      {
-        "id": "proxi_rising_edge",
-        "title": {
-          "en": "Proximity start received"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=proxibox"
-          }
-        ]
-      },
-      {
-        "id": "proxi_any_edge",
-        "title": {
-          "en": "Proximity change received"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=proxibox"
           }
         ]
       },
@@ -782,190 +765,6 @@
         ]
       },
       {
-        "id": "measure_temperature.sens1_changed",
-        "title": {
-          "en": "The temperature on sensor 1 changed"
-        },
-        "tokens": [
-          {
-            "name": "measure_temperature.sens1",
-            "title": {
-              "en": "Temperature of sensor 1"
-            },
-            "type": "number",
-            "example": 2
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=tempsensorac"
-          }
-        ]
-      },
-      {
-        "id": "measure_temperature.sens2_changed",
-        "title": {
-          "en": "The temperature on sensor 2 changed"
-        },
-        "tokens": [
-          {
-            "name": "measure_temperature.sens2",
-            "title": {
-              "en": "Temperature of sensor 2"
-            },
-            "type": "number",
-            "example": 2
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=tempsensorac"
-          }
-        ]
-      },
-      {
-        "id": "measure_temperature.sens3_changed",
-        "title": {
-          "en": "The temperature on sensor 3 changed"
-        },
-        "tokens": [
-          {
-            "name": "measure_temperature.sens3",
-            "title": {
-              "en": "Temperature of sensor 3"
-            },
-            "type": "number",
-            "example": 2
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=tempsensorac"
-          }
-        ]
-      },
-      {
-        "id": "measure_temperature.sens4_changed",
-        "title": {
-          "en": "The temperature on sensor 4 changed"
-        },
-        "tokens": [
-          {
-            "name": "measure_temperature.sens4",
-            "title": {
-              "en": "Temperature of sensor 4"
-            },
-            "type": "number",
-            "example": 2
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=tempsensorac"
-          }
-        ]
-      },
-      {
-        "id": "measure_temperature.sensor1_changed",
-        "title": {
-          "en": "The temperature on sensor 1 changed"
-        },
-        "tokens": [
-          {
-            "name": "measure_temperature.sensor1",
-            "title": {
-              "en": "Temperature of sensor 1"
-            },
-            "type": "number",
-            "example": 2
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=tempsensorpro"
-          }
-        ]
-      },
-      {
-        "id": "measure_temperature.sensor2_changed",
-        "title": {
-          "en": "The temperature on sensor 2 changed"
-        },
-        "tokens": [
-          {
-            "name": "measure_temperature.sensor2",
-            "title": {
-              "en": "Temperature of sensor 2"
-            },
-            "type": "number",
-            "example": 2
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=tempsensorpro"
-          }
-        ]
-      },
-      {
-        "id": "measure_temperature.sensor3_changed",
-        "title": {
-          "en": "The temperature on sensor 3 changed"
-        },
-        "tokens": [
-          {
-            "name": "measure_temperature.sensor3",
-            "title": {
-              "en": "Temperature of sensor 3"
-            },
-            "type": "number",
-            "example": 2
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=tempsensorpro"
-          }
-        ]
-      },
-      {
-        "id": "measure_temperature.sensor4_changed",
-        "title": {
-          "en": "The temperature on sensor 4 changed"
-        },
-        "tokens": [
-          {
-            "name": "measure_temperature.sensor4",
-            "title": {
-              "en": "Temperature of sensor 4"
-            },
-            "type": "number",
-            "example": 2
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=tempsensorpro"
-          }
-        ]
-      },
-      {
         "id": "measure_wind_strength.avg1_changed",
         "title": {
           "en": "The average wind strength changed"
@@ -993,6 +792,211 @@
       }
     ],
     "actions": [
+      {
+        "id": "dim_blue",
+        "title": {
+          "en": "Dim blue to..."
+        },
+        "titleFormatted": {
+          "en": "Dim blue to [[brightness]]"
+        },
+        "args": [
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=wlightbox|wlightboxpro|wlightboxv3|pixelbox"
+          }
+        ]
+      },
+      {
+        "id": "dim_cwhite",
+        "title": {
+          "en": "Dim cold white to..."
+        },
+        "titleFormatted": {
+          "en": "Dim cold white to [[brightness]]"
+        },
+        "args": [
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=wlightboxv3"
+          }
+        ]
+      },
+      {
+        "id": "dim_green",
+        "title": {
+          "en": "Dim green to..."
+        },
+        "titleFormatted": {
+          "en": "Dim green to [[brightness]]"
+        },
+        "args": [
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=wlightbox|wlightboxpro|wlightboxv3|pixelbox"
+          }
+        ]
+      },
+      {
+        "id": "dim_red",
+        "title": {
+          "en": "Dim red to..."
+        },
+        "titleFormatted": {
+          "en": "Dim red to [[brightness]]"
+        },
+        "args": [
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=wlightbox|wlightboxpro|wlightboxv3|pixelbox"
+          }
+        ]
+      },
+      {
+        "id": "dim_white",
+        "title": {
+          "en": "Dim white to..."
+        },
+        "titleFormatted": {
+          "en": "Dim white to [[brightness]]"
+        },
+        "args": [
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=wlightbox|wlightboxpro|pixelbox"
+          }
+        ]
+      },
+      {
+        "id": "dim_wwhite",
+        "title": {
+          "en": "Dim warm white to..."
+        },
+        "titleFormatted": {
+          "en": "Dim warm white to [[brightness]]"
+        },
+        "args": [
+          {
+            "name": "brightness",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Dim value"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=wlightboxv3"
+          }
+        ]
+      },
+      {
+        "id": "move_to_favorite_pos",
+        "title": {
+          "en": "Move to favorite position"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=shutterbox|shutterboxdc|shutterboxdin"
+          }
+        ]
+      },
+      {
+        "id": "set_channels",
+        "title": {
+          "en": "Set channels to..."
+        },
+        "titleFormatted": {
+          "en": "Set channels to RED=[[red_channel]] GREEN=[[green_channel]] BLUE=[[blue_channel]] WHITE=[[white_channel]]"
+        },
+        "args": [
+          {
+            "name": "red_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Red channel"
+          },
+          {
+            "name": "green_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Green channel"
+          },
+          {
+            "name": "blue_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "Blue channel"
+          },
+          {
+            "name": "white_channel",
+            "type": "number",
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "placeholder": "White channel"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=wlightbox|wlightboxpro|pixelbox"
+          }
+        ]
+      },
       {
         "id": "set_thermostat_state_to",
         "title": {
@@ -1040,151 +1044,7 @@
         ]
       },
       {
-        "id": "pixelbox_dim_blue",
-        "title": {
-          "en": "Dim blue to..."
-        },
-        "titleFormatted": {
-          "en": "Dim blue to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=pixelbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "pixelbox_dim_green",
-        "title": {
-          "en": "Dim green to..."
-        },
-        "titleFormatted": {
-          "en": "Dim green to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=pixelbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "pixelbox_dim_red",
-        "title": {
-          "en": "Dim red to..."
-        },
-        "titleFormatted": {
-          "en": "Dim red to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=pixelbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "pixelbox_dim_white",
-        "title": {
-          "en": "Dim white to..."
-        },
-        "titleFormatted": {
-          "en": "Dim white to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=pixelbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "pixelbox_set_channels",
-        "title": {
-          "en": "Set channels to..."
-        },
-        "titleFormatted": {
-          "en": "Set channels to RED=[[red_channel]] GREEN=[[green_channel]] BLUE=[[blue_channel]] WHITE=[[white_channel]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=pixelbox"
-          },
-          {
-            "name": "red_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Red channel"
-          },
-          {
-            "name": "green_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Green channel"
-          },
-          {
-            "name": "blue_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Blue channel"
-          },
-          {
-            "name": "white_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "White channel"
-          }
-        ]
-      },
-      {
-        "id": "pixelbox_set_effect",
+        "id": "wlightbox_set_effect",
         "title": {
           "en": "Set effect to..."
         },
@@ -1192,11 +1052,6 @@
           "en": "Set effect to [[effID]]"
         },
         "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=pixelbox"
-          },
           {
             "name": "effID",
             "type": "dropdown",
@@ -1263,45 +1118,11 @@
                 }
               }
             ]
-          }
-        ]
-      },
-      {
-        "id": "move_to_favorite_pos",
-        "title": {
-          "en": "Move to favorite position"
-        },
-        "args": [
+          },
           {
-            "type": "device",
             "name": "device",
-            "filter": "driver_id=shutterbox"
-          }
-        ]
-      },
-      {
-        "id": "move_to_favorite_pos_dc",
-        "title": {
-          "en": "Move to favorite position"
-        },
-        "args": [
-          {
             "type": "device",
-            "name": "device",
-            "filter": "driver_id=shutterboxdc"
-          }
-        ]
-      },
-      {
-        "id": "shutterboxdin_move_to_favorite_pos",
-        "title": {
-          "en": "Move to favorite position"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=shutterboxdin"
+            "filter": "driver_id=wlightbox|wlightboxpro|wlightboxs|wlightboxspro|pixelbox"
           }
         ]
       },
@@ -1579,663 +1400,6 @@
         ]
       },
       {
-        "id": "dim_blue",
-        "title": {
-          "en": "Dim blue to..."
-        },
-        "titleFormatted": {
-          "en": "Dim blue to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "dim_green",
-        "title": {
-          "en": "Dim green to..."
-        },
-        "titleFormatted": {
-          "en": "Dim green to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "dim_red",
-        "title": {
-          "en": "Dim red to..."
-        },
-        "titleFormatted": {
-          "en": "Dim red to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "dim_white",
-        "title": {
-          "en": "Dim white to..."
-        },
-        "titleFormatted": {
-          "en": "Dim white to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "set_channels",
-        "title": {
-          "en": "Set channels to..."
-        },
-        "titleFormatted": {
-          "en": "Set channels to RED=[[red_channel]] GREEN=[[green_channel]] BLUE=[[blue_channel]] WHITE=[[white_channel]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "red_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Red channel"
-          },
-          {
-            "name": "green_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Green channel"
-          },
-          {
-            "name": "blue_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Blue channel"
-          },
-          {
-            "name": "white_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "White channel"
-          }
-        ]
-      },
-      {
-        "id": "wlightbox_set_effect",
-        "title": {
-          "en": "Set effect to..."
-        },
-        "titleFormatted": {
-          "en": "Set effect to [[effID]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightbox"
-          },
-          {
-            "name": "effID",
-            "type": "dropdown",
-            "title": "Effect",
-            "values": [
-              {
-                "id": "0",
-                "label": {
-                  "en": "None"
-                }
-              },
-              {
-                "id": "1",
-                "label": {
-                  "en": "Effect 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Effect 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Effect 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Effect 4"
-                }
-              },
-              {
-                "id": "5",
-                "label": {
-                  "en": "Effect 5"
-                }
-              },
-              {
-                "id": "6",
-                "label": {
-                  "en": "Effect 6"
-                }
-              },
-              {
-                "id": "7",
-                "label": {
-                  "en": "Effect 7"
-                }
-              },
-              {
-                "id": "8",
-                "label": {
-                  "en": "Effect 8"
-                }
-              },
-              {
-                "id": "9",
-                "label": {
-                  "en": "Effect 9"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "wlightboxpro_dim_blue",
-        "title": {
-          "en": "Dim blue to..."
-        },
-        "titleFormatted": {
-          "en": "Dim blue to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxpro"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "wlightboxpro_dim_green",
-        "title": {
-          "en": "Dim green to..."
-        },
-        "titleFormatted": {
-          "en": "Dim green to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxpro"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "wlightboxpro_dim_red",
-        "title": {
-          "en": "Dim red to..."
-        },
-        "titleFormatted": {
-          "en": "Dim red to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxpro"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "wlightboxpro_dim_white",
-        "title": {
-          "en": "Dim white to..."
-        },
-        "titleFormatted": {
-          "en": "Dim white to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxpro"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "wlightboxpro_set_channels",
-        "title": {
-          "en": "Set channels to..."
-        },
-        "titleFormatted": {
-          "en": "Set channels to RED=[[red_channel]] GREEN=[[green_channel]] BLUE=[[blue_channel]] WHITE=[[white_channel]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxpro"
-          },
-          {
-            "name": "red_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Red channel"
-          },
-          {
-            "name": "green_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Green channel"
-          },
-          {
-            "name": "blue_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Blue channel"
-          },
-          {
-            "name": "white_channel",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "White channel"
-          }
-        ]
-      },
-      {
-        "id": "wlightboxpro_set_effect",
-        "title": {
-          "en": "Set effect to..."
-        },
-        "titleFormatted": {
-          "en": "Set effect to [[effID]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxpro"
-          },
-          {
-            "name": "effID",
-            "type": "dropdown",
-            "title": "Effect",
-            "values": [
-              {
-                "id": "0",
-                "label": {
-                  "en": "None"
-                }
-              },
-              {
-                "id": "1",
-                "label": {
-                  "en": "Effect 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Effect 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Effect 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Effect 4"
-                }
-              },
-              {
-                "id": "5",
-                "label": {
-                  "en": "Effect 5"
-                }
-              },
-              {
-                "id": "6",
-                "label": {
-                  "en": "Effect 6"
-                }
-              },
-              {
-                "id": "7",
-                "label": {
-                  "en": "Effect 7"
-                }
-              },
-              {
-                "id": "8",
-                "label": {
-                  "en": "Effect 8"
-                }
-              },
-              {
-                "id": "9",
-                "label": {
-                  "en": "Effect 9"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "wlightboxs_set_effect",
-        "title": {
-          "en": "Set effect to..."
-        },
-        "titleFormatted": {
-          "en": "Set effect to [[effID]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxs"
-          },
-          {
-            "name": "effID",
-            "type": "dropdown",
-            "title": "Effect",
-            "values": [
-              {
-                "id": "0",
-                "label": {
-                  "en": "None"
-                }
-              },
-              {
-                "id": "1",
-                "label": {
-                  "en": "Effect 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Effect 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Effect 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Effect 4"
-                }
-              },
-              {
-                "id": "5",
-                "label": {
-                  "en": "Effect 5"
-                }
-              },
-              {
-                "id": "6",
-                "label": {
-                  "en": "Effect 6"
-                }
-              },
-              {
-                "id": "7",
-                "label": {
-                  "en": "Effect 7"
-                }
-              },
-              {
-                "id": "8",
-                "label": {
-                  "en": "Effect 8"
-                }
-              },
-              {
-                "id": "9",
-                "label": {
-                  "en": "Effect 9"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "v3_dim_blue",
-        "title": {
-          "en": "Dim blue to..."
-        },
-        "titleFormatted": {
-          "en": "Dim blue to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxv3"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "v3_dim_green",
-        "title": {
-          "en": "Dim green to..."
-        },
-        "titleFormatted": {
-          "en": "Dim green to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxv3"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "v3_dim_red",
-        "title": {
-          "en": "Dim red to..."
-        },
-        "titleFormatted": {
-          "en": "Dim red to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxv3"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "v3_dim_wwhite",
-        "title": {
-          "en": "Dim warm white to..."
-        },
-        "titleFormatted": {
-          "en": "Dim warm white to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxv3"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
-        "id": "v3_dim_cwhite",
-        "title": {
-          "en": "Dim cold white to..."
-        },
-        "titleFormatted": {
-          "en": "Dim cold white to [[brightness]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxv3"
-          },
-          {
-            "name": "brightness",
-            "type": "number",
-            "min": 0,
-            "max": 1,
-            "step": 0.01,
-            "placeholder": "Dim value"
-          }
-        ]
-      },
-      {
         "id": "v3_set_channels",
         "title": {
           "en": "Set channels to..."
@@ -2288,89 +1452,6 @@
             "max": 1,
             "step": 0.01,
             "placeholder": "Cold white channel"
-          }
-        ]
-      },
-      {
-        "id": "v3_set_effect",
-        "title": {
-          "en": "Set effect to..."
-        },
-        "titleFormatted": {
-          "en": "Set effect to [[effID]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=wlightboxv3"
-          },
-          {
-            "name": "effID",
-            "type": "dropdown",
-            "title": "Effect",
-            "values": [
-              {
-                "id": "0",
-                "label": {
-                  "en": "None"
-                }
-              },
-              {
-                "id": "1",
-                "label": {
-                  "en": "Effect 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Effect 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Effect 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Effect 4"
-                }
-              },
-              {
-                "id": "5",
-                "label": {
-                  "en": "Effect 5"
-                }
-              },
-              {
-                "id": "6",
-                "label": {
-                  "en": "Effect 6"
-                }
-              },
-              {
-                "id": "7",
-                "label": {
-                  "en": "Effect 7"
-                }
-              },
-              {
-                "id": "8",
-                "label": {
-                  "en": "Effect 8"
-                }
-              },
-              {
-                "id": "9",
-                "label": {
-                  "en": "Effect 9"
-                }
-              }
-            ]
           }
         ]
       }
@@ -2484,18 +1565,24 @@
       ],
       "pair": [
         {
-          "id": "list_actionboxes",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_actionboxes"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_actionboxes",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/actionbox/assets/images/small.png",
         "large": "/drivers/actionbox/assets/images/large.png",
@@ -2516,6 +1603,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -2523,7 +1626,15 @@
               },
               "attr": {
                 "min": 500,
-                "max": 60000
+                "max": 600000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -2581,18 +1692,24 @@
       ],
       "pair": [
         {
-          "id": "list_actionboxes",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_actionboxes"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_actionboxes",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/actionboxs/assets/images/small.png",
         "large": "/drivers/actionboxs/assets/images/large.png",
@@ -2613,6 +1730,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -2620,7 +1753,15 @@
               },
               "attr": {
                 "min": 500,
-                "max": 60000
+                "max": 600000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -2680,21 +1821,27 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/airsensor/assets/images/small.png",
         "large": "/drivers/airsensor/assets/images/large.png"
       },
       "pair": [
         {
-          "id": "list_airsensors",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_airsensors"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_airsensors",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -2718,6 +1865,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -2726,6 +1889,14 @@
               "attr": {
                 "min": 60000,
                 "max": 360000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -2786,7 +1957,22 @@
       ],
       "pair": [
         {
-          "id": "pair"
+          "id": "add_blebox_device",
+          "navigation": {
+            "next": "list_blebox_devices"
+          }
+        },
+        {
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
         }
       ],
       "energy": {
@@ -2814,6 +2000,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -2822,6 +2024,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             },
             {
@@ -3496,6 +2706,7 @@
       "connectivity": [
         "lan"
       ],
+      "deprecated": true,
       "pair": [
         {
           "id": "list_dimboxes",
@@ -4458,17 +3669,23 @@
           "usageConstant": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_floodsensors",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_floodsensors"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_floodsensors",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -4487,6 +3704,50 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "dropdown",
+              "value": "Yes",
+              "label": {
+                "en": "Action webhooks enabled"
+              },
+              "values": [
+                {
+                  "id": "Yes",
+                  "label": {
+                    "en": "Yes"
+                  }
+                },
+                {
+                  "id": "No",
+                  "label": {
+                    "en": "No"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "polling_enabled",
+              "type": "dropdown",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              },
+              "values": [
+                {
+                  "id": "Yes",
+                  "label": {
+                    "en": "Yes"
+                  }
+                },
+                {
+                  "id": "No",
+                  "label": {
+                    "en": "No"
+                  }
+                }
+              ]
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -4495,6 +3756,14 @@
               "attr": {
                 "min": 500,
                 "max": 600000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -4813,17 +4082,23 @@
           "usageConstant": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_humiditysensor",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_humiditysensor"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_humiditysensor",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -4842,6 +4117,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -4850,6 +4141,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -4957,17 +4256,23 @@
           "usageOff": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_pixelboxes",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_pixelboxes"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_pixelboxes",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -4986,6 +4291,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -4994,6 +4315,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             },
             {
@@ -5059,18 +4388,24 @@
       ],
       "pair": [
         {
-          "id": "list_proxiboxes",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_proxiboxes"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_proxiboxes",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/proxibox/assets/images/small.png",
         "large": "/drivers/proxibox/assets/images/large.png",
@@ -5091,6 +4426,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5099,6 +4450,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -5166,17 +4525,23 @@
           "usageConstant": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_rainsensorspro",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_rainsensorspro"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_rainsensorspro",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -5195,6 +4560,50 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "dropdown",
+              "value": "Yes",
+              "label": {
+                "en": "Action webhooks enabled"
+              },
+              "values": [
+                {
+                  "id": "Yes",
+                  "label": {
+                    "en": "Yes"
+                  }
+                },
+                {
+                  "id": "No",
+                  "label": {
+                    "en": "No"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "polling_enabled",
+              "type": "dropdown",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              },
+              "values": [
+                {
+                  "id": "Yes",
+                  "label": {
+                    "en": "Yes"
+                  }
+                },
+                {
+                  "id": "No",
+                  "label": {
+                    "en": "No"
+                  }
+                }
+              ]
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5203,6 +4612,14 @@
               "attr": {
                 "min": 500,
                 "max": 600000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -5268,7 +4685,22 @@
       },
       "pair": [
         {
-          "id": "pair"
+          "id": "add_blebox_device",
+          "navigation": {
+            "next": "list_blebox_devices"
+          }
+        },
+        {
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
         }
       ],
       "energy": {
@@ -5291,6 +4723,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5299,6 +4747,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             },
             {
@@ -5382,7 +4838,22 @@
       },
       "pair": [
         {
-          "id": "pair"
+          "id": "add_blebox_device",
+          "navigation": {
+            "next": "list_blebox_devices"
+          }
+        },
+        {
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
         }
       ],
       "settings": [
@@ -5400,6 +4871,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5408,6 +4895,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -5469,21 +4964,27 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/shutterbox/assets/images/small.png",
         "large": "/drivers/shutterbox/assets/images/large.png"
       },
       "pair": [
         {
-          "id": "list_shutterboxes",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_shutterboxes"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_shutterboxes",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -5507,6 +5008,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5515,6 +5032,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             },
             {
@@ -5589,7 +5114,22 @@
       },
       "pair": [
         {
-          "id": "pair"
+          "id": "add_blebox_device",
+          "navigation": {
+            "next": "list_blebox_devices"
+          }
+        },
+        {
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
         }
       ],
       "energy": {
@@ -5612,6 +5152,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5620,6 +5176,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             },
             {
@@ -5688,21 +5252,27 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/shutterboxdin/assets/images/small.png",
         "large": "/drivers/shutterboxdin/assets/images/large.png"
       },
       "pair": [
         {
-          "id": "list_shutterboxes",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_shutterboxes"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_shutterboxes",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -5726,6 +5296,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5734,6 +5320,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             },
             {
@@ -6660,17 +6254,23 @@
           "usageConstant": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_tempsensors",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_tempsensors"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_tempsensors",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -6689,6 +6289,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -6697,6 +6313,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -6746,28 +6370,28 @@
       },
       "class": "sensor",
       "capabilities": [
-        "measure_temperature.sens1",
-        "measure_temperature.sens2",
-        "measure_temperature.sens3",
-        "measure_temperature.sens4"
+        "measure_temperature.sensor1",
+        "measure_temperature.sensor2",
+        "measure_temperature.sensor3",
+        "measure_temperature.sensor4"
       ],
       "capabilitiesOptions": {
-        "measure_temperature.sens1": {
+        "measure_temperature.sensor1": {
           "title": {
             "en": "Temperature 1"
           }
         },
-        "measure_temperature.sens2": {
+        "measure_temperature.sensor2": {
           "title": {
             "en": "Temperature 2"
           }
         },
-        "measure_temperature.sens3": {
+        "measure_temperature.sensor3": {
           "title": {
             "en": "Temperature 3"
           }
         },
-        "measure_temperature.sens4": {
+        "measure_temperature.sensor4": {
           "title": {
             "en": "Temperature 4"
           }
@@ -6788,17 +6412,23 @@
           "usageConstant": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_tempsensorsac",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_tempsensorsac"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_tempsensorsac",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -6817,6 +6447,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -6825,6 +6471,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -6916,17 +6570,23 @@
           "usageConstant": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_tempsensorspro",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_tempsensorspro"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_tempsensorspro",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -6945,6 +6605,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -6953,6 +6629,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -7038,17 +6722,23 @@
           "usageOff": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_thermoboxes",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_thermoboxes"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_thermoboxes",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -7067,6 +6757,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -7075,6 +6781,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -7184,17 +6898,23 @@
           "usageConstant": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_windrainsensors",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_windrainsensors"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_windrainsensors",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -7213,6 +6933,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -7221,6 +6957,14 @@
               "attr": {
                 "min": 500,
                 "max": 600000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -7296,17 +7040,23 @@
           "usageConstant": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_windsensorspro",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_windsensorspro"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_windsensorspro",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -7325,6 +7075,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -7333,6 +7099,14 @@
               "attr": {
                 "min": 500,
                 "max": 600000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -7440,17 +7214,23 @@
           "usageOff": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_wlightbox",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_wlightbox"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_wlightbox",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -7469,6 +7249,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -7477,6 +7273,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             },
             {
@@ -7592,17 +7396,23 @@
           "usageOff": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_wlightboxpro",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_wlightboxpro"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_wlightboxpro",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -7621,6 +7431,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -7629,6 +7455,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             },
             {
@@ -7696,17 +7530,23 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_wlightboxses",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_wlightboxses"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_wlightboxses",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -7735,6 +7575,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -7743,6 +7599,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             },
             {
@@ -8409,7 +8273,8 @@
       "class": "light",
       "capabilities": [
         "dim",
-        "onoff"
+        "onoff",
+        "effect_selector"
       ],
       "platforms": [
         "local"
@@ -8417,17 +8282,23 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_wlightboxsespro",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_wlightboxsespro"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_wlightboxsespro",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -8453,6 +8324,30 @@
               "type": "text",
               "label": {
                 "en": "IP Address"
+              }
+            },
+            {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             },
             {
@@ -9192,17 +9087,23 @@
           "usageOff": 1
         }
       },
-      "discovery": "bbxsrv",
       "pair": [
         {
-          "id": "list_wlightbox",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_wlightbox"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_wlightbox",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -9221,6 +9122,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -9229,6 +9146,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Last poll"
               }
             },
             {
@@ -9413,52 +9338,6 @@
       "icon": "/assets/measure_heat_index.svg",
       "desc": {
         "en": "Heat index in °C"
-      },
-      "chartType": "spline",
-      "decimals": 2,
-      "getable": true,
-      "setable": false,
-      "uiComponent": "sensor"
-    },
-    "measure_pm1": {
-      "type": "number",
-      "title": {
-        "en": "PM1.0",
-        "nl": "PM1.0",
-        "de": "PM1.0"
-      },
-      "units": {
-        "en": "μg/m3"
-      },
-      "insights": true,
-      "icon": "/assets/measure_pm1.svg",
-      "desc": {
-        "en": "Atmospheric Particulate Matter PM1.0 (μg/m3)",
-        "nl": "Deeltjesvormige luchtverontreiniging PM1.0 (μg/m3)",
-        "de": "Atmosphärischer Feinstaub PM1.0 (μg/m3)"
-      },
-      "chartType": "spline",
-      "decimals": 2,
-      "getable": true,
-      "setable": false,
-      "uiComponent": "sensor"
-    },
-    "measure_pm10": {
-      "type": "number",
-      "title": {
-        "en": "PM10",
-        "nl": "PM10",
-        "de": "PM10"
-      },
-      "units": {
-        "en": "μg/m3"
-      },
-      "insights": true,
-      "icon": "/assets/measure_pm10.svg",
-      "desc": {
-        "en": "Atmospheric Particulate Matter PM10 (μg/m3)",
-        "nl": "Deeltjesvormige luchtverontreiniging PM10 (μg/m3)",
-        "de": "Atmosphärischer Feinstaub PM10 (μg/m3)"
       },
       "chartType": "spline",
       "decimals": 2,

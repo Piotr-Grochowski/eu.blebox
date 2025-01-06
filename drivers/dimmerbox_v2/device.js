@@ -59,8 +59,6 @@ class dimmerBoxV2Device extends BleBoxMDNSDevice {
       .catch(error => {
         // Error occured
         this.log(error);
-        this.error(error);
-        return;
       });
     }
     else
@@ -70,8 +68,6 @@ class dimmerBoxV2Device extends BleBoxMDNSDevice {
       .catch(error => {
         // Error occured
         this.log(error);
-        this.error(error);
-        return;
       });
     }
   }
@@ -88,8 +84,6 @@ class dimmerBoxV2Device extends BleBoxMDNSDevice {
     .catch(error => {
       // Error occured
       this.log(error);
-      this.error(error);
-      return;
     });
 }
 

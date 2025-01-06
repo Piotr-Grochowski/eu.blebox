@@ -1,1 +1,16 @@
-{}
+{
+    "driver": {
+        "addDeviceTitle": "Add new BleBox device",
+        "addDeviceSubtitle": "Please choose how would you like to add and maintain new BleBox deivces",
+        "addDeviceMethodTitle": "How to search for a device:",
+        "addDeviceMDNS": "Automatically using mDNS-SD",
+        "addDeviceManual": "Manually using IP Address",
+        "addDeviceIPAddress": "IP Address",
+        "addDeviceIntegration": "How to integrate with the device",
+        "addDeviceWebhooks": "Install webhook actions on BleBox device<br />(recommended, but may overwrite custom actions if you created some)",
+        "addDevicePolling": "Use polling",
+        "addDeviceInterval": "Interval [ms]",
+        "addDeviceNext": "Next",
+        "InvalidIPAddress": "IP Address is not valid."
+    }
+}

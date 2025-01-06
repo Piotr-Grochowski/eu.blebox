@@ -1,0 +1,170 @@
+<script type="text/javascript">
+
+function radioMethodChanged() {
+  if($('#radio-method1').prop('checked') == true)
+  {
+     $('#ip_address').show(); 
+     $('#ip_address_label').show(); 
+  }
+  else
+  {
+    $('#ip_address').hide();
+    $('#ip_address_label').hide(); 
+  }
+};
+
+function checkboxPollingChanged() {
+  if($('#checkbox-polling').prop('checked') == true)
+  {
+     $('#polling_interval').show(); 
+     $('#polling_interval_label').show(); 
+  }
+  else
+  {
+    $('#polling_interval').hide();
+    $('#polling_interval_label').hide(); 
+  }
+  nextButtonActivation();
+};
+
+function nextButtonActivation()
+{
+  if($('#checkbox-polling').prop('checked') || $('#checkbox-webhooks').prop('checked'))
+  {
+    $('#nextButton').prop('class','homey-button-primary');
+    $('#nextButton').prop('disabled',false);
+  }
+  else
+  {
+    $('#nextButton').prop('class','homey-button-primary is-disabled');
+    $('#nextButton').prop('disabled','true');
+  }
+
+};
+
+$(function() {
+
+  // Connect button pressed
+  $('#nextButton').click(function() {
+
+    // Hide the messages
+		$('.blebox-ok').hide();
+		$('.blebox-error').hide();
+
+    // Validate IP address
+    var inputaddress = $('#address').val();
+    if (inputaddress != '') 
+    {
+      // IP address is valid, try to connect via backend
+      Homey.emit('addBleBox',{ip:inputaddress},function( err, result ){
+        if (err) {
+          // if an error occured - show the messages
+          $('.blebox-error').show();
+					$('.blebox-error-msg').html(err.message || err.toString() );
+				} else {
+          // No error - show the messages
+  				$('.blebox-error').hide();
+          $('.blebox-ok').show();
+          // Add the device
+          Homey.addDevice({
+				    name	 : result.name,
+            data 	 : 
+              {
+                id: result.id
+              },
+            settings : 
+              {
+                address : result.address,
+                poll_interval : result.poll_interval,
+                product: result.product,
+                apiLevel: result.apiLevel,
+                hv: result.hv,
+                fv: result.fv
+              }
+			      }, function(error, result ) {
+              // If an error occured show the messages
+              if (error) {
+					      $('.blebox-error').show();
+					      $('.blebox-error-msg').html(error.message || error.toString() );
+				      } else {
+                // Success - show the messages and close the wizard
+  				      $('.blebox-error').hide();
+  				      $('.blebox-ok').show();
+                Homey.done();
+              }
+            });
+          }
+      })
+		} else {
+      // The IP address is invalid - show messages
+			$('.blebox-error').show();
+			$('.blebox-error-msg').html( 'Please enter valid IP address.' );
+		}
+	});
+});
+</script>
+    
+
+<header class="homey-header">
+  <h1 class="homey-title" data-i18n="driver.addDeviceTitle">
+  </h1>
+  <p class="homey-subtitle" data-i18n="driver.addDeviceSubtitle">
+  </p>
+</header>
+
+<form class="homey-form" id="formularz">
+  <fieldset class="homey-form-fieldset">
+    
+    <div class="homey-form-group">
+      <fieldset class="homey-form-radio-set">
+        <legend class="homey-form-radio-set-title" data-i18n="driver.addDeviceMethodTitle"></legend>
+    
+        <label class="homey-form-radio">
+          <input class="homey-form-radio-input" type="radio" name="radio-method" id="radio-method2" onchange="radioMethodChanged()" checked/>
+          <span class="homey-form-radio-checkmark"></span>
+          <span class="homey-form-radio-text" data-i18n="driver.addDeviceMDNS"></span>
+        </label>
+    
+        <label class="homey-form-radio">
+          <input class="homey-form-radio-input" type="radio" name="radio-method" id="radio-method1" onchange="radioMethodChanged()"/>
+          <span class="homey-form-radio-checkmark"></span>
+          <span class="homey-form-radio-text" data-i18n="driver.addDeviceManual"></span>
+        </label>
+        <div class="homey-form-group">
+          <label class="homey-form-label" id="ip_address_label" for="ip_address" data-i18n="driver.addDeviceIPAddress" style="display:none"></label>
+          <input class="homey-form-input" id="ip_address" type="text" value="0.0.0.0" style="display:none" />
+        </div>
+      </fieldset>
+    </div> 
+
+    <div class="homey-form-group">
+      <fieldset class="homey-form-checkbox-set">
+        <legend class="homey-form-checkbox-set-title" data-i18n="driver.addDeviceIntegration"></legend>
+    
+        <label class="homey-form-checkbox">
+          <input class="homey-form-checkbox-input" type="checkbox" name="checkbox-webhooks" id="checkbox-webhooks" onchange="nextButtonActivation()" checked/>
+          <span class="homey-form-checkbox-checkmark"></span>
+          <span class="homey-form-checkbox-text" data-i18n="driver.addDeviceWebhooks"></span>
+        </label>
+    
+        <label class="homey-form-checkbox">
+          <input class="homey-form-checkbox-input" type="checkbox" name="checkbox-polling" id="checkbox-polling" onchange="checkboxPollingChanged()" checked/>
+          <span class="homey-form-checkbox-checkmark"></span>
+          <span class="homey-form-checkbox-text" data-i18n="driver.addDevicePolling"></span>
+        </label>
+        <div class="homey-form-group">
+          <label class="homey-form-label" for="polling_interval" id="polling_interval_label" data-i18n="driver.addDeviceInterval"></label>
+          <input class="homey-form-input" id="polling_interval" type="text" value="60000"/>
+        </div>
+
+      </fieldset>
+    </div>
+    <div style="float:right">
+      <button class="homey-button-primary" data-i18n="driver.addDeviceNext" id="nextButton"></button>
+    </div>
+    <div class="messages">
+      <p id="blebox-ok-p" style="color: #008C23; display:none"><i class="fa fa-check"></i> <span id="blebox-ok"></span></p>
+      <p id="blebox-error-p" style="color: #ff6300; display:none"><i class="fa fa-times"></i> <span id="blebox-error"></span></p>
+    </div>
+  </fieldset>
+</form>

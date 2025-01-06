@@ -1,0 +1,13 @@
+{
+    "id": "button3_rising_edge", 
+    "title": {
+      "en": "Rising edge has been detected on input 3"
+    },
+    "args":[
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=actionbox"
+        }
+    ]
+  }

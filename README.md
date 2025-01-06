@@ -9,7 +9,7 @@ Blebox.eu is a brand of high-quality products related to home automation. Create
 At the moment this app supports the following devices:
 - actionBox - physical or virtual multifunctional action trigger
 - actionBoxS - 230V mini action trigger
-- airSensor - airSensor is your personal air quality sensor - it keeps you informed about the presence of harmful dust suspended in - dimmerBox - dimmerBox is the first device in the world which allows you to switch and dim 230V lights in your home or office. Control your lights from a smartphone or tablet, no matter where you are.
+- airSensor - airSensor is your personal air quality sensor - it keeps you informed about the presence of harmful dust suspended in - dimmerBox+ - dimmerBox is the first device in the world which allows you to switch and dim 230V lights in your home or office. Control your lights from a smartphone or tablet, no matter where you are.
 - doorBox - an integrated, miniature controller: electric bolt lock, electric strikes and safety devices designed for access control
 - floodSensor - detects flood and water leakage
 - gateBox - gateBox allows you to not only open and close gates, but also check on their status 
@@ -23,7 +23,7 @@ At the moment this app supports the following devices:
 your home and outside.
 - shutterBox - is a device designed to wireless control of electric roller shutters, awnings, screens, etc. (by using Smartphones and tablets), also from any place in the world.
 - shutterBoxDC - allows you to control roller blinds, awnings, venetian or windows equipped with low voltage (12-24V) DC motor by using a smartphone or tablet, also from anywhere in the World
-- shutterBoxDIN
+- shutterBoxDIN - is a device designed to wireless control of electric roller shutters, awnings, screens, etc. (by using Smartphones and tablets), also from any place in the world, in DIN standard.
 - switchBox - this device allows you to wirelessly turn on or off electric devices powered by network voltage of 230V and up to 3kW of power. You can control the load via mobile devices and/or personal computers wherever you are.
 - switchBox v3 - you can turn on and off virtually any electrical device using your smartphone and tablet. It doesn’t matter if you are at home, at work or skiing. If you want to turn on the heat before going home, switchBox is the solution for you. And it also has many other possibilities…
 - switchBox Light - the smallest controller in the world that allows wireless switching on and off of electrical devices powered by a 230 V mains voltage with a power of up to 1 kW from anywhere in the world
@@ -43,7 +43,32 @@ your home and outside.
 - wLightBoxS - Using wLightBoxS you can switch on, off and also adjust brightness of single color LED lights using your smartphone or tablet, also from anywhere in the World. It's an alternative in compare with wLightBox (RGBW LED controller) for people who only want to control one color per device.
 - wLightBoxS Pro - turns on, off and dims single-color LED lighting from anywhere, anytime. Install the controller in the place that best suits your needs, both indoors, outdoors or wherever you want. Use 4 ways to control the device.
 
+# Remarks
+1. Please set static IP adresses for all your BleBox devices to prevent connectivity issues
+2. To work with automatic mDNS-SD device discovery you might have to enable it in your router and/or access points
+
+
 # Changelog
+v.3.99.0
+- new "Add device" process. From now on for selected drivers you can select to automatically search for devices using mDNS-SD or to do it manually using user provided IP Address.
+- new integration methods for selected drivers - the user can choose to integrate using traditional polling or by using actions or both.
+- redesigned polling. Now you can see on selected devices last poll action in settings (to see if connectivity with device works right), soon you will be able to restart polling if failed.
+- devices with new adding process: actionBox, actionBoxS, airSensor, dimmerBox, humiditySensor, pixelBox, proxiBox, rainSensor, rollerGate, saunaBox, shutterBox, shutterBoxDC, shutterBoxDIN, tempSensor, tempSensorPro, tempSensorAC,  windSensorPro, wind&RainSensor, wLightBox, wLightBoxV3, wLightBoxPro, wLightBoxS, wLightBoxS
+- devices with actions and polling: floodSensor, rainSensor
+- devices with actions only: actionBox, actionBoxS, proxiBox
+- airSensor with new Homey build-in capabilities
+- new unified dimmerBox driver (for v1 & v2), v2 only driver now depreciated - recommended change to unified one
+- unified wLightBox* and pixelBox* flow cards (may broke some flows using old flow cards)
+
+v.3.14.7
+- tempSensor v2 bugfix
+
+v.3.14.4
+- tempsensor v2 support
+
+v.3.14.3
+- switchBoxD quickfix for new firmware
+
 v.3.14.2
 - rainSensor bugfix
 

@@ -5,7 +5,8 @@
   "class": "light",
   "capabilities": [
     "dim",
-    "onoff"
+    "onoff",
+    "effect_selector"
   ],
   "platforms": [
     "local"
@@ -13,16 +14,19 @@
   "connectivity": [
     "lan"
   ],
-  "discovery": "bbxsrv",
   "pair": [
     {
-      "id": "list_wlightboxsespro",
-      "template": "list_devices",
-      "navigation": { "next": "add_wlightboxsespro"}
+      "id":"add_blebox_device",
+      "navigation": {"next": "list_blebox_devices"}
     },
     {
-      "id": "add_wlightboxsespro",
-      "template": "add_devices"    
+      "id":"list_blebox_devices",
+      "template": "list_devices",
+      "navigation": {"next": "add_devices", "prev": "add_blebox_device"}
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
     }
   ],
   "energy": {
@@ -49,6 +53,24 @@
           "label": {
             "en": "IP Address"
           }
+        },
+        {
+          "id": "webhooks_enabled",
+          "type": "label",
+          "value": "No",
+          "label": {"en": "Action webhooks enabled"}
+        },
+        {
+          "id": "polling_enabled",
+          "type": "label",
+          "value": "Yes",
+          "label": {"en": "Polling enabled"}
+        },
+        {
+          "id": "last_poll",
+          "type": "label",
+          "value": "",
+          "label": {"en": "Last poll"}
         },
         {
           "id": "poll_interval",

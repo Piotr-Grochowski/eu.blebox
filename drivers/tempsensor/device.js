@@ -1,8 +1,8 @@
 'use strict';
 
-const BleBoxMDNSDevice = require('../../lib/bleboxmdnsdevice.js');
+const BleBoxDevice = require('../../lib/bleboxdevice.js');
 
-class tempSensorDevice extends BleBoxMDNSDevice {
+class tempSensorDevice extends BleBoxDevice {
 
   async pollBleBox() 
 	{
@@ -17,7 +17,7 @@ class tempSensorDevice extends BleBoxMDNSDevice {
 
       this.setCapabilityValue('measure_temperature', temperature)
         .catch( err => {
-          this.log(error);
+          this.log(err);
         });
 
     })
