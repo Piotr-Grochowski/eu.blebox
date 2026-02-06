@@ -26,7 +26,7 @@
     {
       "name": "device",
       "type": "device",
-      "filter": "driver_id=wlightbox|wlightboxpro|wlightboxs|wlightboxspro|pixelbox"
+      "filter": "driver_id=wlightbox|wlightboxpro|wlightboxs|wlightboxspro|pixelbox|wlightboxv3"
     }
   ]
 }

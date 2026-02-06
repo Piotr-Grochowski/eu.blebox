@@ -49,7 +49,7 @@ module.exports = class saunaBoxDevice extends BleBoxDevice {
 	// this method is called when the Device has requested a state change (turned on or off)
 	async onCapabilityOnoff( value, opts ) 
 	{
-    	await this.bbApi.thermoBoxSetState(this.getSetting('address'),value)
+    	await this.bbApi.thermoBoxSetState(this.getSetting('address'),(value ? 1 : 0))
         .catch(error => {
             this.log(error);
         })

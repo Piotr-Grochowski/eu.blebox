@@ -49,6 +49,10 @@ your home and outside.
 
 
 # Changelog
+
+v.3.99.2
+- wlightBox v3 effect selector bugfix
+
 v.3.99.0
 - new "Add device" process. From now on for selected drivers you can select to automatically search for devices using mDNS-SD or to do it manually using user provided IP Address.
 - new integration methods for selected drivers - the user can choose to integrate using traditional polling or by using actions or both.

@@ -8,7 +8,7 @@ class tempSensorProDriver extends BleBoxDriver_v2 {
   {
     this.driverName = 'tempSensorProDriver';
     this.driverType = 'multiSensor';
-    this.driverProduct = ['tempSensorPro','tempSensorPro_v2'];
+    this.driverProduct = ['tempSensorPro','tempSensorPro_v2','tempSensor_PRO_v2'];
     this.drivermDNSSDMethod = true;
     this.driverIPAddressMethod = true;
     this.driverActions = false;

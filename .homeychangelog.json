@@ -247,5 +247,14 @@
   },
   "3.99.1": {
     "en": "Changelog fix"
+  },
+  "3.99.2": {
+    "en": "wlightBox v3 effect selector bugfix"
+  },
+  "3.99.3": {
+    "en": "tempSensor PRO v2 bugfix"
+  },
+  "3.99.4": {
+    "en": "saunaBox on/off bugfix"
   }
 }
