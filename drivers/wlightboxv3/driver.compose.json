@@ -3,7 +3,18 @@
     "en": "wLightBox v3"
   },
   "class": "light",
-  "capabilities": ["onoff","dim.brightness","dim.channelR","dim.channelG","dim.channelB","dim.channelWW","dim.channelCW","light_hue","light_saturation","effect_selector"],
+  "capabilities": [
+    "onoff",
+    "dim.brightness",
+    "dim.channelR",
+    "dim.channelG",
+    "dim.channelB",
+    "dim.channelWW",
+    "dim.channelCW",
+    "light_hue",
+    "light_saturation",
+    "effect_selector"
+  ],
   "capabilitiesOptions": {
     "dim.brightness": {
       "title": {
@@ -52,115 +63,28 @@
   },
   "energy": {
     "approximation": {
-      "usageOn": 1, 
-      "usageOff": 1 
+      "usageOn": 1,
+      "usageOff": 1
     }
   },
   "pair": [
     {
-      "id":"add_blebox_device",
-      "navigation": {"next": "list_blebox_devices"}
+      "id": "add_blebox_device",
+      "navigation": {
+        "next": "list_blebox_devices"
+      }
     },
     {
-      "id":"list_blebox_devices",
+      "id": "list_blebox_devices",
       "template": "list_devices",
-      "navigation": {"next": "add_devices", "prev": "add_blebox_device"}
+      "navigation": {
+        "next": "add_devices",
+        "prev": "add_blebox_device"
+      }
     },
     {
       "id": "add_devices",
       "template": "add_devices"
-    }
-  ],
-  "settings": [
-    {
-      "type": "group",
-      "label": {
-          "en": "General settings"
-      },
-      "children":
-      [
-        {
-          "id": "address",
-          "type": "text",
-          "label": {
-            "en": "IP Address"
-          }
-        },
-        {
-          "id": "webhooks_enabled",
-          "type": "label",
-          "value": "No",
-          "label": {"en": "Action webhooks enabled"}
-        },
-        {
-          "id": "polling_enabled",
-          "type": "label",
-          "value": "Yes",
-          "label": {"en": "Polling enabled"}
-        },
-        {
-          "id": "poll_interval",
-          "type": "number",
-          "label": {
-            "en": "Poll interval [ms]"
-          },
-          "attr": {
-            "min": 500,
-            "max": 60000
-          }
-        },
-        {
-          "id": "last_poll",
-          "type": "label",
-          "value": "",
-          "label": {"en": "Last poll"}
-        },
-        {
-          "id": "on_value",
-          "type": "text",
-          "label": {
-            "en": "ON value"
-          },
-          "pattern":  "^[0-9A-F]{10}$"
-        }              
-      ]
-    },
-    {
-      "type": "group",
-      "label": {
-          "en": "Device properties"
-      },
-      "children":
-      [
-        {
-          "id": "product",
-          "type": "label",
-          "label": {
-            "en": "Product name"
-          }
-        },
-        {
-          "id": "apiLevel",
-          "type": "label",
-          "label": {
-            "en": "API Level"
-          }
-        },
-        {
-          "id": "hv",
-          "type": "label",
-          "label": {
-            "en": "Hardware version"
-          }
-        },
-        {
-          "id": "fv",
-          "type": "label",
-          "label": {
-            "en": "Firmware version"
-          }
-        }
-      ]
     }
   ]
 }

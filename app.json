@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.blebox",
-  "version": "3.99.4",
+  "version": "3.99.6",
   "compatibility": ">=12.2.0",
   "sdk": 3,
   "platforms": [
@@ -1588,6 +1588,7 @@
         "large": "/drivers/actionbox/assets/images/large.png",
         "xlarge": "/drivers/actionbox/assets/images/xlarge.png"
       },
+      "id": "actionbox",
       "settings": [
         {
           "type": "group",
@@ -1675,8 +1676,7 @@
             }
           ]
         }
-      ],
-      "id": "actionbox"
+      ]
     },
     {
       "name": {
@@ -1715,6 +1715,7 @@
         "large": "/drivers/actionboxs/assets/images/large.png",
         "xlarge": "/drivers/actionboxs/assets/images/xlarge.png"
       },
+      "id": "actionboxs",
       "settings": [
         {
           "type": "group",
@@ -1802,8 +1803,7 @@
             }
           ]
         }
-      ],
-      "id": "actionboxs"
+      ]
     },
     {
       "name": {
@@ -1850,6 +1850,7 @@
           "usageConstant": 1
         }
       },
+      "id": "airsensor",
       "settings": [
         {
           "type": "group",
@@ -1937,8 +1938,7 @@
             }
           ]
         }
-      ],
-      "id": "airsensor"
+      ]
     },
     {
       "name": {
@@ -1985,6 +1985,7 @@
         "small": "/drivers/dimmerbox/assets/images/small.png",
         "large": "/drivers/dimmerbox/assets/images/large.png"
       },
+      "id": "dimmerbox",
       "settings": [
         {
           "type": "group",
@@ -2688,8 +2689,7 @@
             }
           ]
         }
-      ],
-      "id": "dimmerbox"
+      ]
     },
     {
       "name": {
@@ -2731,6 +2731,7 @@
         "small": "/drivers/dimmerbox_v2/assets/images/small.png",
         "large": "/drivers/dimmerbox_v2/assets/images/large.png"
       },
+      "id": "dimmerbox_v2",
       "settings": [
         {
           "type": "group",
@@ -3410,8 +3411,7 @@
             }
           ]
         }
-      ],
-      "id": "dimmerbox_v2"
+      ]
     },
     {
       "name": {
@@ -3457,6 +3457,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "doorBox_v2",
       "settings": [
         {
           "type": "group",
@@ -3534,8 +3535,7 @@
             }
           ]
         }
-      ],
-      "id": "doorBox_v2"
+      ]
     },
     {
       "name": {
@@ -3566,6 +3566,7 @@
           "id": "pair"
         }
       ],
+      "id": "doorbox",
       "settings": [
         {
           "type": "group",
@@ -3643,8 +3644,7 @@
             }
           ]
         }
-      ],
-      "id": "doorbox"
+      ]
     },
     {
       "name": {
@@ -3689,6 +3689,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "floodsensor",
       "settings": [
         {
           "type": "group",
@@ -3804,8 +3805,7 @@
             }
           ]
         }
-      ],
-      "id": "floodsensor"
+      ]
     },
     {
       "name": {
@@ -3851,6 +3851,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "gatebox",
       "settings": [
         {
           "type": "group",
@@ -3928,8 +3929,7 @@
             }
           ]
         }
-      ],
-      "id": "gatebox"
+      ]
     },
     {
       "name": {
@@ -3975,6 +3975,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "gateboxpro",
       "settings": [
         {
           "type": "group",
@@ -4052,8 +4053,7 @@
             }
           ]
         }
-      ],
-      "id": "gateboxpro"
+      ]
     },
     {
       "name": {
@@ -4102,6 +4102,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "humiditysensor",
       "settings": [
         {
           "type": "group",
@@ -4189,8 +4190,7 @@
             }
           ]
         }
-      ],
-      "id": "humiditysensor"
+      ]
     },
     {
       "name": {
@@ -4276,6 +4276,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "pixelbox",
       "settings": [
         {
           "type": "group",
@@ -4371,8 +4372,7 @@
             }
           ]
         }
-      ],
-      "id": "pixelbox"
+      ]
     },
     {
       "name": {
@@ -4411,6 +4411,7 @@
         "large": "/drivers/proxibox/assets/images/large.png",
         "xlarge": "/drivers/proxibox/assets/images/xlarge.png"
       },
+      "id": "proxibox",
       "settings": [
         {
           "type": "group",
@@ -4498,8 +4499,7 @@
             }
           ]
         }
-      ],
-      "id": "proxibox"
+      ]
     },
     {
       "name": {
@@ -4545,6 +4545,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "rainsensor",
       "settings": [
         {
           "type": "group",
@@ -4660,8 +4661,7 @@
             }
           ]
         }
-      ],
-      "id": "rainsensor"
+      ]
     },
     {
       "name": {
@@ -4708,6 +4708,7 @@
           "usageConstant": 1
         }
       },
+      "id": "rollergate",
       "settings": [
         {
           "type": "group",
@@ -4802,8 +4803,7 @@
             }
           ]
         }
-      ],
-      "id": "rollergate"
+      ]
     },
     {
       "name": {
@@ -4856,6 +4856,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "saunabox",
       "settings": [
         {
           "type": "group",
@@ -4943,8 +4944,7 @@
             }
           ]
         }
-      ],
-      "id": "saunabox"
+      ]
     },
     {
       "name": {
@@ -4993,6 +4993,7 @@
           "usageConstant": 1
         }
       },
+      "id": "shutterbox",
       "settings": [
         {
           "type": "group",
@@ -5087,8 +5088,7 @@
             }
           ]
         }
-      ],
-      "id": "shutterbox"
+      ]
     },
     {
       "name": {
@@ -5137,6 +5137,7 @@
           "usageConstant": 1
         }
       },
+      "id": "shutterboxdc",
       "settings": [
         {
           "type": "group",
@@ -5231,8 +5232,7 @@
             }
           ]
         }
-      ],
-      "id": "shutterboxdc"
+      ]
     },
     {
       "name": {
@@ -5281,6 +5281,7 @@
           "usageConstant": 1
         }
       },
+      "id": "shutterboxdin",
       "settings": [
         {
           "type": "group",
@@ -5375,8 +5376,7 @@
             }
           ]
         }
-      ],
-      "id": "shutterboxdin"
+      ]
     },
     {
       "name": {
@@ -5411,6 +5411,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "switchbox",
       "settings": [
         {
           "type": "group",
@@ -5474,8 +5475,7 @@
             }
           ]
         }
-      ],
-      "id": "switchbox"
+      ]
     },
     {
       "name": {
@@ -5530,6 +5530,7 @@
         "small": "/drivers/switchboxd/assets/images/small.png",
         "large": "/drivers/switchboxd/assets/images/large.png"
       },
+      "id": "switchboxd",
       "settings": [
         {
           "type": "group",
@@ -5593,8 +5594,7 @@
             }
           ]
         }
-      ],
-      "id": "switchboxd"
+      ]
     },
     {
       "name": {
@@ -5629,6 +5629,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "switchboxdc",
       "settings": [
         {
           "type": "group",
@@ -5692,8 +5693,7 @@
             }
           ]
         }
-      ],
-      "id": "switchboxdc"
+      ]
     },
     {
       "name": {
@@ -5743,6 +5743,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "switchboxddin",
       "settings": [
         {
           "type": "group",
@@ -5806,8 +5807,7 @@
             }
           ]
         }
-      ],
-      "id": "switchboxddin"
+      ]
     },
     {
       "name": {
@@ -5844,6 +5844,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "switchboxdin",
       "settings": [
         {
           "type": "group",
@@ -5907,8 +5908,7 @@
             }
           ]
         }
-      ],
-      "id": "switchboxdin"
+      ]
     },
     {
       "name": {
@@ -5943,6 +5943,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "switchboxlight",
       "settings": [
         {
           "type": "group",
@@ -6006,8 +6007,7 @@
             }
           ]
         }
-      ],
-      "id": "switchboxlight"
+      ]
     },
     {
       "name": {
@@ -6064,6 +6064,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "switchboxtpro",
       "settings": [
         {
           "type": "group",
@@ -6127,8 +6128,7 @@
             }
           ]
         }
-      ],
-      "id": "switchboxtpro"
+      ]
     },
     {
       "name": {
@@ -6165,6 +6165,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "switchboxv3",
       "settings": [
         {
           "type": "group",
@@ -6228,8 +6229,7 @@
             }
           ]
         }
-      ],
-      "id": "switchboxv3"
+      ]
     },
     {
       "name": {
@@ -6274,6 +6274,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "tempsensor",
       "settings": [
         {
           "type": "group",
@@ -6361,8 +6362,7 @@
             }
           ]
         }
-      ],
-      "id": "tempsensor"
+      ]
     },
     {
       "name": {
@@ -6432,6 +6432,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "tempsensorac",
       "settings": [
         {
           "type": "group",
@@ -6519,8 +6520,7 @@
             }
           ]
         }
-      ],
-      "id": "tempsensorac"
+      ]
     },
     {
       "name": {
@@ -6590,6 +6590,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "tempsensorpro",
       "settings": [
         {
           "type": "group",
@@ -6677,8 +6678,7 @@
             }
           ]
         }
-      ],
-      "id": "tempsensorpro"
+      ]
     },
     {
       "name": {
@@ -6742,6 +6742,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "thermobox",
       "settings": [
         {
           "type": "group",
@@ -6861,8 +6862,7 @@
             }
           ]
         }
-      ],
-      "id": "thermobox"
+      ]
     },
     {
       "name": {
@@ -6918,6 +6918,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "windrainsensor",
       "settings": [
         {
           "type": "group",
@@ -7005,8 +7006,7 @@
             }
           ]
         }
-      ],
-      "id": "windrainsensor"
+      ]
     },
     {
       "name": {
@@ -7060,6 +7060,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "windsensorpro",
       "settings": [
         {
           "type": "group",
@@ -7147,8 +7148,7 @@
             }
           ]
         }
-      ],
-      "id": "windsensorpro"
+      ]
     },
     {
       "name": {
@@ -7234,6 +7234,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "wlightbox",
       "settings": [
         {
           "type": "group",
@@ -7329,8 +7330,7 @@
             }
           ]
         }
-      ],
-      "id": "wlightbox"
+      ]
     },
     {
       "name": {
@@ -7416,6 +7416,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "wlightboxpro",
       "settings": [
         {
           "type": "group",
@@ -7511,8 +7512,7 @@
             }
           ]
         }
-      ],
-      "id": "wlightboxpro"
+      ]
     },
     {
       "name": {
@@ -7560,6 +7560,7 @@
         "small": "/drivers/wlightboxs/assets/images/small.png",
         "large": "/drivers/wlightboxs/assets/images/large.png"
       },
+      "id": "wlightboxs",
       "settings": [
         {
           "type": "group",
@@ -8263,8 +8264,7 @@
             }
           ]
         }
-      ],
-      "id": "wlightboxs"
+      ]
     },
     {
       "name": {
@@ -8312,6 +8312,7 @@
         "small": "/drivers/wlightboxspro/assets/images/small.png",
         "large": "/drivers/wlightboxspro/assets/images/large.png"
       },
+      "id": "wlightboxspro",
       "settings": [
         {
           "type": "group",
@@ -9015,8 +9016,7 @@
             }
           ]
         }
-      ],
-      "id": "wlightboxspro"
+      ]
     },
     {
       "name": {
@@ -9107,6 +9107,7 @@
           "template": "add_devices"
         }
       ],
+      "id": "wlightboxv3",
       "settings": [
         {
           "type": "group",
@@ -9202,8 +9203,7 @@
             }
           ]
         }
-      ],
-      "id": "wlightboxv3"
+      ]
     }
   ],
   "capabilities": {

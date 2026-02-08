@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "airSensor" 
+    "en": "airSensor"
   },
   "class": "sensor",
   "capabilities": [
@@ -20,13 +20,18 @@
   },
   "pair": [
     {
-      "id":"add_blebox_device",
-      "navigation": {"next": "list_blebox_devices"}
+      "id": "add_blebox_device",
+      "navigation": {
+        "next": "list_blebox_devices"
+      }
     },
     {
-      "id":"list_blebox_devices",
+      "id": "list_blebox_devices",
       "template": "list_devices",
-      "navigation": {"next": "add_devices", "prev": "add_blebox_device"}
+      "navigation": {
+        "next": "add_devices",
+        "prev": "add_blebox_device"
+      }
     },
     {
       "id": "add_devices",
@@ -37,89 +42,5 @@
     "approximation": {
       "usageConstant": 1
     }
-  },
-  "settings": [
-    {
-      "type": "group",
-      "label": {
-          "en": "General settings"
-      },
-      "children":
-      [
-        {
-          "id": "address",
-          "type": "text",
-          "label": {
-            "en": "IP Address"
-          }
-        },
-        {
-          "id": "webhooks_enabled",
-          "type": "label",
-          "value": "No",
-          "label": {"en": "Action webhooks enabled"}
-        },
-        {
-          "id": "polling_enabled",
-          "type": "label",
-          "value": "Yes",
-          "label": {"en": "Polling enabled"}
-        },
-        {
-          "id": "poll_interval",
-          "type": "number",
-          "label": {
-            "en": "Poll interval [ms]"
-          },
-          "attr": {
-            "min": 60000,
-            "max": 360000
-          }
-        },
-        {
-          "id": "last_poll",
-          "type": "label",
-          "value": "",
-          "label": {"en": "Last poll"}
-        }
-      ]
-    },
-    {
-      "type": "group",
-      "label": {
-          "en": "Device properties"
-      },
-      "children":
-      [
-        {
-          "id": "product",
-          "type": "label",
-          "label": {
-            "en": "Product name"
-          }
-        },
-        {
-          "id": "apiLevel",
-          "type": "label",
-          "label": {
-            "en": "API Level"
-          }
-        },
-        {
-          "id": "hv",
-          "type": "label",
-          "label": {
-            "en": "Hardware version"
-          }
-        },
-        {
-          "id": "fv",
-          "type": "label",
-          "label": {
-            "en": "Firmware version"
-          }
-        }
-      ]
-    }
-  ]
+  }
 }
