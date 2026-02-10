@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.blebox",
-  "version": "3.99.6",
+  "version": "3.99.10",
   "compatibility": ">=12.2.0",
   "sdk": 3,
   "platforms": [
@@ -19,8 +19,9 @@
   ],
   "permissions": [],
   "images": {
-    "small": "/assets/images/small.png",
-    "large": "/assets/images/large.png"
+    "small": "/assets/images/small.jpg",
+    "large": "/assets/images/large.jpg",
+    "xlarge": "/assets/images/xlarge.jpg"
   },
   "contributing": {
     "donate": {
@@ -1633,7 +1634,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -1651,28 +1652,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -1760,7 +1765,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -1778,28 +1783,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -1895,7 +1904,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -1913,28 +1922,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -2030,7 +2043,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -2664,28 +2677,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -3386,28 +3403,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -3510,28 +3531,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -3619,28 +3644,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -3762,7 +3791,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -3780,28 +3809,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -3904,28 +3937,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -4028,28 +4065,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -4147,7 +4188,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -4165,28 +4206,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -4321,7 +4366,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -4347,28 +4392,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -4456,7 +4505,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -4474,28 +4523,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -4618,7 +4671,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -4636,28 +4689,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -4753,7 +4810,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -4778,28 +4835,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -4901,7 +4962,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -4919,28 +4980,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -5038,7 +5103,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -5063,28 +5128,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -5182,7 +5251,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -5207,28 +5276,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -5326,7 +5399,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -5351,28 +5424,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -5450,28 +5527,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -5569,28 +5650,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -5668,28 +5753,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -5782,28 +5871,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -5883,28 +5976,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -5982,28 +6079,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -6103,28 +6204,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -6204,28 +6309,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -6319,7 +6428,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -6337,28 +6446,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -6477,7 +6590,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -6495,28 +6608,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -6635,7 +6752,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -6653,28 +6770,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -6787,7 +6908,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -6805,28 +6926,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         },
@@ -6963,7 +7088,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -6981,28 +7106,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -7105,7 +7234,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -7123,28 +7252,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -7279,7 +7412,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -7305,28 +7438,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -7461,7 +7598,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -7487,28 +7624,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -7605,7 +7746,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -8239,28 +8380,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -8346,7 +8491,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -8991,28 +9136,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }
@@ -9152,7 +9301,7 @@
             {
               "id": "last_poll",
               "type": "label",
-              "value": "",
+              "value": "n/a",
               "label": {
                 "en": "Last poll"
               }
@@ -9178,28 +9327,32 @@
               "type": "label",
               "label": {
                 "en": "Product name"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "apiLevel",
               "type": "label",
               "label": {
                 "en": "API Level"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "hv",
               "type": "label",
               "label": {
                 "en": "Hardware version"
-              }
+              },
+              "value": "n/a"
             },
             {
               "id": "fv",
               "type": "label",
               "label": {
                 "en": "Firmware version"
-              }
+              },
+              "value": "n/a"
             }
           ]
         }

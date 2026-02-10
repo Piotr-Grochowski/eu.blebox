@@ -70,7 +70,7 @@
       {
         "id": "last_poll",
         "type": "label",
-        "value": "",
+        "value": "n/a",
         "label": {
           "en": "Last poll"
         }
@@ -88,28 +88,32 @@
         "type": "label",
         "label": {
           "en": "Product name"
-        }
+        },
+        "value": "n/a"
       },
       {
         "id": "apiLevel",
         "type": "label",
         "label": {
           "en": "API Level"
-        }
+        },
+        "value": "n/a"
       },
       {
         "id": "hv",
         "type": "label",
         "label": {
           "en": "Hardware version"
-        }
+        },
+        "value": "n/a"
       },
       {
         "id": "fv",
         "type": "label",
         "label": {
           "en": "Firmware version"
-        }
+        },
+        "value": "n/a"
       }
     ]
   }
