@@ -4,7 +4,7 @@ const BleBoxDevice = require('../../lib/bleboxdevice.js');
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-class proxiBoxDevice extends BleBoxMDNSDevice {
+class proxiBoxDevice extends BleBoxDevice {
 
   async onBleBoxInit()
   {
