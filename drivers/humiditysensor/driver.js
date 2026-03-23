@@ -8,7 +8,7 @@ class humiditySensorDriver extends BleBoxDriver_v2 {
   {
     this.driverName = 'humiditySensorDriver';
     this.driverType = 'multiSensor';
-    this.driverProduct = ['humiditySensor'];
+    this.driverProduct = ['humiditySensor','humiditySensor_v2'];
     this.drivermDNSSDMethod = true;
     this.driverIPAddressMethod = true;
     this.driverActions = false;

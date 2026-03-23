@@ -277,5 +277,11 @@
   },
   "3.99.11": {
     "en": "Bugfixes"
+  },
+  "3.99.12": {
+    "en": "proxiBox bugfix"
+  },
+  "3.99.13": {
+    "en": "humiditySensor v2 support added"
   }
 }
