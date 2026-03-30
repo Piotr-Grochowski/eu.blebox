@@ -23,11 +23,11 @@ class gateBoxDevice extends BleBoxDevice {
       this.getSetting('username'),
       this.getSetting('password'),
     )
-      .then((result) => {
+      .then(async (result) => {
         const state = result.gate.currentPos !== 0;
 
         if (state !== this.getCapabilityValue('alarm_contact')) {
-          this.setCapabilityValue('alarm_contact', state)
+          await this.setCapabilityValue('alarm_contact', state)
             .catch((err) => this.log(err));
         }
       })

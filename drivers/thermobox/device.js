@@ -14,54 +14,54 @@ class thermoBoxClassicDevice extends BleBoxDevice {
 	{
     // Read the device state
     await this.bbApi.thermoBoxGetExtendedState(this.getSetting('address'), this.getSetting('apiLevel'))
-    .then(result => {
+    .then(async result => {
       // On success - update Homey's device state
       if (result.thermo.desiredTemp/100 != this.getCapabilityValue('target_temperature')) {
-        this.setCapabilityValue('target_temperature', result.thermo.desiredTemp/100)
+        await this.setCapabilityValue('target_temperature', result.thermo.desiredTemp/100)
           .catch( err => {
             this.log(err);
-          })   
+          })
       }
 
       if (result.thermo.state.toString() != this.getCapabilityValue('thermostat_state')) {
-        this.setCapabilityValue('thermostat_state', result.thermo.state.toString())
+        await this.setCapabilityValue('thermostat_state', result.thermo.state.toString())
           .catch( err => {
             this.log(err);
-          })   
+          })
       }
 
       switch(result.thermo.operatingState)
       {
         case 0:
-          this.setCapabilityValue('measure_power', this.getSetting('power_idle'));
+          await this.setCapabilityValue('measure_power', this.getSetting('power_idle'));
           break;
         case 1:
-          this.setCapabilityValue('measure_power', this.getSetting('power_on'));
+          await this.setCapabilityValue('measure_power', this.getSetting('power_on'));
           break;
         case 2:
-          this.setCapabilityValue('measure_power', this.getSetting('power_on'));
+          await this.setCapabilityValue('measure_power', this.getSetting('power_on'));
           break;
         case 3:
-          this.setCapabilityValue('measure_power', this.getSetting('power_boost'));
+          await this.setCapabilityValue('measure_power', this.getSetting('power_boost'));
           break;
       }
 
-      result.sensors.forEach(element => {
+      for (const element of result.sensors) {
         if((result.thermo.safetyTempSensor.sensorId == null && element.type=='temperature' ) ||
-            (result.thermo.safetyTempSensor.sensorId != null && element.type=='temperature' && element.id != 
+            (result.thermo.safetyTempSensor.sensorId != null && element.type=='temperature' && element.id !=
             result.thermo.safetyTempSensor.sensorId))
-          this.setCapabilityValue('measure_temperature', element.value / 100)
-          .catch( err => {
-            this.log(err);
-          });
-        
-        if(result.thermo.safetyTempSensor.sensorId != null && element.type=='temperature' && element.id == result.thermo.safetyTempSensor.sensorId) 
-          this.setCapabilityValue('measure_temperature.safety', element.value / 100)
+          await this.setCapabilityValue('measure_temperature', element.value / 100)
           .catch( err => {
             this.log(err);
           });
 
-      });
+        if(result.thermo.safetyTempSensor.sensorId != null && element.type=='temperature' && element.id == result.thermo.safetyTempSensor.sensorId)
+          await this.setCapabilityValue('measure_temperature.safety', element.value / 100)
+          .catch( err => {
+            this.log(err);
+          });
+
+      }
     })
     .catch(error => {
       this.log(error);
@@ -73,7 +73,7 @@ class thermoBoxClassicDevice extends BleBoxDevice {
    */
 	async onCapabilityTargetTemperature( value, opts ) 
   {
-    this.bbApi.thermoBoxSetTargetTemperature(this.getSetting('address'),value)
+    await this.bbApi.thermoBoxSetTargetTemperature(this.getSetting('address'),value)
     .catch(error => {
       // Error occured
       this.log(error);
@@ -86,7 +86,7 @@ class thermoBoxClassicDevice extends BleBoxDevice {
    */
 	async onCapabilityThermostatState( value, opts ) 
   {
-    this.bbApi.thermoBoxSetState(this.getSetting('address'),value)
+    await this.bbApi.thermoBoxSetState(this.getSetting('address'),value)
     .catch(error => {
       // Error occured
       this.log(error);

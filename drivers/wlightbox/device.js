@@ -23,7 +23,7 @@ class wLightBoxDevice extends BleBoxDevice {
 	{
     // Read the device state
     await this.bbApi.wLightBoxGetState(this.getSetting('address'), this.getSetting('apiLevel'))
-    .then(result => {
+    .then(async result => {
       const levelR = Math.round(parseInt(result.rgbw.desiredColor.substring(0,2),16)/255*100)/100;
       const levelG = Math.round(parseInt(result.rgbw.desiredColor.substring(2,4),16)/255*100)/100;
       const levelB = Math.round(parseInt(result.rgbw.desiredColor.substring(4,6),16)/255*100)/100;
@@ -39,61 +39,61 @@ class wLightBoxDevice extends BleBoxDevice {
       const brightness = channels[2];
 
       if (result.rgbw.effectID.toString() != this.getCapabilityValue('effect_selector')) {
-        this.setCapabilityValue('effect_selector', result.rgbw.effectID.toString())
+        await this.setCapabilityValue('effect_selector', result.rgbw.effectID.toString())
           .catch( err => {
             this.log(err);
           })
       }
 
       if (levelR != this.getCapabilityValue('dim.channelR')) {
-        this.setCapabilityValue('dim.channelR', levelR)
+        await this.setCapabilityValue('dim.channelR', levelR)
           .catch( err => {
             this.log(err);
           })
       }
 
       if (levelG != this.getCapabilityValue('dim.channelG')) {
-        this.setCapabilityValue('dim.channelG', levelG)
+        await this.setCapabilityValue('dim.channelG', levelG)
           .catch( err => {
             this.log(err);
           })
       }
       if (levelB != this.getCapabilityValue('dim.channelB')) {
-        this.setCapabilityValue('dim.channelB', levelB)
+        await this.setCapabilityValue('dim.channelB', levelB)
           .catch( err => {
             this.log(err);
           })
       }
       if (levelW != this.getCapabilityValue('dim.channelW')) {
-        this.setCapabilityValue('dim.channelW', levelW)
+        await this.setCapabilityValue('dim.channelW', levelW)
           .catch( err => {
             this.log(err);
           })
       }
 
       if (brightness != this.getCapabilityValue('dim.brightness')) {
-        this.setCapabilityValue('dim.brightness', brightness)
+        await this.setCapabilityValue('dim.brightness', brightness)
           .catch( err => {
             this.log(err);
           })
       }
 
       if (hue != this.getCapabilityValue('light_hue')) {
-        this.setCapabilityValue('light_hue', hue)
+        await this.setCapabilityValue('light_hue', hue)
           .catch( err => {
             this.log(err);
           })
       }
 
       if (saturation != this.getCapabilityValue('light_saturation')) {
-        this.setCapabilityValue('light_saturation', saturation)
+        await this.setCapabilityValue('light_saturation', saturation)
           .catch( err => {
             this.log(err);
           })
       }
 
       if (onState != this.getCapabilityValue('onoff')) {
-        this.setCapabilityValue('onoff', onState)
+        await this.setCapabilityValue('onoff', onState)
           .catch( err => {
             this.log(err);
           })

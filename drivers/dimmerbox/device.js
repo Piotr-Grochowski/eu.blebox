@@ -14,7 +14,7 @@ class dimmerBoxDevice extends BleBoxDevice {
   async pollBleBox() 
 	{
     await this.bbApi.dimmerBoxGetState(this.getSetting('address'),this.getSetting('apiLevel'))
-    .then(result => {
+    .then(async result => {
       let brightness = Math.round(result.dimmer.desiredBrightness/255*100)/100;
       let onState = false;
       if(brightness>0)
@@ -23,17 +23,17 @@ class dimmerBoxDevice extends BleBoxDevice {
         onState = true;
       }
       if (brightness != this.getCapabilityValue('dim')) {
-        this.setCapabilityValue('dim', brightness)
+        await this.setCapabilityValue('dim', brightness)
           .catch( err => {
             this.log(err);
           })
       }
 
       if (onState != this.getCapabilityValue('onoff')) {
-        this.setCapabilityValue('onoff', onState)
+        await this.setCapabilityValue('onoff', onState)
           .catch( err => {
             this.log(err);
-          })	
+          })
       }
     })
     .catch(error => {

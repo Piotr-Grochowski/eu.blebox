@@ -63,6 +63,51 @@
       "method": "GET",
       "path": "/rainSensor",
       "public": true
+    },
+    "switchBox": {
+      "method": "GET",
+      "path": "/switchBox",
+      "public": true
+    },
+    "switchBoxD": {
+      "method": "GET",
+      "path": "/switchBoxD",
+      "public": true
+    },
+    "switchBoxDC": {
+      "method": "GET",
+      "path": "/switchBoxDC",
+      "public": true
+    },
+    "switchBoxDDIN": {
+      "method": "GET",
+      "path": "/switchBoxDDIN",
+      "public": true
+    },
+    "switchBoxDIN": {
+      "method": "GET",
+      "path": "/switchBoxDIN",
+      "public": true
+    },
+    "switchBoxLight": {
+      "method": "GET",
+      "path": "/switchBoxLight",
+      "public": true
+    },
+    "switchBoxTPRO": {
+      "method": "GET",
+      "path": "/switchBoxTPRO",
+      "public": true
+    },
+    "switchBoxV3": {
+      "method": "GET",
+      "path": "/switchBoxV3",
+      "public": true
+    },
+    "switchBoxSeparated": {
+      "method": "GET",
+      "path": "/switchBoxSeparated",
+      "public": true
     }
   }
 }

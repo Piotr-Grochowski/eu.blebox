@@ -7,7 +7,7 @@ class airSensorDevice extends BleBoxDevice {
   async pollBleBox() 
 	{
     await this.bbApi.airSensorGetState(this.getSetting('address'), this.getSetting('apiLevel'))
-    .then(result => {
+    .then(async result => {
 
       let pm1value = 0;
       let pm25value = 0;
@@ -19,17 +19,17 @@ class airSensorDevice extends BleBoxDevice {
         if(element.type=='pm10') pm10value = element.value;
       });
 
-      this.setCapabilityValue('measure_pm25', pm25value)
+      await this.setCapabilityValue('measure_pm25', pm25value)
         .catch( err => {
           this.log(err);
         });
 
-      this.setCapabilityValue('measure_pm1', pm1value)
+      await this.setCapabilityValue('measure_pm1', pm1value)
         .catch( err => {
           this.log(err);
         });
 
-      this.setCapabilityValue('measure_pm10', pm10value)
+      await this.setCapabilityValue('measure_pm10', pm10value)
         .catch( err => {
           this.log(err);
         });

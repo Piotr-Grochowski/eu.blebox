@@ -21,7 +21,7 @@ class wLightBoxSDevice extends BleBoxDevice {
 	{
     // Read the device state
     await this.bbApi.wLightBoxGetState(this.getSetting('address'), this.getSetting('apiLevel'))
-    .then(result => {
+    .then(async result => {
       const brightness = Math.round(parseInt(result.rgbw.desiredColor,16)/255*100)/100;
       const onState = brightness > 0 ? true : false;
       if(brightness>0)
@@ -29,21 +29,21 @@ class wLightBoxSDevice extends BleBoxDevice {
         this.previousDimLevel = brightness;
       }
       if (brightness != this.getCapabilityValue('dim')) {
-        this.setCapabilityValue('dim', brightness)
+        await this.setCapabilityValue('dim', brightness)
           .catch( err => {
             this.log(err);
           })
       }
 
       if (onState != this.getCapabilityValue('onoff')) {
-        this.setCapabilityValue('onoff', onState)
+        await this.setCapabilityValue('onoff', onState)
           .catch( err => {
             this.log(err);
           })
       }
 
       if (result.rgbw.effectID.toString() != this.getCapabilityValue('effect_selector')) {
-        this.setCapabilityValue('effect_selector', result.rgbw.effectID.toString())
+        await this.setCapabilityValue('effect_selector', result.rgbw.effectID.toString())
           .catch( err => {
             this.log(err);
           })

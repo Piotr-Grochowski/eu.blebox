@@ -24,7 +24,7 @@ class dacBoxDDevice extends BleBoxDevice {
 
   async pollBleBox() {
     await this.bbApi.wLightBoxGetState(this.getSetting('address'), this.getSetting('apiLevel'))
-      .then((result) => {
+      .then(async (result) => {
         const hex = result.rgbw.desiredColor;
         // 2 channels, 2 hex chars each: AABB
         const level1 = Math.round((parseInt(hex.substring(0, 2), 16) / 255) * 100) / 100;
@@ -34,19 +34,19 @@ class dacBoxDDevice extends BleBoxDevice {
         if (level2 > 0) this.previousDimLevel2 = level2;
 
         if (level1 !== this.getCapabilityValue('dim.channel1')) {
-          this.setCapabilityValue('dim.channel1', level1).catch((err) => this.log(err));
+          await this.setCapabilityValue('dim.channel1', level1).catch((err) => this.log(err));
         }
         if (level2 !== this.getCapabilityValue('dim.channel2')) {
-          this.setCapabilityValue('dim.channel2', level2).catch((err) => this.log(err));
+          await this.setCapabilityValue('dim.channel2', level2).catch((err) => this.log(err));
         }
 
         const on1 = level1 > 0;
         const on2 = level2 > 0;
         if (on1 !== this.getCapabilityValue('onoff.channel1')) {
-          this.setCapabilityValue('onoff.channel1', on1).catch((err) => this.log(err));
+          await this.setCapabilityValue('onoff.channel1', on1).catch((err) => this.log(err));
         }
         if (on2 !== this.getCapabilityValue('onoff.channel2')) {
-          this.setCapabilityValue('onoff.channel2', on2).catch((err) => this.log(err));
+          await this.setCapabilityValue('onoff.channel2', on2).catch((err) => this.log(err));
         }
       })
       .catch((error) => this.log(error));

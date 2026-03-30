@@ -7,7 +7,7 @@ class tempSensorDevice extends BleBoxDevice {
   async pollBleBox() 
 	{
     await this.bbApi.tempSensorGetState(this.getSetting('address'), this.getSetting('apiLevel'))
-    .then(result => {
+    .then(async result => {
 
       let temperature = 0.00;
 
@@ -15,7 +15,7 @@ class tempSensorDevice extends BleBoxDevice {
         if(element.type=='temperature') temperature = element.value/100;
       });
 
-      this.setCapabilityValue('measure_temperature', temperature)
+      await this.setCapabilityValue('measure_temperature', temperature)
         .catch( err => {
           this.log(err);
         });

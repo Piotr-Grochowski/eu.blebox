@@ -30,23 +30,23 @@ class floodSensorDevice extends BleBoxDevice {
   async pollBleBox() 
 	{
     await this.bbApi.multiSensorGetState(this.getSetting('address'), this.getSetting('apiLevel'))
-    .then(result => {
-      result.multiSensor.sensors.forEach(element => {
+    .then(async result => {
+      for (const element of result.multiSensor.sensors) {
           if(this.getCapabilityValue('alarm_water') && element.type == 'flood' && element.value==0)
           {
-            this.setCapabilityValue('alarm_water', false)
+            await this.setCapabilityValue('alarm_water', false)
             .catch( err => {
               this.log(err);
             });
-          } 
+          }
           if(!this.getCapabilityValue('alarm_water') && element.type == 'flood' && element.value>0)
           {
-            this.setCapabilityValue('alarm_water', true)
+            await this.setCapabilityValue('alarm_water', true)
             .catch( err => {
               this.log(err);
             });
-          } 
-      });
+          }
+      }
 
     })
     .catch(error => {
@@ -58,22 +58,22 @@ class floodSensorDevice extends BleBoxDevice {
   {
     if(!this.getCapabilityValue('alarm_water'))
       {
-        this.setCapabilityValue('alarm_water', true)
+        await this.setCapabilityValue('alarm_water', true)
         .catch( err => {
           this.log(err);
         });
-      } 
+      }
   }
 
   async onNoFlood()
   {
     if(this.getCapabilityValue('alarm_water'))
       {
-        this.setCapabilityValue('alarm_water', false)
+        await this.setCapabilityValue('alarm_water', false)
         .catch( err => {
           this.log(err);
         });
-      } 
+      }
   }
 
 }

@@ -28,30 +28,30 @@ class rainSensorDevice extends BleBoxDevice {
   async pollBleBox() 
 	{
     await this.bbApi.multiSensorGetState(this.getSetting('address'), this.getSetting('apiLevel'))
-    .then(result => {
+    .then(async result => {
 
-      result.multiSensor.sensors.forEach(element => {
-        if(element.type=='rain' && element.id == 0) 
-          if(this.getCapabilityValue('measure_rain')!=element.value) 
-            this.setCapabilityValue('measure_rain', element.value)
+      for (const element of result.multiSensor.sensors) {
+        if(element.type=='rain' && element.id == 0)
+          if(this.getCapabilityValue('measure_rain')!=element.value)
+            await this.setCapabilityValue('measure_rain', element.value)
             .catch( err => {
               this.log(err);
             });
           if(element.type=='rain' && element.id == 0 && this.getCapabilityValue('alarm_water') && element.value==0)
           {
-            this.setCapabilityValue('alarm_water', false)
+            await this.setCapabilityValue('alarm_water', false)
             .catch( err => {
               this.log(err);
             });
-          } 
+          }
           if(element.type=='rain' && element.id == 0 && !this.getCapabilityValue('alarm_water') && element.value>0)
           {
-            this.setCapabilityValue('alarm_water', true)
+            await this.setCapabilityValue('alarm_water', true)
             .catch( err => {
               this.log(err);
             });
-          } 
-      });
+          }
+      }
 
     })
   .catch(error => {
@@ -63,13 +63,13 @@ class rainSensorDevice extends BleBoxDevice {
   {
     if(!this.getCapabilityValue('alarm_water'))
     {
-      this.setCapabilityValue('alarm_water', true)
+      await this.setCapabilityValue('alarm_water', true)
       .catch( err => {
         this.log(err);
       });
-    } 
-    if(this.getCapabilityValue('measure_rain')!=1) 
-      this.setCapabilityValue('measure_rain', 1)
+    }
+    if(this.getCapabilityValue('measure_rain')!=1)
+      await this.setCapabilityValue('measure_rain', 1)
       .catch( err => {
         this.log(err);
       });
@@ -79,13 +79,13 @@ class rainSensorDevice extends BleBoxDevice {
   {
     if(this.getCapabilityValue('alarm_water'))
     {
-      this.setCapabilityValue('alarm_water', false)
+      await this.setCapabilityValue('alarm_water', false)
       .catch( err => {
         this.log(err);
       });
-    } 
-    if(this.getCapabilityValue('measure_rain')!=0) 
-      this.setCapabilityValue('measure_rain', 0)
+    }
+    if(this.getCapabilityValue('measure_rain')!=0)
+      await this.setCapabilityValue('measure_rain', 0)
       .catch( err => {
         this.log(err);
       });

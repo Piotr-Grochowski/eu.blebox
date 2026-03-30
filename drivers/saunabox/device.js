@@ -13,32 +13,32 @@ module.exports = class saunaBoxDevice extends BleBoxDevice {
 	async pollBleBox() 
 	{
 		await this.bbApi.saunaBoxGetState(this.getSetting('address'),this.getSetting('apiLevel'))
-		.then(result => {
+		.then(async result => {
 			// On success - update Homey's device state
 
 			if (result.heat.desiredTemp/100 != this.getCapabilityValue('target_temperature')) {
-				this.setCapabilityValue('target_temperature', result.heat.desiredTemp/100)
+				await this.setCapabilityValue('target_temperature', result.heat.desiredTemp/100)
 					.catch( err => {
 						this.log(err);
-					})   
+					})
 			}
 
 			const state = result.heat.state == 0 ? false : true;
 
 			if (state != this.getCapabilityValue('onoff')) {
-				this.setCapabilityValue('onoff', state)
+				await this.setCapabilityValue('onoff', state)
 					.catch( err => {
 						this.log(err);
-					})   
+					})
 			}
-	
-			result.heat.sensors.forEach(element => {
+
+			for (const element of result.heat.sensors) {
 				if(element.type=='temperature')
-					this.setCapabilityValue('measure_temperature', element.value / 100)
+					await this.setCapabilityValue('measure_temperature', element.value / 100)
 					.catch( err => {
 						this.log(err);
 					});
-			});
+			}
 
 		})
 		.catch(error => {
