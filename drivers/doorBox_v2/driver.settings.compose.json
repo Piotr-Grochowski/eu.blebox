@@ -27,6 +27,22 @@
         }
       },
       {
+        "id": "webhooks_enabled",
+        "type": "label",
+        "value": "No",
+        "label": {
+          "en": "Action webhooks enabled"
+        }
+      },
+      {
+        "id": "polling_enabled",
+        "type": "label",
+        "value": "Yes",
+        "label": {
+          "en": "Polling enabled"
+        }
+      },
+      {
         "id": "poll_interval",
         "type": "number",
         "label": {
@@ -35,6 +51,14 @@
         "attr": {
           "min": 500,
           "max": 60000
+        }
+      },
+      {
+        "id": "last_poll",
+        "type": "label",
+        "value": "n/a",
+        "label": {
+          "en": "Last poll"
         }
       }
     ]

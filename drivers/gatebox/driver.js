@@ -1,57 +1,20 @@
 'use strict';
- 
-const { Driver } = require('homey');
-const BleBoxAPI = require('../../lib/bleboxapi.js');
 
-class gateBoxDriver extends Driver {
+const BleBoxDriver_v2 = require('../../lib/bleboxdriver_v2.js');
 
-  async onInit() {
-    this.bleBoxPoll = 1000;
-    this.log('gateBoxDriver has been initialized');
+class gateBoxDriver extends BleBoxDriver_v2 {
+
+  onInitAddOn() {
+    this.driverName = 'gateBoxDriver';
+    this.driverType = 'gateBox';
+    this.driverProduct = ['gateBox', 'RiCo'];
+    this.drivermDNSSDMethod = true;
+    this.driverIPAddressMethod = true;
+    this.driverActions = false;
+    this.driverPolling = true;
+    this.driverPollingInterval = 1000;
   }
 
-  async onPairListDevices() {
-    const discoveryStrategy = this.getDiscoveryStrategy();
-    const discoveryResults = discoveryStrategy.getDiscoveryResults();
-    const bbApi = new BleBoxAPI();
-
-    const devices = [];
-    
-    for(const currDevice of Object.values(discoveryResults))
-    {
-      await bbApi.getDeviceState(currDevice.address)
-      .then (result => 
-      {
-        if((result.type=='gateBox') && (result.product == 'gateBox' || result.product == 'RiCo' || result.product == 'doorBox_v2'))
-        {
-          const apiLevel = result.hasOwnProperty('apiLevel') ? result.apiLevel : '20151206';
-          devices.push(
-            {
-              name: result.deviceName,
-              data: {
-                id: currDevice.id
-              },
-              settings: 
-              {
-                address: currDevice.address,
-                poll_interval : this.bleBoxPoll,
-                product: result.product,
-                apiLevel: apiLevel,
-                hv: result.hv,
-                fv: result.fv
-              }
-            }
-          );
-          return;
-        }
-      })
-      .catch(err => {
-        this.log(err);
-      }
-      );
-    };
-    return devices;
-  }
 }
 
 module.exports = gateBoxDriver;

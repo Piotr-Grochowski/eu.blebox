@@ -1,47 +1,50 @@
 'use strict';
 
-const BleBoxMDNSDevice = require('../../lib/bleboxmdnsdevice.js');
+const BleBoxDevice = require('../../lib/bleboxdevice.js');
 
-class gateBoxDevice extends BleBoxMDNSDevice {
+class gateBoxDevice extends BleBoxDevice {
 
-  async onBleBoxInit()
-  {
+  async onInit() {
+    // Migration from v1: ensure polling_enabled exists for devices paired under old architecture
+    if (!this.getSetting('polling_enabled')) {
+      await this.setSettings({ polling_enabled: 'Yes' });
+    }
+    await super.onInit();
+  }
+
+  async onBleBoxInit() {
     this.registerCapabilityListener('button', this.onCapabilityButton.bind(this));
   }
 
-  async pollBleBox() 
-	{
-    await this.bbApi.gateBoxGetState(this.getSetting('address'), this.getSetting('apiLevel'),this.getSetting('username'),this.getSetting('password'))
-    .then(result => {
-        // On success - update Homey's device state
-        let state = false;
-        if(result.gate.currentPos!=0) state = true;
-        
-        if (state != this.getCapabilityValue('alarm_contact')) {
-            this.setCapabilityValue('alarm_contact', state)
-                .catch( err => {
-                    this.log(err);
-                })
-        }
-    })
-    .catch(error => {
-      this.log(error);
-    })
-	}
+  async pollBleBox() {
+    await this.bbApi.gateBoxGetState(
+      this.getSetting('address'),
+      this.getSetting('apiLevel'),
+      this.getSetting('username'),
+      this.getSetting('password'),
+    )
+      .then((result) => {
+        const state = result.gate.currentPos !== 0;
 
-  /**
-   * Send the state to the device
-   */
-	async onCapabilityButton( value, opts ) 
-  {
-    this.bbApi.gateBoxPrimaryButton(this.getSetting('address'),this.getSetting('username'),this.getSetting('password'))
-    .catch(error => {
-      // Error occured
-      this.log(error);
-      this.error(error);
-      return;
-    });
+        if (state !== this.getCapabilityValue('alarm_contact')) {
+          this.setCapabilityValue('alarm_contact', state)
+            .catch((err) => this.log(err));
+        }
+      })
+      .catch((error) => this.log(error));
+  }
+
+  async onCapabilityButton() {
+    await this.bbApi.gateBoxPrimaryButton(
+      this.getSetting('address'),
+      this.getSetting('username'),
+      this.getSetting('password'),
+    )
+      .catch((error) => {
+        this.log(error);
+        this.error(error);
+      });
   }
 }
- 
+
 module.exports = gateBoxDevice;

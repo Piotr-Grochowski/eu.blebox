@@ -1,7 +1,6 @@
 'use strict';
 
-const gateBox = require ('../gatebox/device.js');
-
+const gateBox = require('../gatebox/device.js');
 
 class gateBoxProDevice extends gateBox {
 }

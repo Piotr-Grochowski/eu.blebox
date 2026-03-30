@@ -1,0 +1,149 @@
+<script type="text/javascript">
+
+Homey.on("SetData", function (data) {
+    
+    if(data.ip_address)
+    {
+      $('#radio-method-ip-checkmark').show();
+      $('#radio-method-ip-text').show();
+      $('#radio-method-ip').prop('checked',true);
+    }
+  
+    if(data.mdns)
+    {
+      $('#radio-method-mdns-checkmark').show();
+      $('#radio-method-mdns-text').show();
+      $('#radio-method-mdns').prop('checked',true);
+    }
+    else
+    {
+      $('#ip_address').show(); 
+      $('#ip_address_label').show(); 
+    }
+  
+    if(data.actions)
+    {
+      $('#checkbox-webhooks-checkmark').show();
+      $('#checkbox-webhooks-text').show();
+      $('#checkbox-webhooks').prop('checked',true);
+      if(!data.polling) 
+        $('#checkbox-actions').prop('disabled',true);
+    }
+  
+    if(data.polling)
+    {
+      $('#checkbox-polling-checkmark').show();
+      $('#checkbox-polling-text').show();
+      $('#checkbox-polling').prop('checked',true);
+      $('#polling_interval').show(); 
+      $('#polling_interval_label').show(); 
+      $('#polling_interval').val(data.interval);
+      if(!data.actions) 
+        $('#checkbox-polling').prop('disabled',true);
+    }
+
+    return 0; // send a reply back to the pairing session
+  });
+
+function radioMethodChanged() {
+  if($('#radio-method-ip').prop('checked') == true)
+  {
+     $('#ip_address').show(); 
+     $('#ip_address_label').show(); 
+     Homey.emit('methodChanged',2);
+  }
+  else
+  {
+    $('#ip_address').hide();
+    $('#ip_address_label').hide(); 
+    Homey.emit('methodChanged',1);
+  }
+};
+
+function ip_addressChanged()
+{
+  Homey.emit('ipChanged',$('#ip_address').val());
+}
+
+function checkboxActionsChanged()
+{
+  Homey.emit('actionsChanged',$('#checkbox-webhooks').prop('checked'));
+}
+function checkboxPollingChanged() {
+  if($('#checkbox-polling').prop('checked') == true)
+  {
+     $('#polling_interval').show(); 
+     $('#polling_interval_label').show(); 
+  }
+  else
+  {
+    $('#polling_interval').hide();
+    $('#polling_interval_label').hide(); 
+  }
+  Homey.emit('pollingChanged',$('#checkbox-polling').prop('checked'));
+};
+
+function intervalChanged()
+{
+  Homey.emit('intervalChanged',$('#polling_interval').val());
+}
+</script>
+    
+
+<header class="homey-header">
+  <h1 class="homey-title" data-i18n="driver.addDeviceTitle">
+  </h1>
+  <p class="homey-subtitle" data-i18n="driver.addDeviceSubtitle">
+  </p>
+</header>
+
+<form class="homey-form" id="formularz">
+  <fieldset class="homey-form-fieldset">
+    
+    <div class="homey-form-group">
+      <fieldset class="homey-form-radio-set">
+        <legend class="homey-form-radio-set-title" data-i18n="driver.addDeviceMethodTitle"></legend>
+    
+        <label class="homey-form-radio">
+          <input class="homey-form-radio-input" type="radio" name="radio-method" id="radio-method-mdns" style="display:none" onchange="radioMethodChanged()"/>
+          <span class="homey-form-radio-checkmark" id="radio-method-mdns-checkmark" style="display:none" ></span>
+          <span class="homey-form-radio-text" id="radio-method-mdns-text" style="display:none" data-i18n="driver.addDeviceMDNS"></span>
+        </label>
+    
+        <label class="homey-form-radio">
+          <input class="homey-form-radio-input" type="radio" name="radio-method" id="radio-method-ip" style="display:none" onchange="radioMethodChanged()"/>
+          <span class="homey-form-radio-checkmark" id="radio-method-ip-checkmark" style="display:none" ></span>
+          <span class="homey-form-radio-text" id="radio-method-ip-text" style="display:none" data-i18n="driver.addDeviceManual"></span>
+        </label>
+        <div class="homey-form-group">
+          <label class="homey-form-label" id="ip_address_label" for="ip_address" data-i18n="driver.addDeviceIPAddress" style="display:none"></label>
+          <input class="homey-form-input" id="ip_address" type="text" value="0.0.0.0" onchange="ip_addressChanged()" style="display:none" />
+        </div>
+      </fieldset>
+    </div> 
+
+    <div class="homey-form-group">
+      <fieldset class="homey-form-checkbox-set">
+        <legend class="homey-form-checkbox-set-title" data-i18n="driver.addDeviceIntegration"></legend>
+    
+        <label class="homey-form-checkbox">
+          <input class="homey-form-checkbox-input" type="checkbox" name="checkbox-webhooks" id="checkbox-webhooks" style="display:none" onchange="checkboxActionsChanged()"/>
+          <span class="homey-form-checkbox-checkmark" id="checkbox-webhooks-checkmark" style="display:none"></span>
+          <span class="homey-form-checkbox-text" id="checkbox-webhooks-text" style="display:none" data-i18n="driver.addDeviceWebhooks"></span>
+        </label>
+    
+        <label class="homey-form-checkbox">
+          <input class="homey-form-checkbox-input" type="checkbox" name="checkbox-polling" id="checkbox-polling" style="display:none" onchange="checkboxPollingChanged()"/>
+          <span class="homey-form-checkbox-checkmark" id="checkbox-polling-checkmark" style="display:none"></span>
+          <span class="homey-form-checkbox-text" id="checkbox-polling-text" style="display:none" data-i18n="driver.addDevicePolling"></span>
+        </label>
+        <div class="homey-form-group">
+          <label class="homey-form-label" for="polling_interval" style="display:none" id="polling_interval_label" data-i18n="driver.addDeviceInterval"></label>
+          <input class="homey-form-input" id="polling_interval" style="display:none" type="number" min="500" max="600000" onchange="intervalChanged()"/>
+        </div>
+
+      </fieldset>
+    </div>
+  </fieldset>
+</form>
+
