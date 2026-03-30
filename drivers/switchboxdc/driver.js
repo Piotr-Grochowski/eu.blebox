@@ -1,16 +1,12 @@
 'use strict';
 
-const BleBoxDriver = require('../../lib/bleboxdriver.js');
+const SwitchBoxBaseDriver = require('../../lib/switchboxdriver.js');
 
-class switchBoxDCDriver extends BleBoxDriver {
+class switchBoxDCDriver extends SwitchBoxBaseDriver {
 
-  // Overload onInit - to specify which type and product to search in discovery results.
-  async onInit()
-  {
-    this.bleBoxType = 'switchBox';
-    this.bleBoxProduct = 'switchBoxDC';
-    this.bleBoxPoll = 1000;
-    this.log('switchBoxDCDriver has been initialized');
+  onSwitchBoxInit() {
+    this.driverName = 'switchBoxDCDriver';
+    this.driverProduct = ['switchBoxDC'];
   }
 
 }

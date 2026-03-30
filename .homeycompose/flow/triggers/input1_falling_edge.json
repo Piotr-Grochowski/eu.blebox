@@ -1,0 +1,13 @@
+{
+  "id": "input1_falling_edge",
+  "title": {
+    "en": "Falling edge has been detected on input 1"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=switchbox|switchboxd|switchboxdc|switchboxddin|switchboxdin|switchboxlight|switchboxtpro|switchboxv3|switchboxseparated"
+    }
+  ]
+}

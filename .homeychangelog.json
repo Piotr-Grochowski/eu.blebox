@@ -283,5 +283,11 @@
   },
   "3.99.13": {
     "en": "humiditySensor v2 support added"
+  },
+  "3.100.0": {
+    "en": "switchBox rebuilt + switchBox separated"
+  },
+  "3.101.0": {
+    "en": "luxSensor support added"
   }
 }

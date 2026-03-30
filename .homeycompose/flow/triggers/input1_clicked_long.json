@@ -1,0 +1,13 @@
+{
+  "id": "input1_clicked_long",
+  "title": {
+    "en": "Input 1 has been clicked long"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=switchbox|switchboxd|switchboxdc|switchboxddin|switchboxdin|switchboxlight|switchboxtpro|switchboxv3|switchboxseparated"
+    }
+  ]
+}

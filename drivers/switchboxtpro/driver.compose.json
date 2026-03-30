@@ -9,19 +9,19 @@
     "onoff.relaypro3"
   ],
   "capabilitiesOptions": {
-    "onoff.relay1": {
+    "onoff.relaypro1": {
       "title": {
         "en": "Relay 1",
         "nl": "Relay 1"
       }
     },
-    "onoff.relay2": {
+    "onoff.relaypro2": {
       "title": {
         "en": "Relay 2",
         "nl": "Relay 2"
       }
     },
-    "onoff.relay3": {
+    "onoff.relaypro3": {
       "title": {
         "en": "Relay 3",
         "nl": "Relay 3"
@@ -34,7 +34,6 @@
   "connectivity": [
     "lan"
   ],
-  "discovery": "bbxsrv",
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png",
@@ -42,14 +41,21 @@
   },
   "pair": [
     {
-      "id": "list_switchboxesTPRO",
-      "template": "list_devices",
+      "id": "add_blebox_device",
       "navigation": {
-        "next": "add_switchboxesTPRO"
+        "next": "list_blebox_devices"
       }
     },
     {
-      "id": "add_switchboxesTPRO",
+      "id": "list_blebox_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices",
+        "prev": "add_blebox_device"
+      }
+    },
+    {
+      "id": "add_devices",
       "template": "add_devices"
     }
   ]

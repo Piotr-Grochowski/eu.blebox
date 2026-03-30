@@ -1,0 +1,70 @@
+{
+  "name": {
+    "en": "dacBoxD DC"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim.channel1",
+    "onoff.channel1",
+    "dim.channel2",
+    "onoff.channel2"
+  ],
+  "capabilitiesOptions": {
+    "dim.channel1": {
+      "title": {
+        "en": "Channel 1 level"
+      }
+    },
+    "onoff.channel1": {
+      "title": {
+        "en": "Channel 1"
+      }
+    },
+    "dim.channel2": {
+      "title": {
+        "en": "Channel 2 level"
+      }
+    },
+    "onoff.channel2": {
+      "title": {
+        "en": "Channel 2"
+      }
+    }
+  },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png"
+  },
+  "energy": {
+    "approximation": {
+      "usageOn": 1,
+      "usageOff": 1
+    }
+  },
+  "pair": [
+    {
+      "id": "add_blebox_device",
+      "navigation": {
+        "next": "list_blebox_devices"
+      }
+    },
+    {
+      "id": "list_blebox_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices",
+        "prev": "add_blebox_device"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

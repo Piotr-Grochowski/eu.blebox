@@ -1,6 +1,6 @@
 {
   "id": "eu.blebox",
-  "version": "3.99.13",
+  "version": "3.101.0",
   "compatibility": ">=12.2.0",
   "sdk": 3,
   "platforms": [

@@ -1,9 +1,17 @@
 'use strict';
 
-const switchBox = require ('../switchbox/device.js');
+const SwitchBoxBaseDevice = require('../../lib/switchboxdevice.js');
 
+class switchBoxDCDevice extends SwitchBoxBaseDevice {
 
-class switchBoxDCDevice extends switchBox {
+  getRelayCapabilities() {
+    return ['onoff'];
+  }
+
+  getWebhookDriverId() {
+    return 'switchBoxDC';
+  }
+
 }
 
 module.exports = switchBoxDCDevice;

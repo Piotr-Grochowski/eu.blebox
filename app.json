@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.blebox",
-  "version": "3.99.13",
+  "version": "3.101.0",
   "compatibility": ">=12.2.0",
   "sdk": 3,
   "platforms": [
@@ -403,6 +403,201 @@
             "name": "device",
             "type": "device",
             "filter": "driver_id=wlightbox|wlightboxpro|pixelbox"
+          }
+        ]
+      },
+      {
+        "id": "input1_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input 1"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchbox|switchboxd|switchboxdc|switchboxddin|switchboxdin|switchboxlight|switchboxtpro|switchboxv3|switchboxseparated"
+          }
+        ]
+      },
+      {
+        "id": "input1_clicked",
+        "title": {
+          "en": "Input 1 has been clicked shortly"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchbox|switchboxd|switchboxdc|switchboxddin|switchboxdin|switchboxlight|switchboxtpro|switchboxv3|switchboxseparated"
+          }
+        ]
+      },
+      {
+        "id": "input1_clicked_long",
+        "title": {
+          "en": "Input 1 has been clicked long"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchbox|switchboxd|switchboxdc|switchboxddin|switchboxdin|switchboxlight|switchboxtpro|switchboxv3|switchboxseparated"
+          }
+        ]
+      },
+      {
+        "id": "input1_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input 1"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchbox|switchboxd|switchboxdc|switchboxddin|switchboxdin|switchboxlight|switchboxtpro|switchboxv3|switchboxseparated"
+          }
+        ]
+      },
+      {
+        "id": "input1_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input 1"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchbox|switchboxd|switchboxdc|switchboxddin|switchboxdin|switchboxlight|switchboxtpro|switchboxv3|switchboxseparated"
+          }
+        ]
+      },
+      {
+        "id": "input2_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input 2"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchboxd|switchboxddin|switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "input2_clicked",
+        "title": {
+          "en": "Input 2 has been clicked shortly"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchboxd|switchboxddin|switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "input2_clicked_long",
+        "title": {
+          "en": "Input 2 has been clicked long"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchboxd|switchboxddin|switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "input2_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input 2"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchboxd|switchboxddin|switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "input2_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input 2"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchboxd|switchboxddin|switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "input3_any_edge",
+        "title": {
+          "en": "Any edge has been detected on input 3"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "input3_clicked",
+        "title": {
+          "en": "Input 3 has been clicked shortly"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "input3_clicked_long",
+        "title": {
+          "en": "Input 3 has been clicked long"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "input3_falling_edge",
+        "title": {
+          "en": "Falling edge has been detected on input 3"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchboxtpro"
+          }
+        ]
+      },
+      {
+        "id": "input3_rising_edge",
+        "title": {
+          "en": "Rising edge has been detected on input 3"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=switchboxtpro"
           }
         ]
       },
@@ -4239,6 +4434,162 @@
     },
     {
       "name": {
+        "en": "luxSensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_luminance",
+        "measure_luminance.avg",
+        "measure_luminance.max"
+      ],
+      "capabilitiesOptions": {
+        "measure_luminance": {
+          "title": {
+            "en": "Illuminance"
+          }
+        },
+        "measure_luminance.avg": {
+          "title": {
+            "en": "Average illuminance"
+          }
+        },
+        "measure_luminance.max": {
+          "title": {
+            "en": "Maximum illuminance"
+          }
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/luxsensor/assets/images/small.png",
+        "large": "/drivers/luxsensor/assets/images/large.png"
+      },
+      "energy": {
+        "approximation": {
+          "usageConstant": 1
+        }
+      },
+      "pair": [
+        {
+          "id": "add_blebox_device",
+          "navigation": {
+            "next": "list_blebox_devices"
+          }
+        },
+        {
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "luxsensor",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              },
+              "value": "n/a"
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              },
+              "value": "n/a"
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": "n/a"
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              },
+              "value": "n/a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
         "en": "pixelBox"
       },
       "class": "light",
@@ -5469,7 +5820,6 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/switchbox/assets/images/small.png",
         "large": "/drivers/switchbox/assets/images/large.png",
@@ -5477,14 +5827,21 @@
       },
       "pair": [
         {
-          "id": "list_switchboxes",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_switchboxes"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_switchboxes",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -5504,6 +5861,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5512,6 +5885,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -5593,24 +5974,30 @@
           "usageOff": 1
         }
       },
-      "discovery": "bbxsrv",
-      "pair": [
-        {
-          "id": "list_dswitchboxes",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_dswitchboxes"
-          }
-        },
-        {
-          "id": "add_dswitchboxes",
-          "template": "add_devices"
-        }
-      ],
       "images": {
         "small": "/drivers/switchboxd/assets/images/small.png",
         "large": "/drivers/switchboxd/assets/images/large.png"
       },
+      "pair": [
+        {
+          "id": "add_blebox_device",
+          "navigation": {
+            "next": "list_blebox_devices"
+          }
+        },
+        {
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
       "id": "switchboxd",
       "settings": [
         {
@@ -5627,6 +6014,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5635,6 +6038,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -5695,7 +6106,6 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/switchboxdc/assets/images/small.png",
         "large": "/drivers/switchboxdc/assets/images/large.png",
@@ -5703,14 +6113,21 @@
       },
       "pair": [
         {
-          "id": "list_switchboxdces",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_switchboxdces"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_switchboxdces",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -5730,6 +6147,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5738,6 +6171,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -5794,13 +6235,13 @@
         "onoff.relaydin2"
       ],
       "capabilitiesOptions": {
-        "onoff.relay1": {
+        "onoff.relaydin1": {
           "title": {
             "en": "Relay 1",
             "nl": "Relay 1"
           }
         },
-        "onoff.relay2": {
+        "onoff.relaydin2": {
           "title": {
             "en": "Relay 2",
             "nl": "Relay 2"
@@ -5813,7 +6254,6 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/switchboxddin/assets/images/small.png",
         "large": "/drivers/switchboxddin/assets/images/large.png",
@@ -5821,14 +6261,21 @@
       },
       "pair": [
         {
-          "id": "list_switchboxesDDin",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_switchboxesDDIN"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_switchboxesDDIN",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -5848,6 +6295,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5856,6 +6319,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -5918,7 +6389,6 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/switchboxdin/assets/images/small.png",
         "large": "/drivers/switchboxdin/assets/images/large.png",
@@ -5926,14 +6396,21 @@
       },
       "pair": [
         {
-          "id": "list_switchboxdines",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_switchboxdines"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_switchboxdines",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -5953,6 +6430,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -5961,6 +6454,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -6021,7 +6522,6 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/switchboxlight/assets/images/small.png",
         "large": "/drivers/switchboxlight/assets/images/large.png",
@@ -6029,14 +6529,21 @@
       },
       "pair": [
         {
-          "id": "list_switchboxeslight",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_switchboxeslight"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_switchboxeslight",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -6056,6 +6563,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -6064,6 +6587,147 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              },
+              "value": "n/a"
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              },
+              "value": "n/a"
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": "n/a"
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              },
+              "value": "n/a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "switchBox Separated"
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/switchboxseparated/assets/images/small.png",
+        "large": "/drivers/switchboxseparated/assets/images/large.png",
+        "xlarge": "/drivers/switchboxseparated/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "add_blebox_device",
+          "navigation": {
+            "next": "list_blebox_devices"
+          }
+        },
+        {
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "switchboxseparated",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -6121,19 +6785,19 @@
         "onoff.relaypro3"
       ],
       "capabilitiesOptions": {
-        "onoff.relay1": {
+        "onoff.relaypro1": {
           "title": {
             "en": "Relay 1",
             "nl": "Relay 1"
           }
         },
-        "onoff.relay2": {
+        "onoff.relaypro2": {
           "title": {
             "en": "Relay 2",
             "nl": "Relay 2"
           }
         },
-        "onoff.relay3": {
+        "onoff.relaypro3": {
           "title": {
             "en": "Relay 3",
             "nl": "Relay 3"
@@ -6146,7 +6810,6 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/switchboxtpro/assets/images/small.png",
         "large": "/drivers/switchboxtpro/assets/images/large.png",
@@ -6154,14 +6817,21 @@
       },
       "pair": [
         {
-          "id": "list_switchboxesTPRO",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_switchboxesTPRO"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_switchboxesTPRO",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -6181,6 +6851,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -6189,6 +6875,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -6251,7 +6945,6 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/switchboxv3/assets/images/small.png",
         "large": "/drivers/switchboxv3/assets/images/large.png",
@@ -6259,14 +6952,21 @@
       },
       "pair": [
         {
-          "id": "list_switchboxesv3",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_switchboxesv3"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_switchboxesv3",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -6286,6 +6986,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -6294,6 +7010,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]

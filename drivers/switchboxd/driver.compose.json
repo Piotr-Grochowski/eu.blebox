@@ -33,22 +33,28 @@
       "usageOff": 1
     }
   },
-  "discovery": "bbxsrv",
-  "pair": [
-    {
-      "id": "list_dswitchboxes",
-      "template": "list_devices",
-      "navigation": {
-        "next": "add_dswitchboxes"
-      }
-    },
-    {
-      "id": "add_dswitchboxes",
-      "template": "add_devices"
-    }
-  ],
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png"
-  }
+  },
+  "pair": [
+    {
+      "id": "add_blebox_device",
+      "navigation": {
+        "next": "list_blebox_devices"
+      }
+    },
+    {
+      "id": "list_blebox_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices",
+        "prev": "add_blebox_device"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
 }

@@ -14,7 +14,6 @@
   "connectivity": [
     "lan"
   ],
-  "discovery": "bbxsrv",
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png",
@@ -22,14 +21,21 @@
   },
   "pair": [
     {
-      "id": "list_switchboxesv3",
-      "template": "list_devices",
+      "id": "add_blebox_device",
       "navigation": {
-        "next": "add_switchboxesv3"
+        "next": "list_blebox_devices"
       }
     },
     {
-      "id": "add_switchboxesv3",
+      "id": "list_blebox_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices",
+        "prev": "add_blebox_device"
+      }
+    },
+    {
+      "id": "add_devices",
       "template": "add_devices"
     }
   ]
