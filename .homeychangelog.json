@@ -289,5 +289,11 @@
   },
   "3.101.0": {
     "en": "luxSensor support added"
+  },
+  "3.101.2": {
+    "en": "Bugfixes"
+  },
+  "4.0.0": {
+    "en": "Optimizations and bugfixes, some rewrites. App should be more stable now."
   }
 }

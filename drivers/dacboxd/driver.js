@@ -7,7 +7,7 @@ class dacBoxDDriver extends BleBoxDriver_v2 {
   onInitAddOn() {
     this.driverName = 'dacBoxDDriver';
     this.driverType = 'wLightBox';
-    this.driverProduct = ['dacBoxD'];
+    this.driverProduct = ['dacBoxD', 'dacBoxD_DC'];
     this.drivermDNSSDMethod = true;
     this.driverIPAddressMethod = true;
     this.driverActions = false;

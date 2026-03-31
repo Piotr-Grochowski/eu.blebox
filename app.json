@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.blebox",
-  "version": "3.101.0",
+  "version": "4.0.0",
   "compatibility": ">=12.2.0",
   "sdk": 3,
   "platforms": [
@@ -63,6 +63,51 @@
     "rainSensor": {
       "method": "GET",
       "path": "/rainSensor",
+      "public": true
+    },
+    "switchBox": {
+      "method": "GET",
+      "path": "/switchBox",
+      "public": true
+    },
+    "switchBoxD": {
+      "method": "GET",
+      "path": "/switchBoxD",
+      "public": true
+    },
+    "switchBoxDC": {
+      "method": "GET",
+      "path": "/switchBoxDC",
+      "public": true
+    },
+    "switchBoxDDIN": {
+      "method": "GET",
+      "path": "/switchBoxDDIN",
+      "public": true
+    },
+    "switchBoxDIN": {
+      "method": "GET",
+      "path": "/switchBoxDIN",
+      "public": true
+    },
+    "switchBoxLight": {
+      "method": "GET",
+      "path": "/switchBoxLight",
+      "public": true
+    },
+    "switchBoxTPRO": {
+      "method": "GET",
+      "path": "/switchBoxTPRO",
+      "public": true
+    },
+    "switchBoxV3": {
+      "method": "GET",
+      "path": "/switchBoxV3",
+      "public": true
+    },
+    "switchBoxSeparated": {
+      "method": "GET",
+      "path": "/switchBoxSeparated",
       "public": true
     }
   },
@@ -2150,6 +2195,169 @@
     },
     {
       "name": {
+        "en": "dacBoxD DC"
+      },
+      "class": "light",
+      "capabilities": [
+        "dim.channel1",
+        "onoff.channel1",
+        "dim.channel2",
+        "onoff.channel2"
+      ],
+      "capabilitiesOptions": {
+        "dim.channel1": {
+          "title": {
+            "en": "Channel 1 level"
+          }
+        },
+        "onoff.channel1": {
+          "title": {
+            "en": "Channel 1"
+          }
+        },
+        "dim.channel2": {
+          "title": {
+            "en": "Channel 2 level"
+          }
+        },
+        "onoff.channel2": {
+          "title": {
+            "en": "Channel 2"
+          }
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/dacboxd/assets/images/small.png",
+        "large": "/drivers/dacboxd/assets/images/large.png"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 1,
+          "usageOff": 1
+        }
+      },
+      "pair": [
+        {
+          "id": "add_blebox_device",
+          "navigation": {
+            "next": "list_blebox_devices"
+          }
+        },
+        {
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "dacboxd",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings"
+          },
+          "children": [
+            {
+              "id": "address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              }
+            },
+            {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll interval [ms]"
+              },
+              "attr": {
+                "min": 500,
+                "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device properties"
+          },
+          "children": [
+            {
+              "id": "product",
+              "type": "label",
+              "label": {
+                "en": "Product name"
+              },
+              "value": "n/a"
+            },
+            {
+              "id": "apiLevel",
+              "type": "label",
+              "label": {
+                "en": "API Level"
+              },
+              "value": "n/a"
+            },
+            {
+              "id": "hv",
+              "type": "label",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": "n/a"
+            },
+            {
+              "id": "fv",
+              "type": "label",
+              "label": {
+                "en": "Firmware version"
+              },
+              "value": "n/a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
         "en": "dimmerBox"
       },
       "class": "light",
@@ -3655,21 +3863,27 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/doorBox_v2/assets/images/small.png",
         "large": "/drivers/doorBox_v2/assets/images/large.png"
       },
       "pair": [
         {
-          "id": "list_doorBoxesv2",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_doorBoxesv2"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_doorBoxesv2",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -3703,6 +3917,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -3711,6 +3941,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -4061,21 +4299,27 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/gatebox/assets/images/small.png",
         "large": "/drivers/gatebox/assets/images/large.png"
       },
       "pair": [
         {
-          "id": "list_gateboxes",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_gateboxes"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_gateboxes",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -4109,6 +4353,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -4117,6 +4377,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
@@ -4189,21 +4457,27 @@
       "connectivity": [
         "lan"
       ],
-      "discovery": "bbxsrv",
       "images": {
         "small": "/drivers/gateboxpro/assets/images/small.png",
         "large": "/drivers/gateboxpro/assets/images/large.png"
       },
       "pair": [
         {
-          "id": "list_gateboxes",
-          "template": "list_devices",
+          "id": "add_blebox_device",
           "navigation": {
-            "next": "add_gateboxes"
+            "next": "list_blebox_devices"
           }
         },
         {
-          "id": "add_gateboxes",
+          "id": "list_blebox_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices",
+            "prev": "add_blebox_device"
+          }
+        },
+        {
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
@@ -4237,6 +4511,22 @@
               }
             },
             {
+              "id": "webhooks_enabled",
+              "type": "label",
+              "value": "No",
+              "label": {
+                "en": "Action webhooks enabled"
+              }
+            },
+            {
+              "id": "polling_enabled",
+              "type": "label",
+              "value": "Yes",
+              "label": {
+                "en": "Polling enabled"
+              }
+            },
+            {
               "id": "poll_interval",
               "type": "number",
               "label": {
@@ -4245,6 +4535,14 @@
               "attr": {
                 "min": 500,
                 "max": 60000
+              }
+            },
+            {
+              "id": "last_poll",
+              "type": "label",
+              "value": "n/a",
+              "label": {
+                "en": "Last poll"
               }
             }
           ]
