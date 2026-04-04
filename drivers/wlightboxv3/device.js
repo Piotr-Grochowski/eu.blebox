@@ -121,8 +121,10 @@ class wLightBoxDevice extends BleBoxDevice {
   {
     if(value==true)
     {
-      // Turn on the device
-      await this.bbApi.wLightBoxSetState(this.getSetting('address'),this.getSetting("on_value"))
+      // Turn on the device - use on_value setting, fall back to FFFFFFFFFF if not set
+      var onValue = this.getSetting("on_value");
+      if (!onValue) onValue = 'FFFFFFFFFF';
+      await this.bbApi.wLightBoxSetState(this.getSetting('address'), onValue)
       .catch(error => {
         this.log(error);
       })
