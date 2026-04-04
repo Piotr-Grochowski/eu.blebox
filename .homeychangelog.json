@@ -295,5 +295,11 @@
   },
   "4.0.0": {
     "en": "Optimizations and bugfixes, some rewrites. App should be more stable now."
+  },
+  "4.0.1": {
+    "en": "wLightBox bugfixes"
+  },
+  "4.0.2": {
+    "en": "wlightBox bugfixes"
   }
 }
