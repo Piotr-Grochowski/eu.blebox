@@ -301,5 +301,8 @@
   },
   "4.0.2": {
     "en": "wlightBox bugfixes"
+  },
+  "4.1.0": {
+    "en": "Added support for: tempSensor DIN, doorBox PRO, gateBox PRO v3, gateBox v2"
   }
 }

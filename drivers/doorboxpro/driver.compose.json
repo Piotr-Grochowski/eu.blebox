@@ -1,0 +1,51 @@
+{
+  "name": {
+    "en": "doorBox PRO"
+  },
+  "class": "button",
+  "capabilities": [
+    "button",
+    "alarm_contact"
+  ],
+  "capabilitiesOptions": {
+    "alarm_contact": {
+      "title": "Gate open alarm"
+    }
+  },
+  "energy": {
+    "approximation": {
+      "usageOn": 1,
+      "usageOff": 1
+    }
+  },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png"
+  },
+  "pair": [
+    {
+      "id": "add_blebox_device",
+      "navigation": {
+        "next": "list_blebox_devices"
+      }
+    },
+    {
+      "id": "list_blebox_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices",
+        "prev": "add_blebox_device"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

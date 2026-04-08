@@ -7,7 +7,7 @@ class gateBoxDriver extends BleBoxDriver_v2 {
   onInitAddOn() {
     this.driverName = 'gateBoxDriver';
     this.driverType = 'gateBox';
-    this.driverProduct = ['gateBox', 'RiCo'];
+    this.driverProduct = ['gateBox', 'RiCo', 'gateBox_v2'];
     this.drivermDNSSDMethod = true;
     this.driverIPAddressMethod = true;
     this.driverActions = false;

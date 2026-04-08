@@ -2,12 +2,12 @@
 
 const BleBoxDriver_v2 = require('../../lib/bleboxdriver_v2.js');
 
-class gateBoxProDriver extends BleBoxDriver_v2 {
+class doorBoxProDriver extends BleBoxDriver_v2 {
 
   onInitAddOn() {
-    this.driverName = 'gateBoxProDriver';
+    this.driverName = 'doorBoxProDriver';
     this.driverType = 'gateBox';
-    this.driverProduct = ['gateBoxPro', 'gateBox_PRO_v3'];
+    this.driverProduct = ['doorBox_PRO'];
     this.drivermDNSSDMethod = true;
     this.driverIPAddressMethod = true;
     this.driverActions = false;
@@ -17,4 +17,4 @@ class gateBoxProDriver extends BleBoxDriver_v2 {
 
 }
 
-module.exports = gateBoxProDriver;
+module.exports = doorBoxProDriver;

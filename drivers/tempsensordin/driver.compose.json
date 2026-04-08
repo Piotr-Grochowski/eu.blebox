@@ -1,0 +1,69 @@
+{
+  "name": {
+    "en": "tempSensor DIN"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_temperature.sensor1",
+    "measure_temperature.sensor2",
+    "measure_temperature.sensor3",
+    "measure_temperature.sensor4"
+  ],
+  "capabilitiesOptions": {
+    "measure_temperature.sensor1": {
+      "title": {
+        "en": "Temperature 1"
+      }
+    },
+    "measure_temperature.sensor2": {
+      "title": {
+        "en": "Temperature 2"
+      }
+    },
+    "measure_temperature.sensor3": {
+      "title": {
+        "en": "Temperature 3"
+      }
+    },
+    "measure_temperature.sensor4": {
+      "title": {
+        "en": "Temperature 4"
+      }
+    }
+  },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png"
+  },
+  "energy": {
+    "approximation": {
+      "usageConstant": 1
+    }
+  },
+  "pair": [
+    {
+      "id": "add_blebox_device",
+      "navigation": {
+        "next": "list_blebox_devices"
+      }
+    },
+    {
+      "id": "list_blebox_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices",
+        "prev": "add_blebox_device"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "General settings"
+    },
+    "children": [
+      {
+        "id": "address",
+        "type": "text",
+        "label": {
+          "en": "IP Address"
+        }
+      },
+      {
+        "id": "username",
+        "type": "text",
+        "label": {
+          "en": "Username"
+        }
+      },
+      {
+        "id": "password",
+        "type": "password",
+        "label": {
+          "en": "Password"
+        }
+      },
+      {
+        "id": "webhooks_enabled",
+        "type": "label",
+        "value": "No",
+        "label": {
+          "en": "Action webhooks enabled"
+        }
+      },
+      {
+        "id": "polling_enabled",
+        "type": "label",
+        "value": "Yes",
+        "label": {
+          "en": "Polling enabled"
+        }
+      },
+      {
+        "id": "poll_interval",
+        "type": "number",
+        "label": {
+          "en": "Poll interval [ms]"
+        },
+        "attr": {
+          "min": 500,
+          "max": 60000
+        }
+      },
+      {
+        "id": "last_poll",
+        "type": "label",
+        "value": "n/a",
+        "label": {
+          "en": "Last poll"
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Device properties"
+    },
+    "children": [
+      {
+        "id": "product",
+        "type": "label",
+        "label": {
+          "en": "Product name"
+        },
+        "value": "n/a"
+      },
+      {
+        "id": "apiLevel",
+        "type": "label",
+        "label": {
+          "en": "API Level"
+        },
+        "value": "n/a"
+      },
+      {
+        "id": "hv",
+        "type": "label",
+        "label": {
+          "en": "Hardware version"
+        },
+        "value": "n/a"
+      },
+      {
+        "id": "fv",
+        "type": "label",
+        "label": {
+          "en": "Firmware version"
+        },
+        "value": "n/a"
+      }
+    ]
+  }
+]
