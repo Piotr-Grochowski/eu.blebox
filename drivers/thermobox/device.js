@@ -47,15 +47,16 @@ class thermoBoxClassicDevice extends BleBoxDevice {
       }
 
       for (const element of result.sensors) {
-        if((result.thermo.safetyTempSensor.sensorId == null && element.type=='temperature' ) ||
-            (result.thermo.safetyTempSensor.sensorId != null && element.type=='temperature' && element.id !=
-            result.thermo.safetyTempSensor.sensorId))
+        if (element.type !== 'temperature' || element.state !== 2) continue;
+
+        if(result.thermo.safetyTempSensor.sensorId == null ||
+            element.id !== result.thermo.safetyTempSensor.sensorId)
           await this.setCapabilityValue('measure_temperature', element.value / 100)
           .catch( err => {
             this.log(err);
           });
 
-        if(result.thermo.safetyTempSensor.sensorId != null && element.type=='temperature' && element.id == result.thermo.safetyTempSensor.sensorId)
+        if(result.thermo.safetyTempSensor.sensorId != null && element.id == result.thermo.safetyTempSensor.sensorId)
           await this.setCapabilityValue('measure_temperature.safety', element.value / 100)
           .catch( err => {
             this.log(err);
