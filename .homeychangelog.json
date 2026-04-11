@@ -304,5 +304,8 @@
   },
   "4.1.0": {
     "en": "Added support for: tempSensor DIN, doorBox PRO, gateBox PRO v3, gateBox v2"
+  },
+  "4.1.1": {
+    "en": "Bugfixes"
   }
 }

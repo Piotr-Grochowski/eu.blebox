@@ -13,7 +13,7 @@ class proxiBoxDriver extends BleBoxDriver_v2 {
     this.driverIPAddressMethod = true;
     this.driverActions = true;
     this.driverPolling = false;
-    this.driverPollingInterval = 600000;    
+    this.driverPollingInterval = 60000;
   }
 
 
